@@ -1,0 +1,117 @@
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css);
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-size: 10px;
+	font-family: "Montserrat", sans-serif;
+}
+
+.container {
+  display: flex;
+  align-items: stretch;
+}
+
+.init-logo {
+  flex-grow: 5;
+  order: -1;
+  padding: 0;
+}
+
+.init {
+	justify-content: space-between;
+	padding: 20px 0;
+	position: relative;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.init-menu {
+	z-index: 2;
+	display: flex;
+}
+
+.init-lista {
+  flex-grow: 1;
+  display: flex;
+  list-style: none;
+  margin-top: 15px;
+	padding: 0;
+}
+
+.item-lista {
+	margin: 0 16px;
+}
+
+.item-lista a {
+  color: #000;
+	font-size: 1.3em;
+	font-weight: bold;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.item-lista button {
+  border: 1px solid rgb(235, 235, 235);
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  margin: -10px;
+  text-decoration: none;
+  border-radius: 21px;
+  box-shadow: rgba(0, 0, 0, 0.18) 0px 1px 2px ;
+  text-decoration: none;
+  height: 42px;
+  background-color: white;
+}
+
+.item-lista a:hover {
+  color: #a8a8a8;
+}
+
+.tablist {
+  margin: 30 110px;
+}
+
+.tablist span {
+  margin-left: 20px;
+  font-size: 16px;
+}
+
+.tablist span:hover {
+  text-decoration: underline;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: 10px;
+  text-align: center;
+  font-family: arial;
+}
+
+.price {
+  color: grey;
+  font-size: 22px;
+}
+
+.card button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.card button:hover {
+  opacity: 0.7;
+}
