@@ -1,0 +1,21 @@
+{% extends 'airbnb/index.html' %}
+
+  {% block content %}
+
+    <form class="form-horizontal" action="{% url 'airbnb/home_new.html' %}" method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+
+      <label for="">Nome</label>
+      {{ form.name }}
+
+      <label for="">Descrição</label>
+      {{ form.description }}
+
+      <label for="">Foto</label>
+      {{ form.image }}
+
+      <button type="submit">Enviar</button>
+
+    </form>
+
+  {% endblock %}

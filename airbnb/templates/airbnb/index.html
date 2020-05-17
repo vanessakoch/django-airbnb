@@ -1,0 +1,48 @@
+{% load static %}
+
+<html>
+
+  <head>
+    <title>Aluguéis por Temporada</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="{% static 'css/airbnb.css' %}">
+    <link rel="shortcut icon" href="{% static 'img/icon.png' %}" />
+  </head>
+
+  <body>
+    <header class="init">
+      <nav class="init-menu">
+        <div class="container">
+          <a class="init-logo" href="#">
+            <img src="{% static 'img/logo.png' %}" alt="Logo AirBnb">
+          </a>
+          <ul class="init-lista">
+            <li class="item-lista">
+              <a href="#">Hospede em sua acomodação</a>
+            </li>
+            <li class="item-lista">
+              <a href="#">Hospede uma experiência</a>
+            </li>
+            <li class="item-lista">
+              <a href="#">Ajuda</a>
+            </li>
+            <li class="item-lista">
+              <a href="#">Entrar</a>
+            </li>
+            <li class="item-lista">
+              <button href="#">Cadastrar-se</button>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <div class="tablist">
+        <span>Lugares para ficar</span>
+        <span>Estadias</span>
+        <span>Experiências</span>
+      </div>
+    </header>
+    {% block content %}
+    {% endblock %}
+  </body>
+</html>

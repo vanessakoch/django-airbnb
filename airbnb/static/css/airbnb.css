@@ -70,12 +70,16 @@ body {
   background-color: white;
 }
 
+.item-lista button:hover {
+  color: #a8a8a8;
+}
+
 .item-lista a:hover {
   color: #a8a8a8;
 }
 
 .tablist {
-  margin: 30 110px;
+  margin: 30 30px;
 }
 
 .tablist span {
@@ -87,9 +91,16 @@ body {
   text-decoration: underline;
 }
 
+.container-card {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-left: 40px;
+}
+
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  max-width: 300px;
+  width: 300px;
   margin: 10px;
   text-align: center;
   font-family: arial;

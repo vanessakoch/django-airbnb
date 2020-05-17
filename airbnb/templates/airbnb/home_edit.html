@@ -1,0 +1,13 @@
+{% extends 'airbnb/index.html' %}
+
+{% block content %}
+
+    <h2>Nova Acomodação</h2>
+    
+    <form method="POST" class="post-form">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button type="submit" class="save btn btn-primary">Save</button>
+    </form>
+
+{% endblock %}

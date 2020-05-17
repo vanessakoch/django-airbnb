@@ -1,0 +1,18 @@
+{% extends 'airbnb/index.html' %}
+
+{% block content %}
+  
+  <div class="container-card">
+    {% for home in homes %}
+      <div class="card">
+        <img src="/media/{{ home.image }}" style="width:100%">
+        <h1> {{ home.name }} </h1>
+        <p class="price"> Preço: R$ {{ home.price }} </p>
+        <p> {{ home.description }} </p>
+        <p> {{ home.published_date }} </p>
+        <p><button>Reservar</button></p>
+      </div>
+    {% endfor %}
+  </div>
+
+{% endblock content %}
