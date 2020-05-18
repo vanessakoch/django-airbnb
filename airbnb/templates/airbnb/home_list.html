@@ -2,12 +2,12 @@
 
 {% block content %}
 
-  <div class="card-deck" style="display: flex; flex-wrap: wrap;">
+  <div class="card-deck" style="display: flex; flex-wrap: wrap; border-radius: 20%;">
     {% for home in homes %}
       <div class="card">
         <img class="card-img-top" src="media/{{ home.image }}" alt="Imagem Acomodacao">
         <div class="card-body">
-          <h3 class="card-title"><a href="{% url 'home_detail' pk=home.pk %}">{{ home.name }}</a></h3>
+          <h4 class="card-title"><a href="{% url 'home_detail' pk=home.pk %}">{{ home.name }}</a></h4>
           <p class="price">Diária: R$ {{ home.price }}</p>
           <p class="card-text">{{ home.description }}</p>
           <button>Reserve já!</button>

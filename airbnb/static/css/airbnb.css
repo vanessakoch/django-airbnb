@@ -95,20 +95,17 @@ body {
 
 .card {
   text-align: center;
-  margin: 19px;
-  -webkit-box-shadow: 9px 7px 5px rgba(50, 50, 50, 0.77);
-  -moz-box-shadow:    9px 7px 5px rgba(50, 50, 50, 0.77);
-  box-shadow:         9px 7px 5px rgba(50, 50, 50, 0.77);
+  margin: 19px; 
 }
 
 .card img {
-  width: 300px;
-  height: 220px;
+  width: 230px;
+  height: 150px;
 }
 
 .price {
   color: grey;
-  font-size: 20px;
+  font-size: 14px;
 }
 
 .card button {
@@ -120,9 +117,23 @@ body {
   text-align: center;
   cursor: pointer;
   width: 100%;
-  font-size: 18px;
+  font-size: 14px;
 }
 
 .card button:hover {
   opacity: 0.7;
+}
+
+.detail-container {
+  text-align: center;
+}
+
+.detail-container img {
+  width: 20%;
+  height: 40%;
+  margin: 10px;
+}
+
+.detail-container a {
+  margin: 10px;
 }

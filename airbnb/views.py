@@ -10,6 +10,7 @@ def home_list(request):
 
 def home_detail(request, pk):
     home = get_object_or_404(Home, pk=pk)
+
     return render(request, 'airbnb/home_detail.html', {'home': home})
 
 @login_required
