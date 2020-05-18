@@ -2,12 +2,15 @@
 
 {% block content %}
 
-    <h2>Nova Acomodação</h2>
-    
+  <div class="container-form">    
     <form method="post" enctype="multipart/form-data">
       {% csrf_token %}
+      
+      <p class="edit-p">Nova Acomodação</p>
+
       {{ form.as_p }}
-      <button type="submit">Create</button>
+      <button class="btn-salvar" type="submit">Salvar</button>
     </form>
+  </div>
 
 {% endblock %}

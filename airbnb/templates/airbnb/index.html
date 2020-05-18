@@ -11,16 +11,15 @@
   </head>
 
   <body>
-    {% if user.is_authenticated %}
-      <p class="top-menu">Olá {{ user.username }} <small>(<a href="{% url 'logout' %}">Log out</a>)</small></p>
-    {% endif %}
-
     <header class="init">
       <nav class="init-menu">
         <div class="container">
           <a class="init-logo" href="{% url 'home_list' %}">
             <img src="{% static 'img/logo.png' %}" alt="Logo AirBnb">
           </a>
+          {% if user.is_authenticated %}
+            <p style="margin-top: 16px;" class="top-menu">Olá {{ user.username }} <small>(<a href="{% url 'logout' %}">Log out</a>)</small></p>
+          {% endif %} 
           <ul class="init-lista">
             <li class="item-lista">
               <a href="{% url 'home_new' %}">Hospede em sua acomodação</a>
@@ -40,12 +39,13 @@
           </ul>
         </div>
       </nav>
-      <div class="tablist">
-        <span>Lugares para ficar</span>
-        <span>Estadias</span>
-        <span>Experiências</span>
-      </div>
     </header>
+
+    <div class="tablist">
+      <span>Lugares para ficar</span>
+      <span>Estadias</span>
+      <span>Experiências</span>
+    </div>
    
     {% block content %}
     {% endblock %}

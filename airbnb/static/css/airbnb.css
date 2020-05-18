@@ -23,11 +23,16 @@ body {
 
 .init {
 	justify-content: space-between;
-	padding: 20px 0;
-	position: relative;
+	padding: 15px 0;
 	width: 100%;
 	display: flex;
-	flex-direction: column;
+  flex-direction: column;
+  position: fixed;
+	top: 0;
+	width: 100%;
+  backface-visibility: hidden;
+  background-color: white;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, .1);
 }
 
 .init-menu {
@@ -79,7 +84,7 @@ body {
 }
 
 .tablist {
-  margin-top: 20px;
+  margin-top: 110px;
   margin-left: 20px;
 }
 
@@ -95,7 +100,23 @@ body {
 
 .card {
   text-align: center;
+  width: 300px;
   margin: 19px; 
+  box-shadow: 4px 4px 5px rgba(0, 0, 0, .1);
+}
+
+.card-deck {
+  display: flex; 
+  flex-wrap: wrap;
+}
+
+.card_text {
+  white-space: pre-wrap; 
+  width: 300px; 
+  height: 40px;
+  text-align: justify;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .card img {
@@ -108,12 +129,28 @@ body {
   font-size: 14px;
 }
 
+.card-title {
+  margin: 10px;
+}
+
+.card-title a {
+  color: rgb(255, 56, 92) ;;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.card-title a:hover {
+  text-decoration: none;
+  color: red;
+}
+
 .card button {
   border: none;
   outline: 0;
   padding: 12px;
+  margin: 10px 0;
   color: white;
-  background-color: #000;
+  background-color: rgb(65, 64, 64);
   text-align: center;
   cursor: pointer;
   width: 100%;
@@ -125,15 +162,145 @@ body {
 }
 
 .detail-container {
-  text-align: center;
+  margin: 20px;
 }
 
 .detail-container img {
   width: 20%;
   height: 40%;
-  margin: 10px;
+  border-radius: 5%;
 }
 
-.detail-container a {
-  margin: 10px;
+.container-form {
+  width: 50%;
+  height: 75%;
+  margin: 15px auto;
+  display: flex;
+  justify-content: center;
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, .1);
 }
+
+.edit-p {
+  color:rgb(255, 56, 92);
+  font-size: 18px;
+  text-align: center;
+}
+
+.container-form label, input {
+  display: block;
+  font-size: 14px;
+  font-weight: normal;
+  text-align: center;
+}
+
+.container-form input {
+  margin-left: 40px;
+}
+
+.container-form textarea {
+  text-align: center;
+  color: black;
+  margin-left: 5px;
+}
+
+.btn-publicar {
+  background-color: rgb(255, 56, 92) ;
+  font-size: 16px;
+  color: white;
+  padding: 10px;
+  margin: 20px;
+  border-radius: 10%;
+}
+
+.btn-salvar {
+  border-color: rgb(255, 56, 92);
+  border-width: 1px;
+  font-size: 16px;
+  background-color: white;
+  color: rgb(255, 56, 92);
+  padding: 10px;
+  border-radius: 10%;
+  margin-left: 120px;
+}
+
+.btn-salvar:hover {
+  cursor: pointer;
+  background-color: crimson;
+  color: white;
+}
+
+.btn-publicar:hover {
+  background-color: crimson;
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn-remover {
+  background-color: rgb(228, 35, 35) ;
+  font-size: 20px;
+  color: white;
+  float: right;
+  margin: 0 20px;
+  padding: 5px;
+  border-radius: 10%;
+}
+
+.btn-remover:hover {
+  background-color: rgb(220, 20, 20);
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+h2 {
+  font-weight: bold;
+}
+
+.btn-editar {
+  background-color: rgb(35, 80, 228) ;
+  font-size: 20px;
+  float: right;
+  color: white;
+  margin: 0 10px;
+  padding: 5px;
+  border-radius: 10%;
+}
+
+.btn-editar:hover {
+  background-color: rgb(25, 9, 252);
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.text-detail {
+  text-align: justify; 
+  width: 700px;
+}
+
+.container-login {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  margin-top: 50px;
+  justify-content: center;
+  border-color: crimson;
+
+}
+
+.container-login label {
+  margin: 20px;
+  text-align: center;
+}
+
+.comment {
+  margin: 20px 0px 20px 20px;
+}
+
+.card-comentario {
+  color: rgb(202, 7, 241);
+  font-size: 12px;
+}
+
+

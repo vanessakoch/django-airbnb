@@ -5,27 +5,48 @@
     <div class="detail-container">
 
         {% if user.is_authenticated %}
-            <a class="btn btn-outline-danger" href="{% url 'home_remove' pk=home.pk %}"><span class="glyphicon glyphicon-remove"></span></a>
-            <a class="btn btn-outline-primary" href="{% url 'home_edit' pk=home.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a class="btn-remover" href="{% url 'home_remove' pk=home.pk %}"><span class="glyphicon glyphicon-remove"></span></a>
+            <a class="btn-editar" href="{% url 'home_edit' pk=home.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
         {% endif %} 
 
         {% if home.published_date %}
-            <div>
-                {{ home.published_date }}
-            </div>
+        
+            {{ home.published_date }}
+        
         {% else %}
+            
             {% if user.is_authenticated %}
-                <a class="btn btn-primary" href="{% url 'home_publish' pk=home.pk %}">Publicar</a>
+                <a class="btn-publicar" href="{% url 'home_publish' pk=home.pk %}">Publicar</a>
             {% endif %}
+        
         {% endif %}
 
-        
         <h2>{{ home.name }}</h2>
-        <br />
-        <h4>Descrição:</h4>
-        <p>{{ home.description }}</p>
+        <br/>
+        <p class="text-detail">{{ home.description }}</p>
         <img src="../../../media/{{ home.image }}" alt="Imagem Acomodacao">
 
     </div>
+
+    <hr>
+    <a class="btn btn-default" href="{% url 'add_comment_to_home' pk=home.pk %}">Add comment</a>
+    
+    {% for comment in home.comments.all %}
+    {% if user.is_authenticated or comment.approved_comment %}
+    <div class="comment">
+        <div >
+            {{ comment.created_date }}
+            {% if not comment.approved_comment %}
+                <a class="btn btn-default" href="{% url 'comment_remove' pk=comment.pk %}"><span class="glyphicon glyphicon-remove"></span></a>
+                <a class="btn btn-default" href="{% url 'comment_approve' pk=comment.pk %}"><span class="glyphicon glyphicon-ok"></span></a>
+            {% endif %}
+        </div>
+        <strong>{{ comment.author }}</strong>
+        <p>{{ comment.text|linebreaks }}</p>
+    </div>
+    {% endif %}
+{% empty %}
+    <p>No comments here yet :(</p>
+{% endfor %}
 
 {% endblock %}
