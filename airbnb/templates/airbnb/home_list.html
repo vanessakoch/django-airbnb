@@ -1,16 +1,22 @@
 {% extends 'airbnb/index.html' %}
 
 {% block content %}
-  
-  <div class="container-card">
+
+  <div class="card-deck" style="display: flex; flex-wrap: wrap;">
     {% for home in homes %}
       <div class="card">
-        <img src="/media/{{ home.image }}" style="width:100%">
-        <h1> {{ home.name }} </h1>
-        <p class="price"> Preço: R$ {{ home.price }} </p>
-        <p> {{ home.description }} </p>
-        <p> {{ home.published_date }} </p>
-        <p><button>Reservar</button></p>
+        <img class="card-img-top" src="media/{{ home.image }}" alt="Imagem Acomodacao">
+        <div class="card-body">
+          <h3 class="card-title"><a href="{% url 'home_detail' pk=home.pk %}">{{ home.name }}</a></h3>
+          <p class="price">Diária: R$ {{ home.price }}</p>
+          <p class="card-text">{{ home.description }}</p>
+          <button>Reserve já!</button>
+        </div>
+        <br />
+        <div class="card-footer">
+          <small class="text-muted">Publicado em: {{ home.published_date }}</small>
+        </div>
+        <br />
       </div>
     {% endfor %}
   </div>

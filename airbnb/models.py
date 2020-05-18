@@ -5,11 +5,11 @@ from django.contrib.auth.models import User
 
 class Home(models.Model):
     owner = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
-    image = models.FileField(upload_to="%Y/%m/%d/", default="img/estadia.jpeg")
+    image = models.ImageField(upload_to='media/', default="media/estadia.jpeg")
     name = models.CharField(max_length=200)
     description = models.TextField()
     price = models.FloatField(default=0)
-    creation_date = models.DateTimeField(default=timezone.now)
+    created_date = models.DateTimeField(default=timezone.now)
     published_date = models.DateTimeField(blank=True, null=True)
 
     def publish(self):

@@ -49,7 +49,7 @@ body {
 
 .item-lista a {
   color: #000;
-	font-size: 1.3em;
+	font-size: 1.4em;
 	font-weight: bold;
   text-decoration: none;
   transition: all 0.2s ease-in-out;
@@ -79,36 +79,36 @@ body {
 }
 
 .tablist {
-  margin: 30 30px;
+  margin-top: 20px;
+  margin-left: 20px;
 }
 
 .tablist span {
-  margin-left: 20px;
-  font-size: 16px;
+  margin-right: 20px;
+  font-size: 14px;
 }
 
 .tablist span:hover {
   text-decoration: underline;
-}
-
-.container-card {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  margin-left: 40px;
+  font-weight: bold;
 }
 
 .card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  width: 300px;
-  margin: 10px;
   text-align: center;
-  font-family: arial;
+  margin: 19px;
+  -webkit-box-shadow: 9px 7px 5px rgba(50, 50, 50, 0.77);
+  -moz-box-shadow:    9px 7px 5px rgba(50, 50, 50, 0.77);
+  box-shadow:         9px 7px 5px rgba(50, 50, 50, 0.77);
+}
+
+.card img {
+  width: 300px;
+  height: 220px;
 }
 
 .price {
   color: grey;
-  font-size: 22px;
+  font-size: 20px;
 }
 
 .card button {

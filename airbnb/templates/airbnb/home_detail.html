@@ -1,8 +1,26 @@
 {% extends 'airbnb/index.html' %}
 
 {% block content %}
+    <div>
+        {% if home.published_date %}
+            <div>
+                {{ home.published_date }}
+            </div>
+        {% else %}
+            {% if user.is_authenticated %}
+                <a class="btn btn-primary right" href="{% url 'home_publish' pk=home.pk %}">Publicar</a>
+            {% endif %}
+        {% endif %}
+        {% if user.is_authenticated %}
+            <a class="btn btn-primary" href="{% url 'home_edit' pk=home.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a class="btn btn-primary" href="{% url 'home_remove' pk=home.pk %}"><span class="glyphicon glyphicon-remove"></span></a>
+        {% endif %}
+        
+        <h1>{{ home.name }}</h1>
+        <br />
+        <img src='media/{{ home.image }}' style="width:20%">
+        <p>{{ home.description }}</p>
 
-    <h1> {{ home.name }}</h1>
-    <p>{{ home.description }}</p>
+    </div>
 
 {% endblock %}

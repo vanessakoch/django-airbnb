@@ -3,7 +3,6 @@ from django.forms.widgets import ClearableFileInput
 from .models import Home
 
 class HomeForm(forms.ModelForm):
-  image = forms.ImageField()
 
   class Meta:
     model = Home

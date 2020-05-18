@@ -6,20 +6,24 @@
     <title>Aluguéis por Temporada</title>
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-    <link rel="stylesheet" href="{% static 'css/airbnb.css' %}">
     <link rel="shortcut icon" href="{% static 'img/icon.png' %}" />
+    <link rel="stylesheet" href="{% static 'css/airbnb.css' %}">
   </head>
 
   <body>
+    {% if user.is_authenticated %}
+      <p class="top-menu">Olá {{ user.username }} <small>(<a href="{% url 'logout' %}">Log out</a>)</small></p>
+    {% endif %}
+
     <header class="init">
       <nav class="init-menu">
         <div class="container">
-          <a class="init-logo" href="#">
+          <a class="init-logo" href="{% url 'home_list' %}">
             <img src="{% static 'img/logo.png' %}" alt="Logo AirBnb">
           </a>
           <ul class="init-lista">
             <li class="item-lista">
-              <a href="#">Hospede em sua acomodação</a>
+              <a href="{% url 'home_new' %}">Hospede em sua acomodação</a>
             </li>
             <li class="item-lista">
               <a href="#">Hospede uma experiência</a>
@@ -28,7 +32,7 @@
               <a href="#">Ajuda</a>
             </li>
             <li class="item-lista">
-              <a href="#">Entrar</a>
+              <a href="{% url 'login' %}">Entrar</a>
             </li>
             <li class="item-lista">
               <button href="#">Cadastrar-se</button>
@@ -42,7 +46,9 @@
         <span>Experiências</span>
       </div>
     </header>
+   
     {% block content %}
     {% endblock %}
+   
   </body>
 </html>
