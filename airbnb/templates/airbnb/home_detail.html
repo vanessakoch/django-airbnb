@@ -29,12 +29,12 @@
     </div>
 
     <hr>
-    <a class="btn btn-default" href="{% url 'add_comment_to_home' pk=home.pk %}">Add comment</a>
+    <a class="btn btn-default" href="{% url 'add_comment_to_home' pk=home.pk %}">Adicionar comentário</a>
     
     {% for comment in home.comments.all %}
     {% if user.is_authenticated or comment.approved_comment %}
     <div class="comment">
-        <div >
+        <div>
             {{ comment.created_date }}
             {% if not comment.approved_comment %}
                 <a class="btn btn-default" href="{% url 'comment_remove' pk=comment.pk %}"><span class="glyphicon glyphicon-remove"></span></a>
@@ -46,7 +46,7 @@
     </div>
     {% endif %}
 {% empty %}
-    <p>No comments here yet :(</p>
+    <p>Nenhum comentário</p>
 {% endfor %}
 
 {% endblock %}

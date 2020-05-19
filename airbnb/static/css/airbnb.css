@@ -102,7 +102,7 @@ body {
   text-align: center;
   width: 300px;
   margin: 19px; 
-  box-shadow: 4px 4px 5px rgba(0, 0, 0, .1);
+  box-shadow: 6px 6px 6px 6px rgba(0, 0, 0, .1);
 }
 
 .card-deck {
@@ -286,7 +286,6 @@ h2 {
   margin-top: 50px;
   justify-content: center;
   border-color: crimson;
-
 }
 
 .container-login label {
