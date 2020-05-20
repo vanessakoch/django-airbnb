@@ -173,62 +173,57 @@ body {
 }
 
 .container-form {
-  width: 50%;
-  height: 75%;
-  margin: 15px auto;
+  align-items: center;
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
-  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, .1);
+}
+
+.form-add {
+  width: 400px;
+}
+
+.container-form input, textarea {
+  display: block;
+  box-shadow: 1px 1px 1px 1px;
+  width: 400px;
+  text-align: center;
+}
+
+.container-form p {
+  text-align: center;
 }
 
 .edit-p {
-  color:rgb(255, 56, 92);
   font-size: 18px;
-  text-align: center;
-}
-
-.container-form label, input {
-  display: block;
-  font-size: 14px;
-  font-weight: normal;
-  text-align: center;
-}
-
-.container-form input {
-  margin-left: 40px;
-}
-
-.container-form textarea {
-  text-align: center;
-  color: black;
-  margin-left: 5px;
+  font-weight: bold;
 }
 
 .btn-publicar {
   background-color: rgb(255, 56, 92) ;
   font-size: 16px;
   color: white;
-  padding: 15px;
+  padding: 5px;
+  margin-left: 110px;
   display: flex;
   justify-content: center;
   width: 53%;  
 }
 
 .btn-salvar {
-  border-color: rgb(255, 56, 92);
-  border-width: 1px;
   font-size: 16px;
-  background-color: white;
-  color: rgb(255, 56, 92);
-  padding: 10px;
+  color: white;
+  background-color: rgb(255, 56, 92);
+  padding: 5px;
+  float: right;
   border-radius: 10%;
-  margin-left: 120px;
 }
 
 .btn-salvar:hover {
   cursor: pointer;
-  background-color: crimson;
-  color: white;
+  background-color: rgb(223, 120, 137);
+  color: black;
 }
 
 .btn-publicar:hover {
@@ -278,7 +273,12 @@ h2 {
 
 .text-detail {
   text-align: justify; 
-  width: 700px;
+  font-size: 12px;
+  margin-right: 110px;
+}
+
+.detail-img {
+  margin: 5px;
 }
 
 .container-login {
@@ -295,10 +295,6 @@ h2 {
   text-align: center;
 }
 
-.comment {
-  margin: 20px 0px 20px 20px;
-}
-
 .card-comentario {
   color: rgb(202, 7, 241);
   font-size: 12px;
@@ -308,6 +304,7 @@ h2 {
   position: absolute;
   transform: translate(5%,5%) rotateY(180deg);
   display: flex;
+  margin-left: 10px;
 }
 
 .rating input {
@@ -348,8 +345,7 @@ h2 {
 }
 
 .rating-button {
-  border-width: 1px;
-  font-size: 16px;
+  font-size: 18px;
   color: white;
   background-color: rgb(255, 56, 92);
   margin-left: 300px;
@@ -357,11 +353,99 @@ h2 {
 }
 
 .rating-p {
-  margin-left: 30px;
+  margin: 10 30px;
+  font-size: 14px;
+}
+
+.rating-p2 {
+  font-size: 14px;
+  margin: 10px;
 }
 
 .rating-obs {
   margin-left: 60px;
   text-align: center;
   font-size: 16px;
+}
+
+.btn-secondary {
+  font-size: 14px;
+  margin-left: 300px;
+}
+
+.container-aside {
+  position: fixed;
+  top: 350;
+  right: 200;
+}
+
+.container-comments {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.detail-comments {
+  width: 400px;
+}
+
+.form-comments {
+  width: 400px;
+  margin: 10px;
+}
+
+.form-comments button {
+  font-size: 16px;
+  color: white;
+  background-color: rgb(255, 56, 92);
+  padding: 5px;
+}
+
+.form-comments input, textarea {
+  box-shadow: 1px 1px 1px 1px;
+  color: #000;
+  width: 400px;
+  font-size: 12px;
+  text-align: left;
+  margin: 10px 0;
+}
+
+.form-comments label {
+  font-size: 14px;
+  text-align: center;
+}
+
+.form-comments h2 {
+  text-align: center;
+}
+
+.detail-btncomentar {
+  font-size: 16px;
+  color: rgb(83, 83, 83);
+  background-color: rgb(187, 185, 185);
+  padding: 5px;
+  cursor: pointer;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.detail-btncomentar:hover {
+  color: white;
+  background-color: rgb(255, 56, 92);
+  text-decoration: none;
+}
+
+.comment-detail {
+  margin-top: 10px;
+  font-size: 14px;
+  text-align: justify;
+}
+
+.data {
+  margin-top: 20px;
+  font-size: 14px;
+  text-align: center;
 }

@@ -24,50 +24,68 @@
         <h2>{{ home.name }}</h2>
         <br/>
         <p class="text-detail">{{ home.description }}</p>
-        <img src="../../../media/{{ home.image }}" alt="Imagem Acomodacao">
+        <img src="../../../media/{{ home.image }}" class="detail-img" alt="Imagem Acomodacao">
 
     </div>
 
     <div>
         <form action="{% url 'rating' pk=home.pk %}" method="post">
             {% csrf_token %}
-            <div class="rating">
-                <input type="radio" name="star" id="star5" value="5"><label for="star5"></label>
-                <input type="radio" name="star" id="star4" value="4"><label for="star4"></label>
-                <input type="radio" name="star" id="star3" value="3"><label for="star3"></label>
-                <input type="radio" name="star" id="star2" value="2"><label for="star2"></label>
-                <input type="radio" name="star" id="star1" value="1"><label for="star1"></label>
-            </div>
-            <button class="rating-button" type="submit">Avaliar :)</button>
+            {% if rated %}
+                <div class="rating">
+                    <input type="radio" name="star" id="star5" value="5" checked><label for="star5"></label>
+                    <input type="radio" name="star" id="star4" value="4" ><label for="star4"></label>
+                    <input type="radio" name="star" id="star3" value="3" ><label for="star3"></label>
+                    <input type="radio" name="star" id="star2" value="2" ><label for="star2"></label>
+                    <input type="radio" name="star" id="star1" value="1" ><label for="star1"></label>
+                </div>
+                <button type="button" class="btn btn-secondary btn-lg" disabled>Avaliar</button>                
+                <p class="rating-p">Você já avaliou este estabelecimento! :)</p>        
+            {% else %}
+                <div class="rating">
+                    <input type="radio" name="star" id="star5" value="5"><label for="star5"></label>
+                    <input type="radio" name="star" id="star4" value="4"><label for="star4"></label>
+                    <input type="radio" name="star" id="star3" value="3"><label for="star3"></label>
+                    <input type="radio" name="star" id="star2" value="2"><label for="star2"></label>
+                    <input type="radio" name="star" id="star1" value="1"><label for="star1"></label>
+                </div>
+                <button class="rating-button" type="submit">Avaliar</button>
+                <p class="rating-p2">Selecione a sua melhor estrela e clique para avaliar! :)</p>    
+            {% endif %}
         </form>
-        <p class="rating-p">Selecione a sua melhor estrela e clique para avaliar!</p>
 
-        <div class="rating-obs">
-            <label for="">Nota da acomodação: {{ home.avg_rating }}</label>
-            <br />
-            <label for="">Quantidade de avaliações: {{ home.no_of_ratings}}</label>
-        </div>
+        <aside class="container-aside">
+            <div class="rating-obs">
+                <label for="">Nota da acomodação: {{ home.avg_rating }}</label>
+                <br />
+                <label for="">Quantidade de avaliações: {{ home.no_of_ratings}}</label>
+            </div>
+        </aside>
     </div>
 
     <hr>
-    <a class="btn btn-default" href="{% url 'add_comment_to_home' pk=home.pk %}">Adicionar comentário</a>
-
-    {% for comment in home.comments.all %}
-    {% if user.is_authenticated or comment.approved_comment %}
-    <div class="comment">
-        <div>
-            {{ comment.created_date }}
-            {% if not comment.approved_comment %}
-                <a class="btn btn-default" href="{% url 'comment_remove' pk=comment.pk %}"><span class="glyphicon glyphicon-remove"></span></a>
-                <a class="btn btn-default" href="{% url 'comment_approve' pk=comment.pk %}"><span class="glyphicon glyphicon-ok"></span></a>
-            {% endif %}
+    <div class="container-comments">
+        <div class="detail-comments">
+            <a class="detail-btncomentar" href="{% url 'add_comment_to_home' pk=home.pk %}">Adicionar comentário</a>
+            {% for comment in home.comments.all %}
+                {% if user.is_authenticated or comment.approved_comment %}
+                    <div>
+                        <p class="data">{{ comment.created_date }}</p>
+                        {% if not comment.approved_comment %}
+                            <a class="btn btn-danger"  href="{% url 'comment_remove' pk=comment.pk %}"><span class="glyphicon glyphicon-remove"></span></a>
+                            <a class="btn btn-success"  href="{% url 'comment_approve' pk=comment.pk %}"><span class="glyphicon glyphicon-ok"></span></a>
+                        {% endif %}
+                    </div>
+                    <div class="comment-detail">
+                        <p><strong>{{ comment.author }}</strong></p>
+                        <p>{{ comment.text|linebreaks }}</p>
+                    </div>
+                {% endif %}
+            {% empty %}
+                <p class="comment-detail" style="text-align: center;"></br>Nenhum comentário ainda</p>
+            {% endfor %}
         </div>
-        <strong>{{ comment.author }}</strong>
-        <p>{{ comment.text|linebreaks }}</p>
     </div>
-    {% endif %}
-{% empty %}
-    <p>Nenhum comentário</p>
-{% endfor %}
+
 
 {% endblock %}

@@ -18,8 +18,8 @@ def home_detail(request, pk):
             user=request.user
         ).count()
 
-    if rate_count > 1:
-        rated = True
+        if rate_count > 0:
+            rated = True
 
     return render(
         request, 
@@ -97,12 +97,28 @@ def comment_remove(request, pk):
 
 @login_required
 def rating(request, pk):
-    print(request)
     home = get_object_or_404(Home, pk=pk)
-    rating = Rating.objects.create(user=request.user, home=home)
-    rating.stars = request.POST.get('star')
-    rating.save()
+    rated = False
+
+    if request.user.is_authenticated:    
+        rate_count = Rating.objects.filter(
+            home=pk,
+            user=request.user
+        ).count()
+
+    if rate_count > 1:
+        rated = True
+
+    if rated:
+        return redirect('home_detail', pk=home.pk)
+    else:
+        if request.POST.get('star') is None:
+            return redirect('home_detail', pk=home.pk)
+        else:
+            rating = Rating.objects.create(user=request.user, home=home)
+            rating.stars = request.POST.get('star')
+            rating.save()
+            return redirect('home_detail', pk=home.pk)
 
     
 
-    return redirect('home_detail', pk=home.pk)
