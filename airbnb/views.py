@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.utils import timezone
-from .models import Home, Comment
-from .forms import HomeForm, CommentForm
+from .models import Home, Comment, Rating
+from .forms import HomeForm, CommentForm, RatingForm
 from django.contrib.auth.decorators import login_required
 
 def home_list(request):
@@ -10,7 +10,22 @@ def home_list(request):
 
 def home_detail(request, pk):
     home = get_object_or_404(Home, pk=pk)
-    return render(request, 'airbnb/home_detail.html', {'home': home})
+    rated = False
+    
+    if request.user.is_authenticated:    
+        rate_count = Rating.objects.filter(
+            home=pk,
+            user=request.user
+        ).count()
+
+    if rate_count > 1:
+        rated = True
+
+    return render(
+        request, 
+        'airbnb/home_detail.html', 
+        {'home': home, 'rated': rated,}
+    )
 
 @login_required
 def home_new(request):
@@ -25,6 +40,7 @@ def home_new(request):
         form = HomeForm()
     return render(request, 'airbnb/home_edit.html', {'form': form})
 
+@login_required
 def home_edit(request, pk):
     home = get_object_or_404(Home, pk=pk)
     if request.method == "POST":
@@ -38,6 +54,7 @@ def home_edit(request, pk):
         form = HomeForm(instance=home)
     return render(request, 'airbnb/home_edit.html', {'form': form})
 
+@login_required
 def home_publish(request, pk):
     home = get_object_or_404(Home, pk=pk)
     home.publish()
@@ -47,6 +64,7 @@ def publish(self):
     self.published_date = timezone.now()
     self.save()
 
+@login_required
 def home_remove(request, pk):
     home = get_object_or_404(Home, pk=pk)
     home.delete()
@@ -76,3 +94,15 @@ def comment_remove(request, pk):
     comment = get_object_or_404(Comment, pk=pk)
     comment.delete()
     return redirect('home_detail', pk=comment.home.pk)
+
+@login_required
+def rating(request, pk):
+    print(request)
+    home = get_object_or_404(Home, pk=pk)
+    rating = Rating.objects.create(user=request.user, home=home)
+    rating.stars = request.POST.get('star')
+    rating.save()
+
+    
+
+    return redirect('home_detail', pk=home.pk)

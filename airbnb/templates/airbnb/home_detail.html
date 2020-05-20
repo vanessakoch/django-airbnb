@@ -16,7 +16,7 @@
         {% else %}
             
             {% if user.is_authenticated %}
-                <a class="btn-publicar" href="{% url 'home_publish' pk=home.pk %}">Publicar</a>
+                <a class="btn-publicar" href="{% url 'home_publish' pk=home.pk %}">Publicar Acomodação</a>
             {% endif %}
         
         {% endif %}
@@ -28,9 +28,30 @@
 
     </div>
 
+    <div>
+        <form action="{% url 'rating' pk=home.pk %}" method="post">
+            {% csrf_token %}
+            <div class="rating">
+                <input type="radio" name="star" id="star5" value="5"><label for="star5"></label>
+                <input type="radio" name="star" id="star4" value="4"><label for="star4"></label>
+                <input type="radio" name="star" id="star3" value="3"><label for="star3"></label>
+                <input type="radio" name="star" id="star2" value="2"><label for="star2"></label>
+                <input type="radio" name="star" id="star1" value="1"><label for="star1"></label>
+            </div>
+            <button class="rating-button" type="submit">Avaliar :)</button>
+        </form>
+        <p class="rating-p">Selecione a sua melhor estrela e clique para avaliar!</p>
+
+        <div class="rating-obs">
+            <label for="">Nota da acomodação: {{ home.avg_rating }}</label>
+            <br />
+            <label for="">Quantidade de avaliações: {{ home.no_of_ratings}}</label>
+        </div>
+    </div>
+
     <hr>
     <a class="btn btn-default" href="{% url 'add_comment_to_home' pk=home.pk %}">Adicionar comentário</a>
-    
+
     {% for comment in home.comments.all %}
     {% if user.is_authenticated or comment.approved_comment %}
     <div class="comment">

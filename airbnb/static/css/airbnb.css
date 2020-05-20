@@ -1,6 +1,7 @@
 @import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css);
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 
+
 * {
 	box-sizing: border-box;
 }
@@ -100,8 +101,8 @@ body {
 
 .card {
   text-align: center;
-  width: 300px;
-  margin: 19px; 
+  width: 220px;
+  margin: 25px; 
   box-shadow: 6px 6px 6px 6px rgba(0, 0, 0, .1);
 }
 
@@ -112,16 +113,16 @@ body {
 
 .card_text {
   white-space: pre-wrap; 
-  width: 300px; 
+  width: 220px; 
   height: 40px;
   text-align: justify;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-.card img {
-  width: 230px;
-  height: 150px;
+.card img { 
+  width: 220px;
+  height: 200px;
 }
 
 .price {
@@ -207,9 +208,10 @@ body {
   background-color: rgb(255, 56, 92) ;
   font-size: 16px;
   color: white;
-  padding: 10px;
-  margin: 20px;
-  border-radius: 10%;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  width: 53%;  
 }
 
 .btn-salvar {
@@ -302,4 +304,64 @@ h2 {
   font-size: 12px;
 }
 
+.rating {
+  position: absolute;
+  transform: translate(5%,5%) rotateY(180deg);
+  display: flex;
+}
 
+.rating input {
+  display: none;
+}
+
+.rating label {
+  cursor: pointer;
+  width: 50px;
+}
+
+.rating label:before {
+  content: '\f005';
+  font-family: fontAwesome;
+  position: relative;
+  display: block;
+  font-size: 25px;
+  color: #101010;
+}
+
+.rating label:after {
+  content: '\f005';
+  font-family: fontAwesome;
+  position: absolute;
+  display: block;
+  font-size: 25px;
+  color: #ffee00;
+  top: 0;
+  opacity: 0;
+  transition: .5s;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, .5);  
+}
+
+.rating label:hover:after,
+.rating label:hover ~ label:after,
+.rating input:checked ~ label:after{
+  opacity: 1;
+}
+
+.rating-button {
+  border-width: 1px;
+  font-size: 16px;
+  color: white;
+  background-color: rgb(255, 56, 92);
+  margin-left: 300px;
+  margin-top: 5px;
+}
+
+.rating-p {
+  margin-left: 30px;
+}
+
+.rating-obs {
+  margin-left: 60px;
+  text-align: center;
+  font-size: 16px;
+}
