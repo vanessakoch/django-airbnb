@@ -5,13 +5,13 @@
   <div class="card-deck">
     {% for home in homes %}
       <div class="card">
-        <img class="card-img-top" src="media/{{ home.image }}" alt="Imagem Acomodacao">
+        <a href="{% url 'home_detail' pk=home.pk %}"><img class="card-img-top" src="../media/{{ home.image }}" alt="Imagem Acomodacao"></a>
         <div class="card-body">
           <p class="card-title"><a href="{% url 'home_detail' pk=home.pk %}">{{ home.name }}</a></p>
           <p class="price">Diária: R$ {{ home.price }}</p>
           <p class="card_text">{{ home.description }}</p>
           <a class="card-comentario" href="{% url 'home_detail' pk=home.pk %}">Comentários: {{ home.approved_comments.count }}</a>          
-          <button>Reserve já!</button>
+          <a class="card-button" href="{% url 'home_detail' pk=home.pk %}">Reserve já!</a>
         </div>
         <br />
         <div class="card-footer">

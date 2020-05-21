@@ -4,6 +4,46 @@ from django.utils import timezone
 from django.contrib.auth.models import User
 from django.core.validators import MaxValueValidator, MinValueValidator
 
+class Address(models.Model):
+    estado = [
+           ('AC', 'Acre'),
+           ('AL', 'Alagoas'),
+           ('AP', 'Amapá'),
+           ('AM', 'Amazonas'),
+           ('BA', 'Bahia'),
+           ('CE', 'Ceará'),
+           ('DF', 'Distrito Federal'),
+           ('ES', 'Espírito Santo'),
+           ('GO', 'Goiás'),
+           ('MA', 'Maranhão'),
+           ('MT', 'Mato Grosso'),
+           ('MS', 'Mato Grosso do Sul'),
+           ('MG', 'Minas Gerais'),
+           ('PA', 'Pará'),
+           ('PB', 'Paraíba'),
+           ('PR', 'Paraná'),
+           ('PE', 'Pernambuco'),
+           ('PI', 'Piauí'),
+           ('RJ', 'Rio de Janeiro'),
+           ('RS', 'Rio Grande do Sul'),
+           ('RO', 'Rondônia'),
+           ('RR', 'Roraima'),
+           ('SC', 'Santa Catarina'),
+           ('SP', 'São Paulo'),
+           ('SE', 'Sergipe'),
+           ('TO', 'Tocantins'),
+           ]
+
+    country = models.CharField(max_length=100)
+    zipcode = models.IntegerField()
+    state = models.CharField(max_length=60, choices=estado)
+    city = models.CharField(max_length=60) 
+    street = models.CharField(max_length=100)
+    phone = models.IntegerField()
+
+    def __str__(self):
+        return f"{self.street} - {self.city} ({self.state}) - {self.country} CEP: {self.zipcode} - Contato: {self.phone} "
+
 class Home(models.Model):
     owner = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     image = models.ImageField(upload_to='media/', default="media/estadia.jpeg")
@@ -12,6 +52,7 @@ class Home(models.Model):
     price = models.FloatField(default=0)
     created_date = models.DateTimeField(default=timezone.now)
     published_date = models.DateTimeField(blank=True, null=True)
+    address = models.OneToOneField(Address, on_delete=models.SET_NULL, null=True)
 
     def publish(self):
         self.published_date = timezone.now()
@@ -35,7 +76,6 @@ class Home(models.Model):
             return total/len(ratings)
         else:
             return 0
-
 
 class Comment(models.Model):
     home = models.ForeignKey('airbnb.Home', on_delete=models.CASCADE, related_name='comments')

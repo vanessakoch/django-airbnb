@@ -1,25 +1,34 @@
 @import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css);
-@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;900&display=swap);
 
 
 * {
 	box-sizing: border-box;
 }
 
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 body {
 	font-size: 10px;
-	font-family: "Montserrat", sans-serif;
+	font-family: "Roboto", sans-serif;
 }
 
 .container {
   display: flex;
   align-items: stretch;
+  width: 100%;
 }
 
 .init-logo {
-  flex-grow: 5;
-  order: -1;
-  padding: 0;
+  margin-left: 50px;
+}
+
+.init-logo img {
+  width: 100%;
 }
 
 .init {
@@ -36,43 +45,76 @@ body {
   box-shadow: 0 1px 0 rgba(0, 0, 0, .1);
 }
 
-.init-menu {
-	z-index: 2;
-	display: flex;
-}
-
 .init-lista {
   flex-grow: 1;
   display: flex;
   list-style: none;
   margin-top: 15px;
-	padding: 0;
+  padding: 0;
+  float: right;
+}
+
+.top-menu {
+  margin-right: 255px;
+  margin-top: 20px;
+  font-size: 12px;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+     width: 65%;
+
+  }
+}
+.globe {
+  font-size: 15px;
+  margin-right: 40px;
+  color: #000000;
 }
 
 .item-lista {
-	margin: 0 16px;
+  margin-top: 2px;
 }
 
 .item-lista a {
-  color: #000;
-	font-size: 1.4em;
-	font-weight: bold;
+  color: rgb(15, 15, 15);
+  font-size: 14.5px;
+  font-weight: 500;
   text-decoration: none;
-  transition: all 0.2s ease-in-out;
+  line-height: 18px;
   cursor: pointer;
+  width: 100%;
+  margin-right: 27px;
+  font-family: inherit;
+}
+@media screen and (max-width: 640px) {
+  .item-lista a, .globe {
+    float: left;
+    font-size: 0.8em;
+    margin-left: -50%;
+  }
+
+  .top-menu {
+    float: left;
+    font-size: 0.8em;
+    margin-left: -70%;
+  }
+
+  .item-lista:first-child {
+    margin-right: 0;
+  }
 }
 
 .item-lista button {
   border: 1px solid rgb(235, 235, 235);
   cursor: pointer;
-  font-size: 14px;
-  font-weight: 600;
-  margin: -10px;
+  font-size: 14.5px;
+  padding: 10px;
+  margin-top: -12px;
   text-decoration: none;
   border-radius: 21px;
   box-shadow: rgba(0, 0, 0, 0.18) 0px 1px 2px ;
   text-decoration: none;
-  height: 42px;
   background-color: white;
 }
 
@@ -85,25 +127,41 @@ body {
 }
 
 .tablist {
-  margin-top: 110px;
-  margin-left: 20px;
+  margin-top: 120px;
+  margin-left: 80px;
 }
 
-.tablist span {
-  margin-right: 20px;
-  font-size: 14px;
-}
-
-.tablist span:hover {
+.a-underline {
   text-decoration: underline;
-  font-weight: bold;
+  font-size: 17px;
+  color: #000;
+  margin-right: 25px;
+}
+
+.a-underline:hover {
+  color: #a8a8a8;
+}
+
+.tablist-a {
+  font-size: 17px;
+  margin-right: 25px;
+  color: #000;
+}
+
+.tablist-a:hover {
+  text-decoration: none;
+  color: #a8a8a8;
 }
 
 .card {
   text-align: center;
   width: 220px;
-  margin: 25px; 
-  box-shadow: 6px 6px 6px 6px rgba(0, 0, 0, .1);
+  margin: 25px;
+  box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, .2);
+}
+
+.card:hover{
+  box-shadow: 6px 6px 6px 6px rgba(0, 0, 0, .3);
 }
 
 .card-deck {
@@ -118,11 +176,11 @@ body {
   text-align: justify;
   overflow: hidden;
   text-overflow: ellipsis;
+  margin: 0 15px;
 }
 
 .card img { 
-  width: 220px;
-  height: 200px;
+  max-width: 100%;
 }
 
 .price {
@@ -142,10 +200,10 @@ body {
 
 .card-title a:hover {
   text-decoration: none;
-  color: red;
+  color: #fc9292;
 }
 
-.card button {
+.card-button {
   border: none;
   outline: 0;
   padding: 12px;
@@ -156,10 +214,14 @@ body {
   cursor: pointer;
   width: 100%;
   font-size: 14px;
+  display: block;
 }
 
-.card button:hover {
-  opacity: 0.7;
+.card-button:hover {
+  opacity: 0.8;
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
 }
 
 .detail-container {
@@ -167,8 +229,7 @@ body {
 }
 
 .detail-container img {
-  width: 20%;
-  height: 40%;
+  max-width: 100%;
   border-radius: 5%;
 }
 
@@ -186,7 +247,6 @@ body {
 
 .container-form input, textarea {
   display: block;
-  box-shadow: 1px 1px 1px 1px;
   width: 400px;
   text-align: center;
 }
@@ -201,14 +261,38 @@ body {
 }
 
 .btn-publicar {
+  border: 1px solid rgb(235, 235, 235);
+  cursor: pointer;
+  font-size: 14px;
+  color: rgb(131, 130, 130);
+  background-color: rgb(223, 220, 221) ;
+  text-decoration: none;
+  border-radius: 21px;
+  box-shadow: rgba(0, 0, 0, 0.18) 0px 1px 2px ;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+}
+
+.card-footer {
+  margin: -10px 0;
+}
+
+.btn-publicar:hover {
+  background-color: rgb(255, 109, 109);
+  text-decoration: none;
+  color: #fff;
+}
+
+.btn-logar {
   background-color: rgb(255, 56, 92) ;
   font-size: 16px;
   color: white;
   padding: 5px;
-  margin-left: 110px;
   display: flex;
   justify-content: center;
-  width: 53%;  
+  width: 53%;
+  margin-left: 108px;
 }
 
 .btn-salvar {
@@ -224,13 +308,6 @@ body {
   cursor: pointer;
   background-color: rgb(223, 120, 137);
   color: black;
-}
-
-.btn-publicar:hover {
-  background-color: crimson;
-  color: white;
-  cursor: pointer;
-  text-decoration: none;
 }
 
 .btn-remover {
@@ -252,6 +329,7 @@ body {
 
 h2 {
   font-weight: bold;
+  font-size: 20px;
 }
 
 .btn-editar {
@@ -362,12 +440,6 @@ h2 {
   margin: 10px;
 }
 
-.rating-obs {
-  margin-left: 60px;
-  text-align: center;
-  font-size: 16px;
-}
-
 .btn-secondary {
   font-size: 14px;
   margin-left: 300px;
@@ -375,8 +447,15 @@ h2 {
 
 .container-aside {
   position: fixed;
-  top: 350;
-  right: 200;
+  top: 300;
+  right: 60;
+  padding: 30px;
+  text-align: center;
+  font-size: 14px;
+  width: 350px;
+  color: white;
+  background-color: rgb(255, 56, 92);
+  border-radius: 20px;
 }
 
 .container-comments {
@@ -404,7 +483,6 @@ h2 {
 }
 
 .form-comments input, textarea {
-  box-shadow: 1px 1px 1px 1px;
   color: #000;
   width: 400px;
   font-size: 12px;
@@ -422,7 +500,7 @@ h2 {
 }
 
 .detail-btncomentar {
-  font-size: 16px;
+  font-size: 14px;
   color: rgb(83, 83, 83);
   background-color: rgb(187, 185, 185);
   padding: 5px;
@@ -434,7 +512,7 @@ h2 {
 
 .detail-btncomentar:hover {
   color: white;
-  background-color: rgb(255, 56, 92);
+  background-color: rgb(255, 109, 109);
   text-decoration: none;
 }
 
@@ -449,3 +527,4 @@ h2 {
   font-size: 14px;
   text-align: center;
 }
+

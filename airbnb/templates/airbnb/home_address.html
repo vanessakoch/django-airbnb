@@ -3,9 +3,9 @@
 {% block content %}
 
   <div class="container-form">    
-    <form class="form-add" method="post" enctype="multipart/form-data">
+    <form class="form-add" method="post" >
       {% csrf_token %}      
-      <p class="edit-p">Nova Acomodação</p>
+      <p class="edit-p">Informe o endereço</p>
       {{ form.as_p }}
       <button class="btn-salvar" type="submit">Salvar</button>
     </form>

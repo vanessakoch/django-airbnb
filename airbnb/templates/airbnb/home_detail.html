@@ -16,7 +16,7 @@
         {% else %}
             
             {% if user.is_authenticated %}
-                <a class="btn-publicar" href="{% url 'home_publish' pk=home.pk %}">Publicar Acomodação</a>
+                <a class="btn-publicar" href="{% url 'home_publish' pk=home.pk %}">Publicar acomodação</a>
             {% endif %}
         
         {% endif %}
@@ -27,7 +27,6 @@
         <img src="../../../media/{{ home.image }}" class="detail-img" alt="Imagem Acomodacao">
 
     </div>
-
     <div>
         <form action="{% url 'rating' pk=home.pk %}" method="post">
             {% csrf_token %}
@@ -55,15 +54,19 @@
         </form>
 
         <aside class="container-aside">
-            <div class="rating-obs">
+            <div>
                 <label for="">Nota da acomodação: {{ home.avg_rating }}</label>
                 <br />
                 <label for="">Quantidade de avaliações: {{ home.no_of_ratings}}</label>
+                <br />
+                <br />
+                <label for="">Localização do estabelecimento:</label>
+                <br />
+                <label for="">{{ home.address }}</label>
             </div>
         </aside>
     </div>
 
-    <hr>
     <div class="container-comments">
         <div class="detail-comments">
             <a class="detail-btncomentar" href="{% url 'add_comment_to_home' pk=home.pk %}">Adicionar comentário</a>
