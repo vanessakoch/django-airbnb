@@ -27,7 +27,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1', '.pythonanywhere.com']
 
-LOGIN_REDIRECT_URL = '/'
+LOGIN_REDIRECT_URL = 'init_page'
+LOGOUT_REDIRECT_URL = 'init_page'
 
 # Application definition
 
@@ -38,8 +39,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'airbnb',
+    'airbnb.apps.AirbnbConfig',
+    'users.apps.UsersConfig',
 ]
+
+AUTH_USER_MODEL = 'users.CustomUser'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

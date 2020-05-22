@@ -19,9 +19,6 @@
           <a class="init-logo" href="{% url 'init_page' %}">
             <img src="{% static 'img/logo.png' %}" alt="Logo AirBnb">
           </a>
-          {% if user.is_authenticated %}
-            <p class="top-menu">Olá {{ user.username }} <small>(<a href="{% url 'logout' %}">Log out</a>)</small></p>
-          {% endif %} 
           <ul class="init-lista">
             <li class="globe">
               <span class="glyphicon glyphicon-globe"></span></a>            
@@ -44,9 +41,12 @@
           </ul>
         </div>
       </nav>
-    </header>
+    </header>    
 
     <div class="tablist">
+      {% if user.is_authenticated %}
+        <p class="top-menu">Olá {{ user.username }} <small>(<a href="{% url 'logout' %}">Sair</a>)</small></p>
+      {% endif %} 
       <a class="a-underline" href="{% url 'init_page' %}">Lugares para ficar</a>
       <a class="tablist-a" href="{% url 'home_list' %}">Estadias</a>
       <a class="tablist-a">Experiências</a>

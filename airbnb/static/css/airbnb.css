@@ -55,20 +55,23 @@ body {
 }
 
 .top-menu {
-  margin-right: 255px;
-  margin-top: 20px;
-  font-size: 12px;
+  font-size: 10px;
 }
 
 @media screen and (max-width: 768px) {
   .container {
      width: 65%;
+  }
 
+  .init-logo {
+    float: left;
+    width: 10%;
   }
 }
 .globe {
   font-size: 15px;
   margin-right: 40px;
+  margin-left: 355px ;
   color: #000000;
 }
 
@@ -87,23 +90,6 @@ body {
   margin-right: 27px;
   font-family: inherit;
 }
-@media screen and (max-width: 640px) {
-  .item-lista a, .globe {
-    float: left;
-    font-size: 0.8em;
-    margin-left: -50%;
-  }
-
-  .top-menu {
-    float: left;
-    font-size: 0.8em;
-    margin-left: -70%;
-  }
-
-  .item-lista:first-child {
-    margin-right: 0;
-  }
-}
 
 .item-lista button {
   border: 1px solid rgb(235, 235, 235);
@@ -120,6 +106,37 @@ body {
 
 .item-lista button:hover {
   color: #a8a8a8;
+}
+
+@media screen and (max-width: 640px) {
+  .item-lista a, .item-lista button {
+    float: left;
+    font-size: 0.8em;
+    margin-left: -30%;
+    margin-right: -0%;
+    padding: 5px;
+  }
+
+  .item-lista button {
+    margin-top: 2px;
+  }
+
+  .globe {
+    font-size: 0.8em;
+    margin-left: -80px;
+    margin-top: 10px;
+
+  }
+
+  .top-menu {
+    float: left;
+    font-size: 0.8em;
+    margin-left: -70%;
+  }
+
+  .item-lista:first-child {
+    margin-right: 0;
+  }
 }
 
 .item-lista a:hover {
@@ -155,8 +172,8 @@ body {
 
 .card {
   text-align: center;
-  width: 220px;
-  margin: 25px;
+  width: 250px;
+  margin: 30px;
   box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, .2);
 }
 
@@ -167,6 +184,7 @@ body {
 .card-deck {
   display: flex; 
   flex-wrap: wrap;
+  margin: 0 50px;
 }
 
 .card_text {
@@ -242,10 +260,11 @@ body {
 }
 
 .form-add {
+  margin-top: 2%;
   width: 400px;
 }
 
-.container-form input, textarea {
+.container-form input, textarea, select {
   display: block;
   width: 400px;
   text-align: center;
@@ -253,6 +272,41 @@ body {
 
 .container-form p {
   text-align: center;
+}
+
+
+.container-login {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  margin-top: 50px;
+  justify-content: center;
+  border-color: crimson;
+}
+
+.container-login label {
+  margin: 20px;
+  text-align: center;
+}
+
+@media screen and (max-width: 640px) {
+  .container-form input, select, p, label {
+    width: 150px;
+  }
+
+  .container-form textarea {
+    width: 100%;
+  }
+
+  .form-add {
+    width: 50%;
+  }
+
+  .container-login input, label {
+    width: 40%;
+    margin-left: 20%;
+  }
+
 }
 
 .edit-p {
@@ -357,20 +411,6 @@ h2 {
 
 .detail-img {
   margin: 5px;
-}
-
-.container-login {
-  width: 100%;
-  text-align: center;
-  display: flex;
-  margin-top: 50px;
-  justify-content: center;
-  border-color: crimson;
-}
-
-.container-login label {
-  margin: 20px;
-  text-align: center;
 }
 
 .card-comentario {
@@ -497,6 +537,28 @@ h2 {
 
 .form-comments h2 {
   text-align: center;
+}
+
+
+@media screen and (max-width: 640px) {
+  .container-aside {
+    visibility: hidden;
+  }
+
+  .container-comments {
+    width: 100%;
+  }
+
+  .form-comments input, textarea, label {
+    width: 100%;
+    margin: 0 50%;
+    align-items: center;
+  }
+
+  .form-comments button, h2{
+    width: 25%;
+    margin: 5% 30%;
+  }
 }
 
 .detail-btncomentar {

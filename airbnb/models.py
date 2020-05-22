@@ -1,7 +1,6 @@
 from django.conf import settings
 from django.db import models
 from django.utils import timezone
-from django.contrib.auth.models import User
 from django.core.validators import MaxValueValidator, MinValueValidator
 
 class Address(models.Model):
@@ -93,7 +92,7 @@ class Comment(models.Model):
    
 class Rating(models.Model):
     home = models.ForeignKey(Home, on_delete=models.CASCADE)
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     stars = models.IntegerField(default=0)
 
     def __str__(self):
