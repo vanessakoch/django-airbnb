@@ -1,6 +1,6 @@
 from django import forms
 from django.forms.widgets import ClearableFileInput
-from .models import Home, Address, Comment, Rating
+from .models import Home, Address, Reserve, Comment, Rating, Search
 
 class HomeForm(forms.ModelForm):
 
@@ -14,13 +14,31 @@ class AddressForm(forms.ModelForm):
     model = Address
     fields = ('country','zipcode', 'state', 'city', 'street', 'phone')   
 
+class RatingForm(forms.ModelForm):
+    
+  class Meta:
+    model = Rating
+    fields = ('home', 'user', 'stars')
+
+class ReserveForm(forms.ModelForm):
+
+  class Meta:
+    model = Reserve
+    fields = ('initial_date', 'final_date', 'number_peoples')
+
+    initial_date = forms.DateField(
+        widget=forms.DateInput(format='%m/%d/%Y'),
+        input_formats=('%m/%d/%Y', )
+        )
+
 class CommentForm(forms.ModelForm):
 
   class Meta:
-      model = Comment
-      fields = ('author', 'text')
+    model = Comment
+    fields = ('author', 'text')
 
-class RatingForm(forms.ModelForm):
-    class Meta:
-        model = Rating
-        fields = ('home', 'user', 'stars')
+class SearchForm(forms.ModelForm):
+
+  class Meta:
+    model = Search
+    fields = ('local', 'number_of_days', 'number_of_peoples')

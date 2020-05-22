@@ -2,7 +2,7 @@
 
 {% block content %}
     {% if form.errors %}
-        <p>Your username and password didn't match. Please try again.</p>
+        <p class="login-error">Your username and password didn't match. Please try again.</p>
     {% endif %}
     <div class="container-login">
         <form method="post" action="{% url 'login' %}">

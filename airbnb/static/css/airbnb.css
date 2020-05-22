@@ -242,15 +242,6 @@ body {
   font-size: 16px;
 }
 
-.detail-container {
-  margin: 20px;
-}
-
-.detail-container img {
-  max-width: 100%;
-  border-radius: 5%;
-}
-
 .container-form {
   align-items: center;
   display: flex;
@@ -273,7 +264,6 @@ body {
 .container-form p {
   text-align: center;
 }
-
 
 .container-login {
   width: 100%;
@@ -422,7 +412,7 @@ h2 {
   position: absolute;
   transform: translate(5%,5%) rotateY(180deg);
   display: flex;
-  margin-left: 10px;
+  margin-left: 70px;
 }
 
 .rating input {
@@ -466,37 +456,72 @@ h2 {
   font-size: 18px;
   color: white;
   background-color: rgb(255, 56, 92);
-  margin-left: 300px;
+  margin-left: 370px;
   margin-top: 5px;
 }
 
 .rating-p {
-  margin: 10 30px;
+  margin: 10px 100px;
   font-size: 14px;
 }
 
 .rating-p2 {
   font-size: 14px;
-  margin: 10px;
+  margin: 10px 75px;
 }
 
 .btn-secondary {
   font-size: 14px;
-  margin-left: 300px;
+  margin-left: 370px;
 }
 
 .container-aside {
   position: fixed;
-  top: 300;
+  top: 190;
   right: 60;
-  padding: 30px;
+  display: block;
+  padding: 20px;
   text-align: center;
-  font-size: 14px;
+  font-size: 16px;
   width: 350px;
   color: white;
   background-color: rgb(255, 56, 92);
   border-radius: 20px;
 }
+
+.reserved_done {
+  font-size: 16px;
+  margin-top: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.container-aside p, label {
+  font-weight: normal;
+}
+
+.aside-bold {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.container-aside a{
+  background-color: #fff;
+  color: rgb(255, 56 , 92);
+  padding: 6px;
+  box-shadow: 1px 1px 1px 1px rgb(255, 109, 109);
+  border-radius: 10px;
+  margin: 10%;
+  display: block;
+  font-weight: bold;
+}
+
+.container-aside a:hover {
+  padding: 5px;
+  text-decoration: none;
+  box-shadow: 4px 4px 4px 4px #e0dfdf;
+}
+
 
 .container-comments {
   align-items: center;
@@ -538,7 +563,6 @@ h2 {
 .form-comments h2 {
   text-align: center;
 }
-
 
 @media screen and (max-width: 640px) {
   .container-aside {
@@ -590,3 +614,154 @@ h2 {
   text-align: center;
 }
 
+.login-error {
+  margin: 50px 80px; 
+  color: red;
+  font-size: 15px;
+}
+
+.container-description {
+  margin: 20px 80px;
+  text-align: justify;
+  width: 800px;
+
+}
+
+.container-list {
+  background-color: #fff;
+  border: 1px solid #F7F7F7 ;
+  border-radius: 12px;
+  box-shadow: 1px 4px 8px #e0dfdf ;
+  color: #222222;
+  display: flex;
+  position: relative;
+  width: 100%;
+  justify-content: center;
+  margin: 30px 75px;
+}
+
+.container-reservation {
+  flex: 1 0 3%;
+  display: flex;
+  box-sizing: border-box;
+  color: #222222;
+  font-size: 14px;  
+  line-height: 1.43;
+}
+
+.reservation {
+  flex: 1 0 0%;
+}
+
+.reservation-box {
+  margin: -1px;
+  position: relative;
+}
+
+.box-lbl {
+  transition: border-color 0.2s;
+  border: 2px solid transparent;
+  border-radius: 12px;
+  display: block;
+  padding: 16px 12px;
+  cursor: pointer;
+  position: relative;
+  line-height: normal;
+  z-index: 2;
+}
+
+.box {
+  font-size: 10px;
+  line-height: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  padding-bottom: 4px;
+}
+
+.box-input {
+  display: block;
+  border: 0px;
+  margin: 0px;
+  width: 100%;
+  font-weight: 400;
+  background-color: rgba(0, 0, 0, 0);
+  font-size: 14px;
+  line-height: 18px;
+  color: rgb(34, 34, 34);
+}
+
+.box-between {
+  align-self: center;
+  border-right: 1px solid rgb(221, 221, 221);
+  flex: 0 1 0px;
+  height: 44px;
+}
+
+.box-check {
+  flex: 1 0 0%;
+}
+
+.box-inout {
+  margin: -1px;
+  position: relative;
+}
+
+.box-btn {
+  background: transparent;
+  border: 2px solid transparent;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  overflow: hidden;
+  padding: 16px 22px;
+  text-align: left;
+  text-decoration: none;
+  transition: border-color 0.2s;
+  margin: 0px;
+  width: 100%;
+  border-radius: 12px;
+  position: relative;
+  z-index: 1
+}
+
+.box-date {
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+  color: rgb(34, 34, 34);
+  opacity: 0.7;
+  display: flex;
+}
+
+.box-write {
+  font-size: 10px;
+  line-height: 12px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding-bottom: 4px
+}
+
+.box-search {
+  margin-left: 2px;
+  padding: 11px;
+}
+
+.box-search button {
+  cursor: pointer;
+  display: inline-block;
+  margin: 0px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  width: auto;
+  font-size: 14px;
+  background-color: rgb(255, 56, 92);
+  line-height: 18px;
+  color:white;
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 14px 24px;
+  transition: box-shadow;
+  border: medium;
+}

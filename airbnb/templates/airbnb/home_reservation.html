@@ -1,0 +1,14 @@
+{% extends 'airbnb/index.html' %}
+
+  {% block content %}
+
+    <div class="container-form">    
+      <form class="form-add" method="post">
+        {% csrf_token %}    
+        <p class="edit-p">Nova reserva</p>
+        {{ form.as_p }}
+        <button class="btn-salvar" type="submit">Salvar</button>
+      </form>
+    </div>
+
+  {% endblock %}

@@ -2,6 +2,7 @@ from django.conf import settings
 from django.db import models
 from django.utils import timezone
 from django.core.validators import MaxValueValidator, MinValueValidator
+from datetime import datetime
 
 class Address(models.Model):
     estado = [
@@ -48,7 +49,7 @@ class Home(models.Model):
     image = models.ImageField(upload_to='media/', default="media/estadia.jpeg")
     name = models.CharField(max_length=200)
     description = models.TextField()
-    price = models.FloatField(default=0)
+    price = models.DecimalField(max_digits=30, decimal_places=2)
     created_date = models.DateTimeField(default=timezone.now)
     published_date = models.DateTimeField(blank=True, null=True)
     address = models.OneToOneField(Address, on_delete=models.SET_NULL, null=True)
@@ -76,6 +77,25 @@ class Home(models.Model):
         else:
             return 0
 
+class Rating(models.Model):
+    home = models.ForeignKey(Home, on_delete=models.CASCADE)
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    stars = models.IntegerField(default=0)
+
+    def __str__(self):
+        return f"{self.home.name} - {self.user}"
+
+class Reserve(models.Model):
+    home = models.ForeignKey(Home, on_delete=models.CASCADE)
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    initial_date = models.DateField()
+    final_date = models.DateField()
+    number_peoples = models.IntegerField()
+    total_value = models.DecimalField(max_digits=30, decimal_places=2)
+
+    def __str__(self):
+        return str(self.total_value)
+
 class Comment(models.Model):
     home = models.ForeignKey('airbnb.Home', on_delete=models.CASCADE, related_name='comments')
     author = models.CharField(max_length=200)
@@ -90,10 +110,11 @@ class Comment(models.Model):
     def __str__(self):
         return self.text
    
-class Rating(models.Model):
-    home = models.ForeignKey(Home, on_delete=models.CASCADE)
+class Search(models.Model):
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
-    stars = models.IntegerField(default=0)
+    local = models.CharField(max_length=20)
+    number_of_days = models.IntegerField()
+    number_of_peoples = models.IntegerField()
 
     def __str__(self):
-        return f"{self.home.name} - {self.user}"
+        return self.local

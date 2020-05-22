@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.utils import timezone
-from .models import Home, Address, Comment, Rating
-from .forms import HomeForm, AddressForm, CommentForm, RatingForm
+from .models import Home, Address, Reserve, Comment, Rating, Search
+from .forms import HomeForm, AddressForm, ReserveForm, CommentForm, RatingForm, SearchForm
 from django.contrib.auth.decorators import login_required
 
 def init_page(request):
@@ -14,6 +14,7 @@ def home_list(request):
 def home_detail(request, pk):
     home = get_object_or_404(Home, pk=pk)
     rated = False
+    reservation = False
     
     if request.user.is_authenticated:    
         rate_count = Rating.objects.filter(
@@ -23,11 +24,30 @@ def home_detail(request, pk):
 
         if rate_count > 0:
             rated = True
+        
+        user_reserve = Reserve.objects.filter(
+            home=pk,
+            user=request.user
+        )
+
+        reserve = get_object_or_404(user_reserve)
+
+        reserve_count = Reserve.objects.filter(
+            home=pk,
+            user=request.user
+        ).count()
+
+        if reserve_count > 0:
+            reservation = True
 
     return render(
         request, 
         'airbnb/home_detail.html', 
-        {'home': home, 'rated': rated,}
+        {'home': home, 
+        'rated': rated, 
+        'reserve': reserve, 
+        'reservation': reservation
+        }
     )
 
 @login_required
@@ -62,6 +82,7 @@ def home_address(request, pk):
 @login_required
 def home_edit(request, pk):
     home = get_object_or_404(Home, pk=pk)
+
     if request.method == "POST":
         form = HomeForm(request.POST, request.FILES, instance=home)
         if form.is_valid():
@@ -72,6 +93,61 @@ def home_edit(request, pk):
     else:
         form = HomeForm(instance=home)
     return render(request, 'airbnb/home_edit.html', {'form': form})
+
+def home_reservation(request, pk):
+    home = get_object_or_404(Home, pk=pk)
+    total_value = 0
+    daily_cost = home.price
+
+    if request.method == "POST":
+        form = ReserveForm(request.POST)
+        if form.is_valid():
+            reserve = form.save(commit=False)
+
+            is_reserved = Reserve.objects.filter(
+                home=pk,
+                user=request.user
+            ).count()
+
+            if is_reserved > 0:
+                return redirect('home_detail', pk=home.pk)
+            else:
+                reserve.user = request.user
+                reserve.home = home
+                
+                total_days = abs((reserve.final_date - reserve.initial_date).days)
+            
+                reserve.total_value = (daily_cost * total_days) * reserve.number_peoples
+                reserve.save() 
+                return redirect('home_detail', pk=home.pk)
+    else:
+        form = ReserveForm()
+    return render(request, 'airbnb/home_reservation.html', {'form': form})
+
+@login_required
+def rating(request, pk):
+    home = get_object_or_404(Home, pk=pk)
+    rated = False
+
+    if request.user.is_authenticated:    
+        rate_count = Rating.objects.filter(
+            home=pk,
+            user=request.user
+        ).count()
+
+    if rate_count > 1:
+        rated = True
+
+    if rated:
+        return redirect('home_detail', pk=home.pk)
+    else:
+        if request.POST.get('star') is None:
+            return redirect('home_detail', pk=home.pk)
+        else:
+            rating = Rating.objects.create(user=request.user, home=home)
+            rating.stars = request.POST.get('star')
+            rating.save()
+            return redirect('home_detail', pk=home.pk)
 
 @login_required
 def home_publish(request, pk):
@@ -113,31 +189,4 @@ def comment_remove(request, pk):
     comment = get_object_or_404(Comment, pk=pk)
     comment.delete()
     return redirect('home_detail', pk=comment.home.pk)
-
-@login_required
-def rating(request, pk):
-    home = get_object_or_404(Home, pk=pk)
-    rated = False
-
-    if request.user.is_authenticated:    
-        rate_count = Rating.objects.filter(
-            home=pk,
-            user=request.user
-        ).count()
-
-    if rate_count > 1:
-        rated = True
-
-    if rated:
-        return redirect('home_detail', pk=home.pk)
-    else:
-        if request.POST.get('star') is None:
-            return redirect('home_detail', pk=home.pk)
-        else:
-            rating = Rating.objects.create(user=request.user, home=home)
-            rating.stars = request.POST.get('star')
-            rating.save()
-            return redirect('home_detail', pk=home.pk)
-
-    
 

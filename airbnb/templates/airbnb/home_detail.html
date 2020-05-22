@@ -2,7 +2,7 @@
 
 {% block content %}
 
-    <div class="detail-container">
+    <div class="container-description">
 
         {% if user.is_authenticated %}
             <a class="btn-remover" href="{% url 'home_remove' pk=home.pk %}"><span class="glyphicon glyphicon-remove"></span></a>
@@ -21,12 +21,17 @@
         
         {% endif %}
 
-        <h2>{{ home.name }}</h2>
-        <br/>
-        <p class="text-detail">{{ home.description }}</p>
-        <img src="../../../media/{{ home.image }}" class="detail-img" alt="Imagem Acomodacao">
+        {% if reservation %}
+            <p class="reserved_done">Parabéns! Você reservou este estabelecimento do dia 
+                {{ reserve.initial_date }} até o dia {{ reserve.final_date }} pelo valor de R$ 
+                {{ reserve.total_value }}!</p>
+        {% endif %}
 
+        <h2>{{ home.name }}</h2>
+        <p>{{ home.description }}</p>
+        <img src="../../../media/{{ home.image }}" class="detail-img" alt="Imagem Acomodacao">
     </div>
+    
     <div>
         <form action="{% url 'rating' pk=home.pk %}" method="post">
             {% csrf_token %}
@@ -52,20 +57,22 @@
                 <p class="rating-p2">Selecione a sua melhor estrela e clique para avaliar! :)</p>    
             {% endif %}
         </form>
-
-        <aside class="container-aside">
-            <div>
-                <label for="">Nota da acomodação: {{ home.avg_rating }}</label>
-                <br />
-                <label for="">Quantidade de avaliações: {{ home.no_of_ratings}}</label>
-                <br />
-                <br />
-                <label for="">Localização do estabelecimento:</label>
-                <br />
-                <label for="">{{ home.address }}</label>
-            </div>
-        </aside>
     </div>
+
+    <aside class="container-aside">
+        <div>
+            <label class="aside-bold">Apenas R$ {{ home.price }} por dia!</label>
+            {% if reservation %}
+                <a><span>JÁ ESTA RESERVADO :)</span></a>
+            {% else %}
+                <a href="{% url 'home_reservation' pk=home.pk %}"><span>RESERVAR</span></a>
+            {% endif %}
+            <label class="aside-bold" for="">Nota da acomodação: {{ home.avg_rating }}</label>
+            <label class="aside-bold" for="">Quantidade de avaliações: {{ home.no_of_ratings}}</label>
+            <label>Localização:</label>
+            <label for="">{{ home.address }}</label>
+        </div>
+    </aside>
 
     <div class="container-comments">
         <div class="detail-comments">
