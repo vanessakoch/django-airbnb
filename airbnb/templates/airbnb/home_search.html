@@ -1,0 +1,35 @@
+{% extends 'airbnb/index.html' %}
+
+{% block content %}
+
+  {% if home_searched %}
+    <p class="title-search">Mostrando hospedagens disponíveis em {{ search.local }} para 
+      {{ search.number_of_peoples }} pessoas por durante 
+      {{ search.number_of_days }} dias de estadia :)
+    </p>
+
+    <div class="card-deck">
+      {% for home in homes %}
+        <div class="card">
+          <a href="{% url 'home_detail' pk=home.pk %}"><img class="card-img-top" src="/media/{{ home.image }}" alt="Imagem Acomodacao"></a>
+          <div class="card-body">
+            <p class="card-title"><a href="{% url 'home_detail' pk=home.pk %}">{{ home.name }}</a></p>
+            <p class="price">Diária: R$ {{ home.price }}</p>
+            <p class="card_text">{{ home.description }}</p>
+            <a class="card-comentario" href="{% url 'home_detail' pk=home.pk %}">Comentários: {{ home.approved_comments.count }}</a>          
+            <a class="card-button" href="{% url 'home_reservation' pk=home.pk %}">Reserve já!</a>
+          </div>
+          <br />
+          <div class="card-footer">
+            <small class="text-muted">Publicado em: {{ home.published_date }}</small>
+          </div>
+          <br />
+        </div>
+      {% endfor %}
+    </div>
+    
+  {% else %}
+    <p class="title-search"> Desculpe, mas não temos hospedagens disponíveis em {{ search.local }} :(</p>
+  {% endif %}
+
+{% endblock content %}

@@ -96,6 +96,16 @@ class Reserve(models.Model):
     def __str__(self):
         return str(self.total_value)
 
+class Search(models.Model):
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    local = models.CharField(max_length=20)
+    number_of_days = models.IntegerField()
+    number_of_peoples = models.IntegerField()
+    created_date = models.DateTimeField(default=timezone.now)
+
+    def __str__(self):
+        return f"{self.local} - {self.number_of_days} - {self.number_of_peoples}"
+
 class Comment(models.Model):
     home = models.ForeignKey('airbnb.Home', on_delete=models.CASCADE, related_name='comments')
     author = models.CharField(max_length=200)
@@ -110,11 +120,3 @@ class Comment(models.Model):
     def __str__(self):
         return self.text
    
-class Search(models.Model):
-    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
-    local = models.CharField(max_length=20)
-    number_of_days = models.IntegerField()
-    number_of_peoples = models.IntegerField()
-
-    def __str__(self):
-        return self.local

@@ -15,6 +15,8 @@ def home_detail(request, pk):
     home = get_object_or_404(Home, pk=pk)
     rated = False
     reservation = False
+    reserve_count = 0
+    reserve = None
     
     if request.user.is_authenticated:    
         rate_count = Rating.objects.filter(
@@ -30,8 +32,6 @@ def home_detail(request, pk):
             user=request.user
         )
 
-        reserve = get_object_or_404(user_reserve)
-
         reserve_count = Reserve.objects.filter(
             home=pk,
             user=request.user
@@ -39,6 +39,9 @@ def home_detail(request, pk):
 
         if reserve_count > 0:
             reservation = True
+
+        if reservation == True:
+            reserve = get_object_or_404(user_reserve)
 
     return render(
         request, 
@@ -148,6 +151,34 @@ def rating(request, pk):
             rating.stars = request.POST.get('star')
             rating.save()
             return redirect('home_detail', pk=home.pk)
+
+def search_list(request):
+    home_searched = False
+
+    if request.method == "POST":
+        form = SearchForm(request.POST)
+        if form.is_valid():
+            search = form.save(commit=False)
+            search.user = request.user
+            search.save()
+            
+            homes = Home.objects.filter(address__city = search.local)
+
+            homes_count = Home.objects.filter(address__city = search.local).count()
+
+            if homes_count > 0:
+                home_searched = True
+
+            return render(
+                request, 
+                'airbnb/home_search.html', 
+                {'homes': homes, 
+                'search': search,
+                'home_searched': home_searched}
+            )
+    else:
+        form = SearchForm()
+    return render(request, 'airbnb/init_page.html', {'form': form})
 
 @login_required
 def home_publish(request, pk):

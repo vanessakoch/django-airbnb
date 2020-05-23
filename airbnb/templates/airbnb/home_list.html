@@ -11,7 +11,11 @@
           <p class="price">Diária: R$ {{ home.price }}</p>
           <p class="card_text">{{ home.description }}</p>
           <a class="card-comentario" href="{% url 'home_detail' pk=home.pk %}">Comentários: {{ home.approved_comments.count }}</a>          
-          <a class="card-button" href="{% url 'home_reservation' pk=home.pk %}">Reserve já!</a>
+          {% if user.is_authenticated %}
+            <a class="card-button" href="{% url 'home_reservation' pk=home.pk %}">Reserve já!</a>
+          {% else %}
+            <a class="card-button" href="{% url 'login' %}">Reserve já!</a>
+          {% endif %}
         </div>
         <br />
         <div class="card-footer">

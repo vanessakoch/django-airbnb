@@ -26,17 +26,12 @@ class ReserveForm(forms.ModelForm):
     model = Reserve
     fields = ('initial_date', 'final_date', 'number_peoples')
 
-    initial_date = forms.DateField(
-        widget=forms.DateInput(format='%m/%d/%Y'),
-        input_formats=('%m/%d/%Y', )
-        )
-
 class CommentForm(forms.ModelForm):
 
   class Meta:
     model = Comment
     fields = ('author', 'text')
-
+    
 class SearchForm(forms.ModelForm):
 
   class Meta:

@@ -242,23 +242,54 @@ body {
   font-size: 16px;
 }
 
+.title-search {
+  text-align: center;
+  font-size: 16px;
+  margin: 25px;
+  font-weight: bold;
+
+}
+
 .container-form {
   align-items: center;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+  margin-top: 10px;
 }
 
 .form-add {
-  margin-top: 2%;
-  width: 400px;
+  width: 450px;
+  margin: 0 10px;
+  padding: 20px;
+  transition: border-color 0.2s;
+  border: 2px solid transparent;
+  box-shadow: 2px 2px 2px 2px rgb(163, 162, 162);
+  border-radius: 12px;
 }
 
-.container-form input, textarea, select {
+.container-form input, select {
+  display: block;
+  padding: 10px;
+  width: 400px;
+  text-align: center;
+}
+
+.container-form select {
+  height: 40px;
+  font-size: 14px;
+  background-color: rgb(245, 47, 87);
+  color: white;
+}
+
+.container-form textarea {
   display: block;
   width: 400px;
   text-align: center;
+  height: 100px;
+  padding: 10px;
+
 }
 
 .container-form p {
@@ -301,7 +332,8 @@ body {
 
 .edit-p {
   font-size: 18px;
-  font-weight: bold;
+  color: rgb(255, 255, 255);
+  background-color: rgb(0, 0, 0);
 }
 
 .btn-publicar {
@@ -350,8 +382,8 @@ body {
 
 .btn-salvar:hover {
   cursor: pointer;
-  background-color: rgb(223, 120, 137);
-  color: black;
+  background-color: rgb(248, 86, 116);
+  color: rgb(250, 248, 248);
 }
 
 .btn-remover {
@@ -522,7 +554,6 @@ h2 {
   box-shadow: 4px 4px 4px 4px #e0dfdf;
 }
 
-
 .container-comments {
   align-items: center;
   display: flex;
@@ -634,10 +665,9 @@ h2 {
   box-shadow: 1px 4px 8px #e0dfdf ;
   color: #222222;
   display: flex;
-  position: relative;
   width: 100%;
   justify-content: center;
-  margin: 30px 75px;
+  margin: 50px 75px;
 }
 
 .container-reservation {
@@ -649,13 +679,27 @@ h2 {
   line-height: 1.43;
 }
 
+.section {
+  margin: auto;
+  max-width: 1760px;
+  padding-right: 80px;
+  padding-left: 80px;
+}
+
+.section-container {
+  font-size: 3.5vw;
+  letter-spacing: -0.02em;
+  line-height: 4.2vw;
+  max-width: 60%;
+  margin: 0px 0px 16px;
+}
+
 .reservation {
   flex: 1 0 0%;
 }
 
 .reservation-box {
   margin: -1px;
-  position: relative;
 }
 
 .box-lbl {
@@ -665,9 +709,12 @@ h2 {
   display: block;
   padding: 16px 12px;
   cursor: pointer;
-  position: relative;
   line-height: normal;
   z-index: 2;
+}
+
+.box-lbl:hover{
+  box-shadow: 1px 1px 2px 2px rgb(143, 142, 142);
 }
 
 .box {
@@ -679,14 +726,12 @@ h2 {
 }
 
 .box-input {
-  display: block;
   border: 0px;
   margin: 0px;
   width: 100%;
   font-weight: 400;
   background-color: rgba(0, 0, 0, 0);
   font-size: 14px;
-  line-height: 18px;
   color: rgb(34, 34, 34);
 }
 
@@ -703,25 +748,6 @@ h2 {
 
 .box-inout {
   margin: -1px;
-  position: relative;
-}
-
-.box-btn {
-  background: transparent;
-  border: 2px solid transparent;
-  cursor: pointer;
-  display: inline-block;
-  font-size: 14px;
-  overflow: hidden;
-  padding: 16px 22px;
-  text-align: left;
-  text-decoration: none;
-  transition: border-color 0.2s;
-  margin: 0px;
-  width: 100%;
-  border-radius: 12px;
-  position: relative;
-  z-index: 1
 }
 
 .box-date {
@@ -751,7 +777,6 @@ h2 {
   cursor: pointer;
   display: inline-block;
   margin: 0px;
-  position: relative;
   text-align: center;
   text-decoration: none;
   width: auto;
@@ -765,3 +790,80 @@ h2 {
   transition: box-shadow;
   border: medium;
 }
+
+.deck-mk {
+  display: flex; 
+  flex-wrap: wrap;
+  margin: 50px 70px;
+  width: 100%;
+}
+
+
+@media screen and (max-width: 640px) {
+
+  .container-list {
+    width: 100%;
+    padding: 0;
+    align-items: center;
+  }
+
+  .box-between {
+    visibility: hidden;
+    width: 10%;
+  }
+  
+  .box-input, .box {
+    font-size: 8px;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+
+  .box-search button {
+    font-size: 100%;
+    padding: 0;
+  }
+
+  .box-lbl {
+    margin: 10px 0;
+  }
+  
+}
+
+.msg-corona {
+  color: rgb(146, 23, 77);
+  font-size: 1em;
+}
+
+
+.card-mk {
+  box-shadow: 0px 0px 1px 1px rgb(172, 170, 170);
+  width: 350px;
+  margin: 0 15px;
+  border-radius: 15px;
+}
+
+.container-mk {
+  margin: 10px;
+  padding: 10px;
+}
+
+.card-mk img {
+  width: 100%;
+  height: 250px;
+  border-start-end-radius: 15px;
+  border-start-start-radius: 15px;
+}
+
+.card-mk-title {
+  text-align: left;
+  font-size: 18px;
+  color: #000;
+}
+
+.card-mk-description {
+  font-size: 14px;
+  color: #707070;
+  text-align: left;
+}
+

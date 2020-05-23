@@ -22,7 +22,7 @@
         {% endif %}
 
         {% if reservation %}
-            <p class="reserved_done">Parabéns! Você reservou este estabelecimento do dia 
+            <p class="reserved_done">Parabéns! Você reservou este estabelecimento para {{ reserve.number_peoples }} pessoa(s), iniciando dia 
                 {{ reserve.initial_date }} até o dia {{ reserve.final_date }} pelo valor de R$ 
                 {{ reserve.total_value }}!</p>
         {% endif %}
@@ -32,40 +32,48 @@
         <img src="../../../media/{{ home.image }}" class="detail-img" alt="Imagem Acomodacao">
     </div>
     
-    <div>
-        <form action="{% url 'rating' pk=home.pk %}" method="post">
-            {% csrf_token %}
-            {% if rated %}
-                <div class="rating">
-                    <input type="radio" name="star" id="star5" value="5" checked><label for="star5"></label>
-                    <input type="radio" name="star" id="star4" value="4" ><label for="star4"></label>
-                    <input type="radio" name="star" id="star3" value="3" ><label for="star3"></label>
-                    <input type="radio" name="star" id="star2" value="2" ><label for="star2"></label>
-                    <input type="radio" name="star" id="star1" value="1" ><label for="star1"></label>
-                </div>
-                <button type="button" class="btn btn-secondary btn-lg" disabled>Avaliar</button>                
-                <p class="rating-p">Você já avaliou este estabelecimento! :)</p>        
-            {% else %}
-                <div class="rating">
-                    <input type="radio" name="star" id="star5" value="5"><label for="star5"></label>
-                    <input type="radio" name="star" id="star4" value="4"><label for="star4"></label>
-                    <input type="radio" name="star" id="star3" value="3"><label for="star3"></label>
-                    <input type="radio" name="star" id="star2" value="2"><label for="star2"></label>
-                    <input type="radio" name="star" id="star1" value="1"><label for="star1"></label>
-                </div>
-                <button class="rating-button" type="submit">Avaliar</button>
-                <p class="rating-p2">Selecione a sua melhor estrela e clique para avaliar! :)</p>    
-            {% endif %}
-        </form>
-    </div>
+    {% if home.published_date %}
+        <div>
+            <form action="{% url 'rating' pk=home.pk %}" method="post">
+                {% csrf_token %}
+                {% if rated %}
+                    <div class="rating">
+                        <input type="radio" name="star" id="star5" value="5" checked><label for="star5"></label>
+                        <input type="radio" name="star" id="star4" value="4" ><label for="star4"></label>
+                        <input type="radio" name="star" id="star3" value="3" ><label for="star3"></label>
+                        <input type="radio" name="star" id="star2" value="2" ><label for="star2"></label>
+                        <input type="radio" name="star" id="star1" value="1" ><label for="star1"></label>
+                    </div>
+                    <button type="button" class="btn btn-secondary btn-lg" disabled>Avaliar</button>                
+                    <p class="rating-p">Você já avaliou este estabelecimento! :)</p>        
+                {% else %}
+                    <div class="rating">
+                        <input type="radio" name="star" id="star5" value="5"><label for="star5"></label>
+                        <input type="radio" name="star" id="star4" value="4"><label for="star4"></label>
+                        <input type="radio" name="star" id="star3" value="3"><label for="star3"></label>
+                        <input type="radio" name="star" id="star2" value="2"><label for="star2"></label>
+                        <input type="radio" name="star" id="star1" value="1"><label for="star1"></label>
+                    </div>
+                    <button class="rating-button" type="submit">Avaliar</button>
+                    <p class="rating-p2">Selecione a sua melhor estrela e clique para avaliar! :)</p>    
+                {% endif %}
+            </form>
+        </div>
+    {% endif %}
 
     <aside class="container-aside">
         <div>
             <label class="aside-bold">Apenas R$ {{ home.price }} por dia!</label>
-            {% if reservation %}
-                <a><span>JÁ ESTA RESERVADO :)</span></a>
-            {% else %}
-                <a href="{% url 'home_reservation' pk=home.pk %}"><span>RESERVAR</span></a>
+            {% if home.published_date %}  
+                {% if reservation %}
+                    <a><span>JÁ ESTA RESERVADO :)</span></a>
+                {% else %}
+                    {% if user.is_authenticated %}
+                        <a href="{% url 'home_reservation' pk=home.pk %}"><span>RESERVAR</span></a>
+                    {% else %}
+                        <a href="{% url 'login' %}"><span>RESERVAR</span></a>        
+                    {% endif %}     
+                {% endif %}
             {% endif %}
             <label class="aside-bold" for="">Nota da acomodação: {{ home.avg_rating }}</label>
             <label class="aside-bold" for="">Quantidade de avaliações: {{ home.no_of_ratings}}</label>

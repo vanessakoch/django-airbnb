@@ -1,47 +1,82 @@
 {% extends 'airbnb/index.html' %}
 
-{% block content %}
+  {% block content %}
 
-  <form method="post"> {% csrf_token %} 
-    <div class="container-list">
-      <div class="container-reservation">
-        <div class="reservation">
-          <div class="reservation-box">
-            <label for="" class="box-lbl">
-              <div class="box">Localização</div>
-              <input class="box-input" type="text" placeholder="Para onde você vai?">
-            </label>
-          </div>
-        </div>
-      </div>
-      <div class="box-between"></div>
-        <div class="box-check">
-          <div class="box-inout">
-            <label class="box-btn">
-              <div class="box">Check-in/Checkout</div>
-              <input class="box-input" type="text" placeholder="Insira a quantidade de dias">
-            </label>
-          </div>
-        </div>
-        <div class="box-between"></div>
-        <div class="box-check">
-          <div class="box-inout">
-            <label for="" class="box-lbl">
-              <div class="box">Hóspedes</div>
-              <input class="box-input" type="text" placeholder="Insira o número de hóspedes">
-            </label>
-          </div>
-        </div>
-        <div class="box-check">
-          <div class="box-inout">
-            <div class="box-search">
-              <button type="submit">Buscar</button>
+    <form method="POST" action="{% url 'search_list' %}"> {% csrf_token %} 
+      <div class="container-list">
+        <div class="container-reservation">
+          <div class="reservation">
+            <div class="reservation-box">
+              <label for="local" class="box-lbl">
+                <div class="box">Localização</div>
+                <input name="local" class="box-input" type="text" placeholder="Para onde você vai?" >  
+              </label>
             </div>
           </div>
         </div>
+        <div class="box-between"></div>
+          <div class="box-check">
+            <div class="box-inout">
+              <label for="number_of_days" class="box-lbl">
+                <div class="box">Check-in/Checkout</div>
+                <input name="number_of_days" class="box-input" type="text" placeholder="Insira quantos dias de permanência">
+              </label>
+            </div>
+          </div>
+          <div class="box-between"></div>
+          <div class="box-check">
+            <div class="box-inout">
+              <label for="number_of_peoples" class="box-lbl">
+                <div class="box">Hóspedes</div>
+                <input name="number_of_peoples" class="box-input" type="text" placeholder="Insira o número de hóspedes">
+              </label>
+            </div>
+          </div>
+          <div class="box-check">
+            <div class="box-inout">
+              <div class="box-search">
+                <button type="submit">Buscar</button>
+              </div>
+            </div>
+          </div>
+      </div>
+    </form>
+
+    <div class="section">
+      <div class="section-container">
+        <span class="msg-corona">Podemos estar afastados, mas vamos superar isso juntos.</span>
+      </div>
     </div>
-  </form>
 
+    <div class="deck-mk">
+        <div class="card-mk">
+          <a href="">
+            <img src="/static/img/mk1.jpg" alt="Imagem Acomodacao">
+          </a>
+          <div class="container-mk">
+            <p class="card-mk-title">Experiências online</p>
+            <a class="card-mk-description">Atividades únicas que podemos fazer juntos, oferecidas por anfitriões de todo o mundo.</a>          
+          </div>
+        </div>
+         
+        <div class="card-mk">
+          <a href="{% url 'home_list' %}">
+            <img src="/static/img/mk2.jpg" alt="Imagem Acomodacao">
+          </a>
+          <div class="container-mk">
+            <p class="card-mk-title">Estadias prolongadas</p>
+            <a class="card-mk-description">Sinta-se em casa no Airbnb com estadias de um mês ou mais.</a>          
+          </div>
+        </div>
+        <div class="card-mk">
+          <a href="">
+            <img src="/static/img/mk3.jpg" alt="Imagem Acomodacao">
+          </a>
+          <div class="container-mk">
+            <p class="card-mk-title">Informações atualizadas</p>
+            <a class="card-mk-description">Saiba mais sobre as ações que estamos tomando em relação à COVID-19. </a>           </a>          
+          </div>
+        </div>
+    </div>
 
-
-{% endblock %}
+  {% endblock %}
