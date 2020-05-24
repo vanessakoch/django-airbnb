@@ -141,6 +141,10 @@
     margin: 0 25%;
 }
 
+.btn {
+    margin: 5px;
+}
+
 .container-comentarios h4 {
     font-size: 20px;
     font-weight: bold;

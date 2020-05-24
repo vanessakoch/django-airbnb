@@ -11,7 +11,7 @@
 
         {% if home.published_date %}
         
-            {{ home.published_date }}
+            <p class="date-home">{{ home.published_date }}</p>
         
         {% else %}
             
@@ -44,7 +44,7 @@
                         <input type="radio" name="star" id="star2" value="2" ><label for="star2"></label>
                         <input type="radio" name="star" id="star1" value="1" ><label for="star1"></label>
                     </div>
-                    <button type="button" class="btn btn-secondary btn-lg" disabled>Avaliar</button>                
+                    <button class="rating-button-disabled" disabled>Avaliar</button>                
                     <p class="rating-p">Você já avaliou este estabelecimento! :)</p>        
                 {% else %}
                     <div class="rating">

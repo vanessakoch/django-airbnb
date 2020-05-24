@@ -4,22 +4,20 @@
     {% if form.errors %}
         <p class="login-error">Your username and password didn't match. Please try again.</p>
     {% endif %}
-    <div class="container-login">
-        <form method="post" action="{% url 'login' %}">
-            {% csrf_token %}
-            <table>
-            <tr>
-                <td>{{ form.username.label_tag }}</td>
-                <td>{{ form.username }}</td>
-            </tr>
-            <tr>
-                <td>{{ form.password.label_tag }}</td>
-                <td>{{ form.password }}</td>
-            </tr>
-            </table>
+    <div class="forms">
 
-            <input class="btn-logar" type="submit" value="login" />
-            <input type="hidden" name="next" value="{{ next }}" />
-        </form>
+        <div class="container-form">
+            <div class="form-add">
+                <form method="post" action="{% url 'login' %}">
+                    {% csrf_token %}
+                    <p class="edit-p">Login</p>
+                    
+                    {{form.as_p}}
+
+                    <input class="btn-salvar" type="submit" value="Entrar" />
+                    <input type="hidden" name="next" value="{{ next }}" />
+                </form>
+            </div>
+        </div>
     </div>
 {% endblock %}

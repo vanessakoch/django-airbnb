@@ -25,6 +25,7 @@ body {
 
 .init-logo {
   margin-left: 50px;
+  width: 10%;
 }
 
 .init-logo img {
@@ -52,22 +53,13 @@ body {
   margin-top: 15px;
   padding: 0;
   float: right;
+  width: 100%;
 }
 
 .login-menu {
   font-size: 10px;
 }
 
-@media screen and (max-width: 768px) {
-  .container {
-     width: 65%;
-  }
-
-  .init-logo {
-    float: left;
-    width: 10%;
-  }
-}
 .globe {
   font-size: 15px;
   margin-right: 40px;
@@ -109,34 +101,22 @@ body {
 }
 
 @media screen and (max-width: 640px) {
-  .item-lista a, .item-lista button {
-    float: left;
-    font-size: 0.9em;
-    margin-left: -30%;
-    margin-right: -10%;
-    padding: 5px;
-  }
-
-  .item-lista button {
-    margin-top: 2px;
-    margin-left: 5px;
+  .init-logo {
+    width: 10%;
+    margin: auto -15px;
   }
 
   .globe {
-    font-size: 0.8em;
-    margin-left: -80px;
-    margin-top: 10px;
-
+    margin: 0 15px;
+  }
+  
+  .item-lista a, .item-lista button {
+    font-size: 8px;
   }
 
-  .top-menu {
-    float: left;
-    font-size: 0.8em;
-    margin-left: -70%;
-  }
-
-  .item-lista:first-child {
-    margin-right: 0;
+  .item-lista button {
+    margin-left: -20%;
+    width: 120%;
   }
 }
 
@@ -202,6 +182,11 @@ body {
   max-width: 100%;
 }
 
+.card-img-top {
+  width: 100%;
+  height: 50%;
+}
+
 .price {
   color: grey;
   font-size: 14px;
@@ -248,7 +233,6 @@ body {
   font-size: 16px;
   margin: 25px;
   font-weight: bold;
-
 }
 
 .container-form {
@@ -425,7 +409,7 @@ h2 {
   position: absolute;
   transform: translate(5%,5%) rotateY(180deg);
   display: flex;
-  margin-left: 70px;
+  margin-left: 120px;
 }
 
 .rating input {
@@ -469,18 +453,27 @@ h2 {
   font-size: 18px;
   color: white;
   background-color: rgb(255, 56, 92);
-  margin-left: 370px;
+  margin-left: 410px;
+  margin-top: 5px;
+}
+
+.rating-button-disabled {
+  font-size: 18px;
+  color: white;
+  background-color: rgb(211, 209, 209);
+  margin-left: 415px;
+  border: none;
   margin-top: 5px;
 }
 
 .rating-p {
-  margin: 10px 100px;
+  margin: 10px 150px;
   font-size: 14px;
 }
 
 .rating-p2 {
   font-size: 14px;
-  margin: 10px 75px;
+  margin: 10px 115px;
 }
 
 .btn-secondary {
@@ -490,13 +483,13 @@ h2 {
 
 .container-aside {
   position: fixed;
-  top: 300;
+  top: 285;
   right: 60;
   display: block;
   padding: 20px;
   text-align: center;
   font-size: 16px;
-  width: 350px;
+  width: 28%;
   color: white;
   background-color: rgb(255, 56, 92);
   border-radius: 20px;
@@ -792,8 +785,10 @@ h2 {
   }
 
   .box-search button {
-    font-size: 100%;
+    width: 80%;
     padding: 0;
+    margin-left: 20%;
+    margin-top: 10%;
   }
 
   .box-lbl{
@@ -803,29 +798,27 @@ h2 {
     margin: 10px;
     width: 50%;
     position: unset;
-
+    padding: auto 0;
   }
-  .container-aside, .aside-bold, .form-add h2{
-    font-size: 8px;
+  .aside-bold, .form-add h2{
+    font-size: 10px;
+  }
+
+  .container-aside a {
+    width: 60%;
   }
 
   .container-aside label {
-    margin-left: 0;
     display: block;
   }
 
-  .rating, .rating-p, .rating-p2, .rating-button {
+  .rating, .rating-p, .rating-p2 {
     font-size: 10px;
-    margin: 0 130px;
-  }
-
-  .rating-button {
-    margin-top: 40px;
-    margin-left: 10px;
+    margin: 0 110px;
   }
 
   .rating-p, .rating-p2 {
-    margin-left: 10px;
+    margin: 10px;
   }
   
 }
@@ -900,8 +893,9 @@ h2 {
     margin-left: 20%;
   }
 
-  .tablist-a, .a-underline {
+  .tablist-a, .a-underline, .tablist p {
     font-size: 10px;
+    margin-left: 5%;
   }
 
   .tablist, .container-list, .deck-mk {
@@ -910,7 +904,19 @@ h2 {
 
   .container-description {
     width: 100%;
-    margin-left: 0;
+    margin: 5%;
+  }
+
+  .btn-remover {
+    margin-right: 10%;
+  }
+
+  .date-home {
+    margin-right: 0;
+  }
+
+  .container-description p {
+    width: 50%;
   }
 
 

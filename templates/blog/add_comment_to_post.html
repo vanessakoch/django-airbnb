@@ -6,7 +6,7 @@
         <div class="container-form">
             <form class="form-add" method="POST" class="post-form">
                 {% csrf_token %}
-                <p class="form-comment-title">Novo comentário</p>
+                <p class="edit-p">Novo comentário</p>
                 {{ form.as_p }}
                 <button type="submit" class="btn-salvar">Enviar</button>
             </form>
