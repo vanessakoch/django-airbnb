@@ -173,7 +173,7 @@ body {
   white-space: pre-wrap; 
   width: 220px; 
   height: 40px;
-  text-align: justify;
+  text-align: center;
   overflow: hidden;
   text-overflow: ellipsis;
   margin: 0 15px;
