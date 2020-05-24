@@ -1,0 +1,91 @@
+{% extends 'airbnb/index.html' %}
+
+{% block content %}
+    <div class="container-post">
+        <a href="{% url 'blog:post_list'%}">
+            <span class="glyphicon glyphicon-home"></span>
+        </a>
+
+        {% if post.published_date %}
+            <div class="date">
+                {{ post.published_date }}
+            </div>
+        {% else %}
+            {% if user.is_authenticated %}
+                <a class="btn-publicar" href="{% url 'blog:post_publish' pk=post.pk %}">Publicar post</a>
+            {% endif %}
+        {% endif %}
+        {% if user.is_authenticated %}
+            <a class="btn btn-primary right" href="{% url 'blog:post_edit' pk=post.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a class="btn btn-danger right" href="{% url 'blog:post_remove' pk=post.pk %}"><span class="glyphicon glyphicon-remove"></span></a>
+        {% endif %}
+
+        <h1>{{ post.title }}</h1>
+        <p>{{ post.text|linebreaksbr }}</p>      
+    </div>
+
+    <div class="post-like">
+        
+        <a href="{% url 'blog:post_like' pk=post.pk %}">
+            {% if liked %}
+                <span class="glyphicon glyphicon-thumbs-up liked"></span>
+            {% else %}
+                <span class="glyphicon glyphicon-thumbs-up"></span>
+            {% endif %}
+        </a> 
+
+        {{ post.likes_count }} &nbsp; | &nbsp;
+
+        <a href="{% url 'blog:post_dislike' pk=post.pk %}">
+            {% if disliked %}
+                <span class="glyphicon glyphicon-thumbs-down disliked"></span>
+            {% else %}
+                <span class="glyphicon glyphicon-thumbs-down"></span>
+            {% endif %}
+        </a> 
+
+        {{ post.dislikes_count }} &nbsp; | &nbsp;
+
+        {{ post.views }} Visualizações 
+
+        </br>
+        <p>Índice de aprovação:</p>
+
+        <div class="progress">
+            <div class="progress-bar progress-bar-striped bg-success" role="progressbar"
+            aria-valuenow="{{ percent_likes|floatformat:1 }}" aria-valuemin="0" aria-valuemax="100" style="width:{{ percent_likes|floatformat:0 }}%">
+            {{ percent_likes|floatformat:1 }}%
+            </div>
+        </div> 
+
+        <p>Índice de reprovação:</p>
+        <div class="progress">
+            <div class="progress-bar progress-bar-danger progress-bar-striped" role="progressbar"
+            aria-valuenow="{{ percent_dislikes|floatformat:1 }}" aria-valuemin="0" aria-valuemax="100" style="width:{{ percent_dislikes|floatformat:0 }}%">
+            {{ percent_dislikes|floatformat:1 }}%
+            </div>
+        </div> 
+    </div>
+
+    <div class="container-comentarios">
+        <a class="btn-publicar" href="{% url 'blog:add_comment_to_post' pk=post.pk %}">Adicionar comentários</a>
+        {% for comment in post.comments.all %}
+            {% if user.is_authenticated or comment.approved_comment %}
+            <div>
+                <div class="date">{{ comment.created_date }}</div>
+
+                {% if not comment.approved_comment %}
+                    <a class="btn btn-danger right" href="{% url 'blog:comment_remove' pk=comment.pk %}"><span class="glyphicon glyphicon-remove"></span></a>
+                    <a class="btn btn-primary right" href="{% url 'blog:comment_approve' pk=comment.pk %}"><span class="glyphicon glyphicon-ok"></span></a>
+                {% endif %}
+
+                <h4>{{ comment.author }}</h4>
+                <p>{{ comment.text|linebreaks }}</p>
+            </div>
+            {% endif %}
+        {% empty %}
+            <p class="comentario-zero">Nenhum comentário ainda :(</p>
+        {% endfor %}
+    </div>
+
+{% endblock %}

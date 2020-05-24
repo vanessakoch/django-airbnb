@@ -1,0 +1,212 @@
+.glyphicon-thumbs-down, .glyphicon-thumbs-up {
+    margin: 30px 0;
+    font-size: 22px;
+    color: #b9b6b6;
+}
+
+.glyphicon-home {
+    font-size: 30px;
+    color: rgb(3, 3, 3);
+    display: flex;
+    justify-content: center;
+    position: unset;
+}
+
+.glyphicon-home:hover {
+    font-size: 33px;
+    text-decoration: none;
+    color: rgb(71, 70, 71);
+}
+
+.glyphicon {
+    position: unset;
+}
+
+
+.liked {
+    color: rgb(4, 245, 77);
+}
+
+.disliked {
+    color: #F00;
+}
+
+.date {
+    color: #828282;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.top-menu, .top-menu:hover, .top-menu:visited {
+    color: #030303;
+    font-size: 22px;
+    width: 100%;
+}
+
+.top-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+    text-align: center;
+}
+
+.top-comentario {
+    font-size: 16px;
+    color: #000;
+}
+
+.top-comentario:hover {
+    color: rgb(49, 49, 49);
+}
+
+.top-addpost {
+    color: rgb(5, 5, 5);;
+    float: right;
+    font-weight: bold;
+    position: unset;
+    margin-right: 100px;
+}
+
+.top-addpost:hover {
+    font-size: 24px;
+    color: rgb(66, 66, 66);
+}
+
+.top-post {
+    text-align: center;
+}
+
+.top-post p {
+    text-align: justify;
+    font-weight: normal;
+    font-size: 14px;
+    width: 100%;
+}
+
+.top-h1 {
+    color: rgb(255, 56, 92);
+    font-size: 35px;
+    font-weight: bold;
+    font-style: oblique;
+    width: 100%;
+
+}
+
+.top-h1:hover {
+    color: rgb(224, 28, 126);
+    text-decoration: none;
+}
+
+
+.titulo-form {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.forms {
+    margin: 80px;
+}
+
+.container-post {
+    margin: 20px 80px;
+}
+
+.container-post h1 {
+    color: rgb(255, 56, 92);
+    font-weight: bold;
+}
+
+.container-post p {
+    text-align: justify;
+    width: 50%;
+}
+
+.progress {
+    width: 50%;
+    height: 20px;
+}
+
+.post-like {
+    text-align: start;
+    margin: 0 80px;
+}
+
+.right{
+	float: right;
+}
+
+.container-comentarios {
+    width: 50%;
+    margin: 0 25%;
+}
+
+.container-comentarios h4 {
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(255, 56, 92);
+    margin-top: 50px;
+}
+.form-comment-title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.container-comentarios p {
+    text-align: justify;
+    width: 100%;
+}
+
+.top-post {
+    margin: 0 20%;
+}
+
+.cntner {
+    width: 100%;
+}
+
+.comentario-zero {
+    text-align: center;
+    display: flex;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+.container-error {
+    width: 90vw;
+    height: 70vh;
+    display: absolute;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-error--detail {
+    text-align: center;
+}
+
+@media screen and (max-width: 640px) {
+    
+    .top-menu {
+        margin: 0;
+        width: 100%;
+    }
+
+    .glyphicon {
+        font-size: 10px;
+    }
+    .date {
+        font-size: 10px;
+    }
+
+    .top-post p {
+        margin: 0;
+    }
+
+    .top-addpost {
+        margin: 10px;
+    }
+}
+
+
+
+

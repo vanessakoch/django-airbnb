@@ -54,7 +54,7 @@ body {
   float: right;
 }
 
-.top-menu {
+.login-menu {
   font-size: 10px;
 }
 
@@ -111,14 +111,15 @@ body {
 @media screen and (max-width: 640px) {
   .item-lista a, .item-lista button {
     float: left;
-    font-size: 0.8em;
+    font-size: 0.9em;
     margin-left: -30%;
-    margin-right: -0%;
+    margin-right: -10%;
     padding: 5px;
   }
 
   .item-lista button {
     margin-top: 2px;
+    margin-left: 5px;
   }
 
   .globe {
@@ -310,26 +311,6 @@ body {
   text-align: center;
 }
 
-@media screen and (max-width: 640px) {
-  .container-form input, select, p, label {
-    width: 150px;
-  }
-
-  .container-form textarea {
-    width: 100%;
-  }
-
-  .form-add {
-    width: 50%;
-  }
-
-  .container-login input, label {
-    width: 40%;
-    margin-left: 20%;
-  }
-
-}
-
 .edit-p {
   font-size: 18px;
   color: rgb(255, 255, 255);
@@ -377,7 +358,6 @@ body {
   background-color: rgb(255, 56, 92);
   padding: 5px;
   float: right;
-  border-radius: 10%;
 }
 
 .btn-salvar:hover {
@@ -433,6 +413,7 @@ h2 {
 
 .detail-img {
   margin: 5px;
+  width: 50%;
 }
 
 .card-comentario {
@@ -509,7 +490,7 @@ h2 {
 
 .container-aside {
   position: fixed;
-  top: 190;
+  top: 300;
   right: 60;
   display: block;
   padding: 20px;
@@ -596,10 +577,6 @@ h2 {
 }
 
 @media screen and (max-width: 640px) {
-  .container-aside {
-    visibility: hidden;
-  }
-
   .container-comments {
     width: 100%;
   }
@@ -798,14 +775,11 @@ h2 {
   width: 100%;
 }
 
+.form-add h2 {
+  text-align: center;
+}
 
 @media screen and (max-width: 640px) {
-
-  .container-list {
-    width: 100%;
-    padding: 0;
-    align-items: center;
-  }
 
   .box-between {
     visibility: hidden;
@@ -814,8 +788,6 @@ h2 {
   
   .box-input, .box {
     font-size: 8px;
-    padding: 0;
-    margin: 0;
     width: 100%;
   }
 
@@ -824,8 +796,36 @@ h2 {
     padding: 0;
   }
 
-  .box-lbl {
-    margin: 10px 0;
+  .box-lbl{
+    width: 100%;
+  }
+  .container-aside {
+    margin: 10px;
+    width: 50%;
+    position: unset;
+
+  }
+  .container-aside, .aside-bold, .form-add h2{
+    font-size: 8px;
+  }
+
+  .container-aside label {
+    margin-left: 0;
+    display: block;
+  }
+
+  .rating, .rating-p, .rating-p2, .rating-button {
+    font-size: 10px;
+    margin: 0 130px;
+  }
+
+  .rating-button {
+    margin-top: 40px;
+    margin-left: 10px;
+  }
+
+  .rating-p, .rating-p2 {
+    margin-left: 10px;
   }
   
 }
@@ -867,3 +867,51 @@ h2 {
   text-align: left;
 }
 
+@media screen and (max-width: 640px) {
+  .container-form {
+    width: 100%;
+  }
+
+  .container-form input, select, p, label, textarea {
+    width: 100%;
+    margin: 0;
+    font-size: 8px;
+  }
+
+  .container-form label {
+    margin-left: 0;
+  }
+
+  .edit-p {
+    font-size: 10px;
+  }
+
+  .container-form textarea {
+    width: 100%;
+    margin: 0;
+  }
+
+  .form-add {
+    width: 50%;
+  }
+
+  .container-login input, label {
+    width: 40%;
+    margin-left: 20%;
+  }
+
+  .tablist-a, .a-underline {
+    font-size: 10px;
+  }
+
+  .tablist, .container-list, .deck-mk {
+    margin-left: 0;
+  }
+
+  .container-description {
+    width: 100%;
+    margin-left: 0;
+  }
+
+
+}

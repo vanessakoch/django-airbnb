@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'airbnb.apps.AirbnbConfig',
     'users.apps.UsersConfig',
+    'blog.apps.BlogConfig', 
 ]
 
 AUTH_USER_MODEL = 'users.CustomUser'
@@ -60,7 +61,7 @@ ROOT_URLCONF = 'mysite.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')], 
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -112,6 +113,8 @@ AUTH_PASSWORD_VALIDATORS = [
 LANGUAGE_CODE = 'pt-BR'
 
 TIME_ZONE = 'America/Sao_Paulo'
+
+TIME_INPUT_FORMATS = '%d/%m/%Y' 
 
 USE_I18N = True
 

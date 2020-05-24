@@ -34,22 +34,22 @@ class Address(models.Model):
            ('TO', 'Tocantins'),
            ]
 
-    country = models.CharField(max_length=100)
-    zipcode = models.IntegerField()
-    state = models.CharField(max_length=60, choices=estado)
-    city = models.CharField(max_length=60) 
-    street = models.CharField(max_length=100)
-    phone = models.IntegerField()
+    country = models.CharField(max_length=100, verbose_name="País")
+    zipcode = models.IntegerField(verbose_name="CEP")
+    state = models.CharField(max_length=60, choices=estado, verbose_name="Estado")
+    city = models.CharField(max_length=60, verbose_name="Município") 
+    street = models.CharField(max_length=100, verbose_name="Rua / Avenida")
+    phone = models.IntegerField(verbose_name="Telefone")
 
     def __str__(self):
         return f"{self.street} - {self.city} ({self.state}) - {self.country} CEP: {self.zipcode} - Contato: {self.phone} "
 
 class Home(models.Model):
     owner = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
-    image = models.ImageField(upload_to='media/', default="media/estadia.jpeg")
-    name = models.CharField(max_length=200)
-    description = models.TextField()
-    price = models.DecimalField(max_digits=30, decimal_places=2)
+    image = models.ImageField(upload_to='media/', default="media/estadia.jpeg", verbose_name="Fotografia")
+    name = models.CharField(max_length=200, verbose_name="Nome do estabelecimento")
+    description = models.TextField(verbose_name="Descrição")
+    price = models.DecimalField(max_digits=30, decimal_places=2, verbose_name="Preço da diária")
     created_date = models.DateTimeField(default=timezone.now)
     published_date = models.DateTimeField(blank=True, null=True)
     address = models.OneToOneField(Address, on_delete=models.SET_NULL, null=True)
@@ -88,9 +88,11 @@ class Rating(models.Model):
 class Reserve(models.Model):
     home = models.ForeignKey(Home, on_delete=models.CASCADE)
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
-    initial_date = models.DateField()
-    final_date = models.DateField()
-    number_peoples = models.IntegerField()
+    initial_date = models.DateField(verbose_name="Data de entrada",
+    help_text="Use o formato dd/mm/AAAA")
+    final_date = models.DateField(verbose_name="Data de saída",
+    help_text="Use o formato dd/mm/AAAA")
+    number_peoples = models.IntegerField(verbose_name="Número de pessoas")
     total_value = models.DecimalField(max_digits=30, decimal_places=2)
 
     def __str__(self):
@@ -108,8 +110,8 @@ class Search(models.Model):
 
 class Comment(models.Model):
     home = models.ForeignKey('airbnb.Home', on_delete=models.CASCADE, related_name='comments')
-    author = models.CharField(max_length=200)
-    text = models.TextField()
+    author = models.CharField(max_length=200, verbose_name="Autor")
+    text = models.TextField(verbose_name="Texto")
     created_date = models.DateTimeField(default=timezone.now)
     approved_comment = models.BooleanField(default=False)
 
