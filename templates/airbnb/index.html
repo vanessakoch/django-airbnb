@@ -7,57 +7,58 @@
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="shortcut icon" href="{% static 'img/icon.png' %}" />
+    <link rel="shortcut icon" href="{% static 'img/icon.png' %}"/>
     <link rel="stylesheet" href="{% static 'css/airbnb.css' %}">
     <link rel="stylesheet" href="{% static 'css/blog.css' %}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
 
   <body>
-    <header class="init">
-      <nav>
-        <div class="container">
-          <a class="init-logo" href="{% url 'init_page' %}">
-            <img src="{% static 'img/logo.png' %}" alt="Logo AirBnb">
-          </a>
-          <ul class="init-lista">
-            <li class="globe">
-              <span class="glyphicon glyphicon-globe"></span></a>            
-            </li>
-            <li class="item-lista">
-              <a href="{% url 'home_new' %}">Hospede em sua acomodação</a>
-            </li>
-            <li class="item-lista">
-              <a href="{% url 'blog:post_list' %}">Hospede uma experiência</a>
-            </li>
-            <li class="item-lista">
-              <a href="#">Ajuda</a>
-            </li>
-            <li class="item-lista">
-              <a href="{% url 'login' %}">Entrar</a>
-            </li>
-            <li class="item-lista">
-              <a href="{% url 'signup' %}">
-                <button>Cadastrar-se</button>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </header>    
+    <header>
+      <div class="container">
+        <ul>
+          <li class="container-item">
+            <a href="{% url 'init_page' %}">
+              <img src="{% static 'img/logo.png' %}" alt="Logo AirBnb">
+            </a>
+          </li>
+          <li class="container-item">
+              <span class="glyphicon glyphicon-globe"></span></a>
+          </li>
+          <li class="container-item">
+            <a href="{% url 'home_new' %}">Hospede em sua acomodação</a>
+          </li>
+          <li class="container-item">
+            <a href="{% url 'blog:post_list' %}">Hospede uma experiência</a>
+          </li>
+          <li class="container-item">
+            <a href="#">Ajuda</a>
+          </li>
+          <li class="container-item">
+            <a href="{% url 'login' %}">Entrar</a>
+          </li>
+          <li class="container-item">
+            <a href="{% url 'signup' %}">
+              <button>Cadastrar-se</button>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </header>
 
-    <div class="tablist">
-      {% if user.is_authenticated %}
-        <p class="login-menu">Olá {{ user.username }} <small>(<a href="{% url 'logout' %}">Sair</a>)</small></p>
-      {% endif %} 
-      <a class="a-underline" href="{% url 'init_page' %}">Lugares para ficar</a>
-      <a class="tablist-a" href="{% url 'home_list' %}">Todas as estadias</a>
-      <a class="tablist-a" href="{% url 'blog:post_list' %}" >Experiências</a>
-    </div>
-   
-    {% block content %}
-    
-    {% endblock %}
-   
-  </body>
+  <div class="intro">
+    {% if user.is_authenticated %}
+      <p class="login-menu">Olá
+        {{ user.username }}
+        <small>(<a href="{% url 'logout' %}">Sair</a>)</small>
+      </p>
+    {% endif %}
+    <a class="intro-underline" href="{% url 'init_page' %}">Lugares para ficar</a>
+    <a class="intro-a" href="{% url 'home_list' %}">Todas as estadias</a>
+    <a class="intro-a" href="{% url 'blog:post_list' %}">Experiências</a>
+  </div>
+
+  {% block content %}{% endblock %}
+
+</body>
 </html>

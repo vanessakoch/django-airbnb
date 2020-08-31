@@ -2,7 +2,7 @@
 
   {% block content %}
 
-    <form method="POST" action="{% url 'search_list' %}"> {% csrf_token %} 
+    <form class="form-search" method="POST" action="{% url 'search_list' %}"> {% csrf_token %} 
       <div class="container-list">
         <div class="container-reservation">
           <div class="reservation">

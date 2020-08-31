@@ -1,154 +1,101 @@
 @import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css);
-@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;900&display=swap);
+@import 'https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap';
 
+:root {
+  --gray: #BDBDBD;
+}
 
 * {
-	box-sizing: border-box;
-}
-
-*, *:before, *:after {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-body {
-	font-size: 10px;
-	font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  border: none;
+  font-family: 'Roboto', sans-serif;
 }
 
 .container {
-  display: flex;
-  align-items: stretch;
   width: 100%;
-}
-
-.init-logo {
-  margin-left: 50px;
-  width: 10%;
-}
-
-.init-logo img {
-  width: 100%;
-}
-
-.init {
-	justify-content: space-between;
-	padding: 15px 0;
-	width: 100%;
-	display: flex;
-  flex-direction: column;
-  position: fixed;
-	top: 0;
-	width: 100%;
-  backface-visibility: hidden;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--gray);
   background-color: white;
-  box-shadow: 0 1px 0 rgba(0, 0, 0, .1);
+  text-align: center;
 }
 
-.init-lista {
-  flex-grow: 1;
-  display: flex;
+ul {
   list-style: none;
-  margin-top: 15px;
-  padding: 0;
-  float: right;
-  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 0.4fr 0.4fr 1fr;
+  align-items: center;
+  gap: 10px;
+  margin: 0 30px;
 }
 
-.login-menu {
-  font-size: 10px;
-}
-
-.globe {
-  font-size: 15px;
-  margin-right: 40px;
-  margin-left: 355px ;
-  color: #000000;
-}
-
-.item-lista {
-  margin-top: 2px;
-}
-
-.item-lista a {
-  color: rgb(15, 15, 15);
-  font-size: 14.5px;
-  font-weight: 500;
-  text-decoration: none;
-  line-height: 18px;
+.container-item a {
   cursor: pointer;
-  width: 100%;
-  margin-right: 27px;
-  font-family: inherit;
+  color: #000;
+  text-decoration: none;
 }
 
-.item-lista button {
-  border: 1px solid rgb(235, 235, 235);
-  cursor: pointer;
-  font-size: 14.5px;
-  padding: 10px;
-  margin-top: -12px;
-  text-decoration: none;
-  border-radius: 21px;
-  box-shadow: rgba(0, 0, 0, 0.18) 0px 1px 2px ;
-  text-decoration: none;
+@media only screen and (max-width: 959px) {
+  .container-item a {
+      font-size: 12px;
+  }
+}
+
+.container-item:nth-child(2) {
+  text-align: right;
+}
+
+.container-item img {
+  width: 80%;
+}
+
+.container-item button {
   background-color: white;
+  padding: 10px;
+  border-radius: 50px;
+  box-shadow: 2px 2px 2px 1px var(--gray);
 }
 
-.item-lista button:hover {
-  color: #a8a8a8;
+.container-item button:hover {
+  color: var(--gray);
+  transition: 0.8s all ease-in;
 }
 
-@media screen and (max-width: 640px) {
-  .init-logo {
-    width: 10%;
-    margin: auto -15px;
-  }
-
-  .globe {
-    margin: 0 15px;
-  }
-  
-  .item-lista a, .item-lista button {
-    font-size: 8px;
-  }
-
-  .item-lista button {
-    margin-left: -20%;
-    width: 120%;
-  }
+.container-item a:hover {
+  color: var(--gray);
+  transition: 0.4s all ease-in;
 }
 
-.item-lista a:hover {
-  color: #a8a8a8;
+.intro {
+  margin-top: 20px;
+  margin-left: 6%;
+  font-size: 12px;
 }
 
-.tablist {
-  margin-top: 120px;
-  margin-left: 80px;
-}
-
-.a-underline {
+.intro-underline {
   text-decoration: underline;
   font-size: 17px;
   color: #000;
   margin-right: 25px;
 }
 
-.a-underline:hover {
-  color: #a8a8a8;
+.intro-underline:hover {
+  color: var(--gray);
 }
 
-.tablist-a {
+.intro a:hover {
+  transition: 0.8s all ease-in;
+}
+
+.intro-a {
   font-size: 17px;
   margin-right: 25px;
   color: #000;
 }
 
-.tablist-a:hover {
+.intro-a:hover {
   text-decoration: none;
-  color: #a8a8a8;
+  color:  var(--gray);
 }
 
 .card {
@@ -461,7 +408,7 @@ h2 {
 .rating-button-disabled {
   font-size: 18px;
   color: white;
-  background-color: rgb(211, 209, 209);
+  background-color: var(--gray);
   margin-left: 420px;
   border: none;
   margin-top: 5px;
@@ -633,12 +580,11 @@ h2 {
   background-color: #fff;
   border: 1px solid #F7F7F7 ;
   border-radius: 12px;
-  box-shadow: 1px 4px 8px #e0dfdf ;
+  box-shadow: 1px 4px 8px var(--gray) ;
   color: #222222;
   display: flex;
-  width: 100%;
   justify-content: center;
-  margin: 50px 75px;
+  margin: 5%;
 }
 
 .container-reservation {
@@ -685,7 +631,7 @@ h2 {
 }
 
 .box-lbl:hover{
-  box-shadow: 1px 1px 2px 2px rgb(143, 142, 142);
+  box-shadow: 1px 1px 2px 2px var(--gray);
 }
 
 .box {
@@ -705,6 +651,12 @@ h2 {
   font-size: 14px;
   color: rgb(34, 34, 34);
 }
+
+.box-input:focus {
+  box-shadow: 0 0 0 0;
+  border: 0 none;
+  outline: 0;
+} 
 
 .box-between {
   align-self: center;
@@ -740,33 +692,40 @@ h2 {
 }
 
 .box-search {
-  margin-left: 2px;
-  padding: 11px;
+  padding-top: 11px;
 }
 
 .box-search button {
   cursor: pointer;
   display: inline-block;
-  margin: 0px;
+  margin: 0px 35%;
   text-align: center;
   text-decoration: none;
-  width: auto;
   font-size: 14px;
   background-color: rgb(255, 56, 92);
   line-height: 18px;
   color:white;
   font-weight: 600;
   border-radius: 8px;
-  padding: 14px 24px;
+  padding: 12px 24px;
   transition: box-shadow;
   border: medium;
+}
+
+.box-search button:hover {
+  transition: 0.4s all ease-in;
+  background-color: #ec407a;
 }
 
 .deck-mk {
   display: flex; 
   flex-wrap: wrap;
-  margin: 50px 70px;
+  margin: 5%;
+}
+
+.form-search {
   width: 100%;
+  display: absolute;
 }
 
 .form-add h2 {
@@ -777,24 +736,21 @@ h2 {
 
   .box-between {
     visibility: hidden;
-    width: 10%;
   }
   
-  .box-input, .box {
+  .box-input, .box, .box-lbl {
     font-size: 8px;
     width: 100%;
   }
 
   .box-search button {
-    width: 80%;
-    padding: 0;
+    width: 70%;
+    font-size: 12px;
+    padding: 1px;
     margin-left: 20%;
     margin-top: 10%;
   }
 
-  .box-lbl{
-    width: 100%;
-  }
   .container-aside {
     margin: 10px;
     width: 50%;
@@ -809,8 +765,6 @@ h2 {
     width: 60%;
     font-size: 10px;
   }
-
-
   .container-aside label {
     display: block;
   }
@@ -833,9 +787,9 @@ h2 {
 
 
 .card-mk {
-  box-shadow: 0px 0px 1px 1px rgb(172, 170, 170);
-  width: 350px;
-  margin: 0 15px;
+  box-shadow: 0px 0px 1px 1px var(--gray);
+  width: 340px;
+  margin: 0 10px;
   border-radius: 15px;
 }
 
@@ -896,13 +850,9 @@ h2 {
     margin-left: 20%;
   }
 
-  .tablist-a, .a-underline, .tablist p {
+  .intro-a, .intro-underline, .intro p {
     font-size: 10px;
     margin-left: 5%;
-  }
-
-  .tablist, .container-list, .deck-mk {
-    margin-left: 0;
   }
 
   .container-description {
