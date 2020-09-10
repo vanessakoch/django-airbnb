@@ -343,21 +343,19 @@ h2 {
   margin-right: 110px;
 }
 
-.detail-img {
-  margin: 5px;
-  width: 50%;
-}
-
 .card-comentario {
   color: rgb(202, 7, 241);
   font-size: 12px;
+}
+
+.container-detail form {
+  margin-left: -30px;
 }
 
 .rating {
   position: absolute;
   transform: translate(5%,5%) rotateY(180deg);
   display: flex;
-  margin-left: 120px;
 }
 
 .rating input {
@@ -401,27 +399,29 @@ h2 {
   font-size: 18px;
   color: white;
   background-color: rgb(255, 56, 92);
-  margin-left: 410px;
+  margin-left: 300px;
   margin-top: 5px;
+  padding: 5px;
 }
 
 .rating-button-disabled {
   font-size: 18px;
   color: white;
   background-color: var(--gray);
-  margin-left: 420px;
+  margin-left: 300px;
   border: none;
   margin-top: 5px;
+  padding: 5px;
 }
 
 .rating-p {
-  margin: 10px 150px;
+  margin: 10px 60px;
   font-size: 14px;
 }
 
 .rating-p2 {
   font-size: 14px;
-  margin: 10px 110px;
+  margin: 10px 30px;
 }
 
 .btn-secondary {
@@ -429,18 +429,29 @@ h2 {
   margin-left: 370px;
 }
 
+.container-detail {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px;
+  width: 100%;
+}
+
 .container-aside {
-  position: fixed;
-  top: 260;
-  right: 60;
-  display: block;
-  padding: 20px;
+  width: 50%;
+  padding: 5%;
   text-align: center;
   font-size: 16px;
-  width: 28%;
   color: white;
   background-color: rgb(255, 56, 92);
   border-radius: 20px;
+}
+
+.normal-weight {
+  font-weight: normal;
+}
+
+.container-detail img {
+  width: 70%;
 }
 
 .reserved_done {
@@ -450,28 +461,19 @@ h2 {
   text-align: center;
 }
 
-.container-aside p, label {
-  font-weight: normal;
-}
-
-.aside-bold {
-  font-weight: bold;
-  font-size: 20px;
-}
-
-.container-aside a{
+.container-aside a {
   background-color: #fff;
   color: rgb(255, 56 , 92);
-  padding: 6px;
   box-shadow: 1px 1px 1px 1px rgb(255, 109, 109);
   border-radius: 10px;
-  margin: 10%;
-  display: block;
   font-weight: bold;
+  display: block;
+  margin: 10px;
+  padding: 10px;
 }
 
 .container-aside a:hover {
-  padding: 5px;
+  padding: 12px;
   text-decoration: none;
   box-shadow: 4px 4px 4px 4px #e0dfdf;
 }
@@ -517,21 +519,22 @@ h2 {
   text-align: center;
 }
 
-@media screen and (max-width: 640px) {
-  .container-comments {
-    width: 100%;
+@media screen and (max-width: 1022px) {
+  .container-aside label, a {
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
   }
 
-  .form-comments input, textarea, label {
-    width: 100%;
-    margin: 0 50%;
-    align-items: center;
+  .container-aside {
+    margin-top: 10px;
+    margin-left: 35px;
   }
 
-  .form-comments button, h2{
-    width: 25%;
-    margin: 5% 30%;
+  .container-detail {
+    display: block;
   }
+ 
 }
 
 .detail-btncomentar {
@@ -570,10 +573,7 @@ h2 {
 }
 
 .container-description {
-  margin: 20px 80px;
-  text-align: justify;
-  width: 800px;
-
+  margin: 10px 80px;
 }
 
 .container-list {
@@ -750,33 +750,6 @@ h2 {
     margin-left: 20%;
     margin-top: 10%;
   }
-
-  .container-aside {
-    margin: 10px;
-    width: 50%;
-    position: unset;
-    padding: auto 0;
-  }
-  .aside-bold, .form-add h2{
-    font-size: 10px;
-  }
-
-  .container-aside a {
-    width: 60%;
-    font-size: 10px;
-  }
-  .container-aside label {
-    display: block;
-  }
-
-  .rating, .rating-p, .rating-p2 {
-    font-size: 10px;
-    margin: 0 110px;
-  }
-
-  .rating-p, .rating-p2 {
-    margin: 10px;
-  }
   
 }
 
@@ -822,14 +795,10 @@ h2 {
     width: 100%;
   }
 
-  .container-form input, select, p, label, textarea {
+  .container-form input, select, p, textarea {
     width: 100%;
     margin: 0;
     font-size: 8px;
-  }
-
-  .container-form label {
-    margin-left: 0;
   }
 
   .edit-p {
@@ -845,14 +814,8 @@ h2 {
     width: 50%;
   }
 
-  .container-login input, label {
-    width: 40%;
-    margin-left: 20%;
-  }
-
   .intro-a, .intro-underline, .intro p {
     font-size: 10px;
-    margin-left: 5%;
   }
 
   .container-description {
@@ -867,10 +830,5 @@ h2 {
   .date-home {
     margin-right: 0;
   }
-
-  .container-description p {
-    width: 50%;
-  }
-
 
 }
