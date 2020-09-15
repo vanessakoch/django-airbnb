@@ -15,7 +15,7 @@
 .container {
   width: 100%;
   padding: 10px 0;
-  border-bottom: 1px solid var(--gray);
+  box-shadow: 0 0 2px 0px var(--gray);
   background-color: white;
   text-align: center;
 }
@@ -23,10 +23,10 @@
 ul {
   list-style: none;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 0.4fr 0.4fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 0.4fr 0.8fr;
   align-items: center;
-  gap: 10px;
-  margin: 0 30px;
+  gap: 5px;
+  margin: 0 20px;
 }
 
 .container-item a {
@@ -101,7 +101,7 @@ ul {
 .card {
   text-align: center;
   width: 250px;
-  height: 400px;
+  height: 380px;
   margin: 30px;
   box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, .2);
 }
@@ -138,10 +138,11 @@ ul {
 .price {
   color: grey;
   font-size: 14px;
+  margin: 0;
 }
 
 .card-title {
-  margin: 10px;
+  margin: 5px;
 }
 
 .card-title a {
@@ -179,7 +180,7 @@ ul {
 .title-search {
   text-align: center;
   font-size: 16px;
-  margin: 25px;
+  margin: 20px;
   font-weight: bold;
 }
 
@@ -205,8 +206,27 @@ ul {
 .container-form input, select {
   display: block;
   padding: 10px;
-  width: 400px;
+  width: 100%;
   text-align: center;
+}
+
+.container-form input {
+  background-color: rgb(214, 216, 218);
+  border-radius: 5px;
+}
+
+.container-form .btn-salvar {
+  font-size: 16px;
+  color: rgb(250, 248, 248);
+  background-color: rgb(255, 56, 92);
+  padding: 5px;
+  width: 100%;
+  padding: 10px;
+}
+
+.container-form .btn-salvar:hover {
+  cursor: pointer;
+  background-color: rgb(248, 86, 116);
 }
 
 .container-form select {
@@ -218,7 +238,8 @@ ul {
 
 .container-form textarea {
   display: block;
-  width: 400px;
+  background-color: rgb(214, 216, 218);
+  width: 100%;
   text-align: center;
   height: 100px;
   padding: 10px;
@@ -244,33 +265,33 @@ ul {
 }
 
 .edit-p {
-  font-size: 18px;
-  color: rgb(255, 255, 255);
-  background-color: rgb(0, 0, 0);
+  font-size: 16px;
+  text-align: center;
+  margin: 10px 0;
+  text-transform: uppercase;
+  color: rgb(255, 56, 92);
 }
 
 .btn-publicar {
-  border: 1px solid rgb(235, 235, 235);
   cursor: pointer;
   font-size: 14px;
-  color: rgb(131, 130, 130);
-  background-color: rgb(223, 220, 221) ;
+  color: #000;
+  transition: 0.4s all ease-in;
+  background-color: white;
+  padding: 10px;
+  box-shadow: 1px 1px 1px 1px var(--gray);
   text-decoration: none;
-  border-radius: 21px;
-  box-shadow: rgba(0, 0, 0, 0.18) 0px 1px 2px ;
-  padding: 5px;
-  display: flex;
-  justify-content: center;
 }
 
 .card-footer {
-  margin-top: -5%;
+  margin-top: -10%;
+  padding: 2px;
 }
 
 .btn-publicar:hover {
-  background-color: rgb(255, 109, 109);
   text-decoration: none;
-  color: #fff;
+  transition: 0.4s all ease-in;
+  color: var(--gray)
 }
 
 .btn-logar {
@@ -282,20 +303,6 @@ ul {
   justify-content: center;
   width: 53%;
   margin-left: 108px;
-}
-
-.btn-salvar {
-  font-size: 16px;
-  color: white;
-  background-color: rgb(255, 56, 92);
-  padding: 5px;
-  float: right;
-}
-
-.btn-salvar:hover {
-  cursor: pointer;
-  background-color: rgb(248, 86, 116);
-  color: rgb(250, 248, 248);
 }
 
 .btn-remover {
@@ -318,6 +325,7 @@ ul {
 h2 {
   font-weight: bold;
   font-size: 20px;
+  margin-top: 30px;
 }
 
 .btn-editar {
@@ -432,11 +440,11 @@ h2 {
 .container-detail {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 5px;
-  width: 100%;
+  gap: 15px;
 }
 
 .container-aside {
+  margin-left: 280px;
   width: 50%;
   padding: 5%;
   text-align: center;
@@ -451,12 +459,12 @@ h2 {
 }
 
 .container-detail img {
-  width: 70%;
+  width: 100%;
 }
 
 .reserved_done {
-  font-size: 16px;
-  margin-top: 30px;
+  font-size: 14px;
+  margin-top: 40px;
   font-weight: bold;
   text-align: center;
 }
@@ -475,7 +483,7 @@ h2 {
 .container-aside a:hover {
   padding: 12px;
   text-decoration: none;
-  box-shadow: 4px 4px 4px 4px #e0dfdf;
+  box-shadow: 1px 1px 1px 1px var(--gray);
 }
 
 .container-comments {
@@ -528,7 +536,7 @@ h2 {
 
   .container-aside {
     margin-top: 10px;
-    margin-left: 35px;
+    margin-left: 0;
   }
 
   .container-detail {
@@ -539,19 +547,21 @@ h2 {
 
 .detail-btncomentar {
   font-size: 14px;
-  color: rgb(83, 83, 83);
-  background-color: rgb(187, 185, 185);
+  color: rgb(255, 255, 255);
+  background-color: rgb(35, 80, 228);
+  transition: 0.4s all ease-in;
   padding: 5px;
   cursor: pointer;
   border-radius: 20px;
   display: flex;
   justify-content: center;
+  margin-top: 20px;
 }
 
 .detail-btncomentar:hover {
   color: white;
-  background-color: rgb(255, 109, 109);
   text-decoration: none;
+  padding: 6px;
 }
 
 .comment-detail {
@@ -573,7 +583,7 @@ h2 {
 }
 
 .container-description {
-  margin: 10px 80px;
+  margin: 30px 80px;
 }
 
 .container-list {
@@ -790,37 +800,32 @@ h2 {
   text-align: left;
 }
 
+.content-done {
+  text-align: center;
+  line-height: 26px;
+  margin: 10vh;
+}
+
+.link-reset {
+  float: right;
+  color: #333;
+  font-weight: bold;
+  margin-top: 15px ;
+}
+
+.link-reset:hover {
+  text-decoration: none;
+  color: rgb(248, 86, 116); 
+}
+
 @media screen and (max-width: 640px) {
-  .container-form {
-    width: 100%;
-  }
-
-  .container-form input, select, p, textarea {
-    width: 100%;
-    margin: 0;
-    font-size: 8px;
-  }
-
-  .edit-p {
-    font-size: 10px;
-  }
-
-  .container-form textarea {
-    width: 100%;
-    margin: 0;
-  }
-
-  .form-add {
-    width: 50%;
-  }
-
   .intro-a, .intro-underline, .intro p {
     font-size: 10px;
   }
 
   .container-description {
     width: 100%;
-    margin: 5%;
+    margin: 30px 15px;
   }
 
   .btn-remover {
@@ -830,5 +835,5 @@ h2 {
   .date-home {
     margin-right: 0;
   }
-
 }
+

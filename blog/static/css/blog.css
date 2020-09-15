@@ -1,11 +1,25 @@
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css);
+@import 'https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap';
+
+:root {
+    --gray: #BDBDBD;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    font-family: 'Roboto', sans-serif;
+  }
+
 .glyphicon-thumbs-down, .glyphicon-thumbs-up {
     margin: 30px 0;
     font-size: 22px;
-    color: #b9b6b6;
+    color: var(--gray);
 }
 
 .glyphicon-home {
-    font-size: 30px;
+    font-size: 2px;
     color: rgb(3, 3, 3);
     display: flex;
     justify-content: center;
@@ -13,9 +27,8 @@
 }
 
 .glyphicon-home:hover {
-    font-size: 33px;
     text-decoration: none;
-    color: rgb(71, 70, 71);
+    color:var(--gray);
 }
 
 .glyphicon {
@@ -42,14 +55,9 @@
     color: #030303;
     font-size: 22px;
     width: 100%;
+    margin-top: 60px;
 }
 
-.top-title {
-    font-size: 24px;
-    font-weight: bold;
-    margin: 0;
-    text-align: center;
-}
 
 .top-comentario {
     font-size: 16px;
@@ -57,20 +65,19 @@
 }
 
 .top-comentario:hover {
-    color: rgb(49, 49, 49);
+    color: var(--gray);
 }
 
 .top-addpost {
-    color: rgb(5, 5, 5);;
+    color: rgb(5, 5, 5);
     float: right;
-    font-weight: bold;
     position: unset;
-    margin-right: 100px;
+    margin-right: 5%;
 }
 
 .top-addpost:hover {
     font-size: 24px;
-    color: rgb(66, 66, 66);
+    color: var(--gray);
 }
 
 .top-post {
@@ -86,22 +93,15 @@
 
 .top-h1 {
     color: rgb(255, 56, 92);
-    font-size: 35px;
+    font-size: 22px;
     font-weight: bold;
-    font-style: oblique;
     width: 100%;
 
 }
 
 .top-h1:hover {
-    color: rgb(224, 28, 126);
+    color: var(--gray);
     text-decoration: none;
-}
-
-
-.titulo-form {
-    font-size: 18px;
-    font-weight: bold;
 }
 
 .forms {
@@ -189,11 +189,6 @@
 }
 
 @media screen and (max-width: 640px) {
-    
-    .top-menu {
-        margin: 0;
-        width: 100%;
-    }
 
     .glyphicon {
         font-size: 10px;

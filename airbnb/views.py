@@ -152,6 +152,7 @@ def rating(request, pk):
             rating.save()
             return redirect('home_detail', pk=home.pk)
 
+@login_required
 def search_list(request):
     home_searched = False
 

@@ -110,11 +110,11 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/3.0/topics/i18n/
 
-LANGUAGE_CODE = 'pt-BR'
+LANGUAGE_CODE = 'pt-br'
 
 TIME_ZONE = 'America/Sao_Paulo'
 
-TIME_INPUT_FORMATS = '%d/%m/%Y' 
+TIME_INPUT_FORMATS = ('%d/%m/%Y', )
 
 USE_I18N = True
 
@@ -122,6 +122,9 @@ USE_L10N = True
 
 USE_TZ = True
 
+# send email configs
+EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
+EMAIL_FILE_PATH = os.path.join(BASE_DIR, 'sent_emails')
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/

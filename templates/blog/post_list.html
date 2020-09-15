@@ -3,7 +3,7 @@
 {% block content %}
     <div class="cntner">
         <div class="top-menu">
-            <p class="top-title">Blog de Experiências</p>
+            <p class="edit-p">Blog de Experiências</p>
             {% if user.is_authenticated %}
                 <a class="top-addpost" href="{% url 'blog:post_new' %}"><span class="glyphicon glyphicon-plus"> Novo post</span></a>
             {% endif %}

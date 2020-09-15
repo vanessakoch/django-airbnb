@@ -5,7 +5,6 @@
         <p class="login-error">Your username and password didn't match. Please try again.</p>
     {% endif %}
     <div class="forms">
-
         <div class="container-form">
             <div class="form-add">
                 <form method="post" action="{% url 'login' %}">
@@ -17,6 +16,9 @@
                     <input class="btn-salvar" type="submit" value="Entrar" />
                     <input type="hidden" name="next" value="{{ next }}" />
                 </form>
+                <a class="link-reset" href="{% url 'password_reset' %}">
+                    Esqueci minha senha
+                </a>
             </div>
         </div>
     </div>
