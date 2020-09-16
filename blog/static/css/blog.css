@@ -14,7 +14,7 @@
 
 .glyphicon-thumbs-down, .glyphicon-thumbs-up {
     margin: 30px 0;
-    font-size: 22px;
+    font-size: 36px;
     color: var(--gray);
 }
 
@@ -32,9 +32,8 @@
 }
 
 .glyphicon {
-    position: unset;
+    font-size: 16px;
 }
-
 
 .liked {
     color: rgb(4, 245, 77);
@@ -58,7 +57,6 @@
     margin-top: 60px;
 }
 
-
 .top-comentario {
     font-size: 16px;
     color: #000;
@@ -76,7 +74,6 @@
 }
 
 .top-addpost:hover {
-    font-size: 24px;
     color: var(--gray);
 }
 
@@ -105,7 +102,7 @@
 }
 
 .forms {
-    margin: 80px;
+    margin: 40px 0px;
 }
 
 .container-post {

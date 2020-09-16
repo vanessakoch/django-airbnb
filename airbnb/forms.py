@@ -1,6 +1,8 @@
 from django import forms
 from django.forms.widgets import ClearableFileInput
 from .models import Home, Address, Reserve, Comment, Rating, Search
+from django.views.generic import CreateView
+
 
 class HomeForm(forms.ModelForm):
 

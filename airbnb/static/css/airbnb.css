@@ -9,15 +9,18 @@
   margin: 0;
   padding: 0;
   border: none;
+  font-size: 14px;
   font-family: 'Roboto', sans-serif;
 }
 
 .container {
-  width: 100%;
+  max-width: 100%;
   padding: 10px 0;
-  box-shadow: 0 0 2px 0px var(--gray);
+  border-bottom: 0.5px solid var(--gray);
   background-color: white;
   text-align: center;
+  margin: 0;
+
 }
 
 ul {
@@ -29,16 +32,18 @@ ul {
   margin: 0 20px;
 }
 
+ul:first-child {
+  margin: 0;
+}
+
+ul:last-child {
+  margin: 0;
+}
+
 .container-item a {
   cursor: pointer;
   color: #000;
   text-decoration: none;
-}
-
-@media only screen and (max-width: 959px) {
-  .container-item a {
-      font-size: 12px;
-  }
 }
 
 .container-item:nth-child(2) {
@@ -98,42 +103,11 @@ ul {
   color:  var(--gray);
 }
 
-.card {
-  text-align: center;
-  width: 250px;
-  height: 380px;
-  margin: 30px;
-  box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, .2);
+.description-home {
+  text-align: justify;
+  margin: 10px 0;
 }
 
-.card:hover{
-  box-shadow: 6px 6px 6px 6px rgba(0, 0, 0, .3);
-}
-
-.card-deck {
-  display: flex; 
-  flex-wrap: wrap;
-  margin: 0 50px;
-}
-
-.card_text {
-  white-space: pre-wrap; 
-  width: 220px; 
-  height: 40px;
-  text-align: center;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  margin: 0 15px;
-}
-
-.card img { 
-  max-width: 100%;
-}
-
-.card-img-top {
-  width: 100%;
-  height: 45%;
-}
 
 .price {
   color: grey;
@@ -141,26 +115,45 @@ ul {
   margin: 0;
 }
 
-.card-title {
-  margin: 5px;
+.card-columns .card {
+  text-align: center;
+
+}
+
+.card-columns {
+  margin: 20px 80px;
+}
+
+.card-text {
+  white-space: pre-wrap; 
+  overflow: hidden;
+  text-align: justify;
+  text-overflow: ellipsis;
+  height: 50px;
 }
 
 .card-title a {
   color: rgb(255, 56, 92) ;;
   font-size: 16px;
   font-weight: bold;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+.card-img-top {
+  height: 200px;
 }
 
 .card-title a:hover {
   text-decoration: none;
-  color: #fc9292;
+  color: var(--gray);
 }
 
 .card-button {
   border: none;
   outline: 0;
   padding: 12px;
-  margin: 10px 0;
+  margin-top: 10px;
   color: white;
   background-color: rgb(65, 64, 64);
   text-align: center;
@@ -174,7 +167,6 @@ ul {
   opacity: 0.8;
   text-decoration: none;
   color: white;
-  font-size: 16px;
 }
 
 .title-search {
@@ -194,12 +186,12 @@ ul {
 }
 
 .form-add {
-  width: 450px;
-  margin: 0 10px;
-  padding: 20px;
+  width: 100%;
+  margin: 20px 80px;
+  padding: 2% 25%;
   transition: border-color 0.2s;
   border: 2px solid transparent;
-  box-shadow: 2px 2px 2px 2px rgb(163, 162, 162);
+  box-shadow: 0px 1px 4px 0px var(--gray);
   border-radius: 12px;
 }
 
@@ -210,8 +202,12 @@ ul {
   text-align: center;
 }
 
-.container-form input {
-  background-color: rgb(214, 216, 218);
+input:focus, textarea:focus {
+  outline: none;
+}
+
+.container-form input, textarea {
+  background-color: rgb(227, 227, 230);
   border-radius: 5px;
 }
 
@@ -238,7 +234,6 @@ ul {
 
 .container-form textarea {
   display: block;
-  background-color: rgb(214, 216, 218);
   width: 100%;
   text-align: center;
   height: 100px;
@@ -281,11 +276,6 @@ ul {
   padding: 10px;
   box-shadow: 1px 1px 1px 1px var(--gray);
   text-decoration: none;
-}
-
-.card-footer {
-  margin-top: -10%;
-  padding: 2px;
 }
 
 .btn-publicar:hover {
@@ -446,7 +436,7 @@ h2 {
 .container-aside {
   margin-left: 280px;
   width: 50%;
-  padding: 5%;
+  padding: 10% 5%;
   text-align: center;
   font-size: 16px;
   color: white;
@@ -460,6 +450,7 @@ h2 {
 
 .container-detail img {
   width: 100%;
+  max-height: 300px;
 }
 
 .reserved_done {
@@ -481,9 +472,9 @@ h2 {
 }
 
 .container-aside a:hover {
-  padding: 12px;
   text-decoration: none;
-  box-shadow: 1px 1px 1px 1px var(--gray);
+  color: var(--gray);
+  box-shadow: 1px 0px 1px 1px var(--gray);
 }
 
 .container-comments {
@@ -743,6 +734,9 @@ h2 {
 }
 
 @media screen and (max-width: 640px) {
+  .form-add  {
+    padding: 5px;
+  }
 
   .box-between {
     visibility: hidden;
@@ -816,6 +810,17 @@ h2 {
 .link-reset:hover {
   text-decoration: none;
   color: rgb(248, 86, 116); 
+}
+
+.container-reset {
+  margin: 100px;
+  font-weight: bold;
+}
+
+.container-reset p {
+  color: #000;
+  margin-top: 0;
+  font-weight: normal;
 }
 
 @media screen and (max-width: 640px) {
