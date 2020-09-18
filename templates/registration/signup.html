@@ -1,14 +1,12 @@
 {% extends 'airbnb/index.html' %}
+{% load crispy_forms_tags %}
 
 {% block content %}
 
-  <div class="container-form">    
-    <form class="form-add" method="post">
-        {% csrf_token %}
-        <p class="edit-p">Cadastre-se</p>
-        {{ form.as_p }}
-        <input class="btn-salvar" type="submit" value="Cadastrar" />
-    </form>
-
+  <div class="container-form">
+    <div class="form-add">  
+      <p class="edit-p">Cadastre-se</p>
+      {% crispy form %}
+    </div>
   </div>
 {% endblock %}

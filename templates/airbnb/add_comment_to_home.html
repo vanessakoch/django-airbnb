@@ -3,16 +3,12 @@
 
 {% block content %}
 
-    <div class="forms">
-        <div class="container-form">
-            <div class="form-add">
-                <p class="edit-p">Novo comentário</p>
-                <form method="POST">
-                    {% csrf_token %}
-                    {{ form|crispy }}
-                    <button class="btn-salvar" type="submit">Enviar</button>
-                </form>
-            </div>
+    <div class="container-form">
+        <div class="form-add">
+            <p class="edit-p">Novo comentário</p>
+            {% csrf_token %}
+            {% crispy form %}
         </div>
     </div>
+    
 {% endblock %}

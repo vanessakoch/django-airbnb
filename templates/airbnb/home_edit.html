@@ -3,13 +3,12 @@
 
 {% block content %}
 
-  <div class="container-form">    
-    <form class="form-add" method="post" enctype="multipart/form-data">
+  <div class="container-form">
+    <div class="form-add">  
       {% csrf_token %}      
       <p class="edit-p">Nova Acomodação</p>
-      {{ form|crispy }}
-      <button class="btn-salvar" type="submit">Salvar</button>
-    </form>
+      {% crispy form %}
+    </div>  
   </div>
 
 {% endblock %}

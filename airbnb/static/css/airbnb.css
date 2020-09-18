@@ -12,6 +12,13 @@
   font-family: 'Roboto', sans-serif;
 }
 
+input:focus, a:focus, button:focus, textarea:focus, .btn-primary:focus {
+  outline: thin dotted;
+  outline: 0px auto -webkit-focus-ring-color;
+  outline-offset: 0px;
+  box-shadow: none;
+}
+
 .container {
   max-width: 100%;
   padding: 10px 0;
@@ -54,6 +61,7 @@ ul:last-child {
 }
 
 .container-item button {
+  cursor: pointer;
   background-color: white;
   padding: 10px;
   border-radius: 50px;
@@ -206,33 +214,43 @@ input:focus, textarea:focus {
 }
 
 .container-form input {
-  background-color: rgb(227, 227, 230);
   border-radius: 5px;
 }
 
 .container-form .btn-salvar {
   font-size: 16px;
   color: rgb(250, 248, 248);
-  background-color: rgb(255, 56, 92);
-  padding: 5px;
   width: 100%;
-  padding: 10px;
+  box-shadow: none;
+  background-color: rgb(255, 56, 92);
 }
 
-.container-form .btn-salvar:hover {
+.btn-primary {
+  border-color: rgb(255, 56, 92);
+}
+
+.container-form .btn-salvar:hover,
+.btn-primary:hover {
   cursor: pointer;
+  border: none;
+  padding: 11px;
+  border-color: none;
   background-color: rgb(248, 86, 116);
+}
+
+.btn-primary:not(:disabled):not(.disabled):active {
+  background-color: rgb(248, 86, 116);
+  border: none;
 }
 
 .container-form select {
   height: 40px;
   font-size: 14px;
-  background-color: rgb(245, 47, 87);
+  background-color: rgb(248, 86, 116);
   color: white;
 }
 
 .container-form textarea {
-  background-color: rgb(227, 227, 230);
   display: block;
   width: 100%;
   text-align: center;
@@ -722,25 +740,34 @@ h2 {
 }
 
 @media screen and (max-width: 640px) {
-  .form-add  {
-    padding: 5px;
+  .form-add, .container-form  {
+    padding: 10px;
+    margin: 5px 0;
   }
 
   .box-between {
     visibility: hidden;
   }
-  
-  .box-input, .box, .box-lbl {
+
+  .reservation, .box-check {
+    width: 100px;
+  }
+
+  .box, .box-input {
     font-size: 8px;
-    width: 100%;
+  }
+
+  .box-lbl {
+    height: 60px;
   }
 
   .box-search button {
-    width: 70%;
+    width: 90%;
     font-size: 12px;
     padding: 1px;
-    margin-left: 20%;
-    margin-top: 10%;
+    border-radius: 2%;
+    margin-left: 0;
+    margin-top: 12%;
   }
   
 }

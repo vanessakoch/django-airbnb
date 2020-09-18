@@ -119,10 +119,6 @@
     text-decoration: none;
 }
 
-.forms {
-    margin: 40px 0px;
-}
-
 .container-post {
     margin: 20px 80px;
 }
@@ -157,16 +153,13 @@
     margin: 0 25%;
 }
 
-.btn {
-    margin: 5px;
-}
-
 .container-comentarios h4 {
     font-size: 20px;
     font-weight: bold;
     color: rgb(255, 56, 92);
     margin-top: 50px;
 }
+
 .form-comment-title {
     font-size: 18px;
     font-weight: bold;
@@ -203,22 +196,3 @@
 .container-error--detail {
     text-align: center;
 }
-
-@media screen and (max-width: 640px) {
-
-    .fa, h1 {
-        font-size: 20px;
-    }
-
-    .top-post p {
-        margin-left: 20%;
-    }
-
-    .top-addpost {
-        margin: 10px;
-    }
-}
-
-
-
-
