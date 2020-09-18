@@ -1,8 +1,8 @@
 from django import forms
 from django.forms.widgets import ClearableFileInput
 from .models import Home, Address, Reserve, Comment, Rating, Search
-from django.views.generic import CreateView
-
+from crispy_forms.helper import FormHelper
+from crispy_forms.layout import Submit
 
 class HomeForm(forms.ModelForm):
 
@@ -14,7 +14,7 @@ class AddressForm(forms.ModelForm):
   
   class Meta:
     model = Address
-    fields = ('country','zipcode', 'state', 'city', 'street', 'phone')   
+    fields = ('country','zipcode', 'state', 'city', 'street', 'phone')
 
 class RatingForm(forms.ModelForm):
     

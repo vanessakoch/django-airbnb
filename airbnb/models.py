@@ -36,8 +36,8 @@ class Address(models.Model):
 
     country = models.CharField(max_length=100, verbose_name="País")
     zipcode = models.IntegerField(verbose_name="CEP")
-    state = models.CharField(max_length=60, choices=estado, verbose_name="Estado")
-    city = models.CharField(max_length=60, verbose_name="Município") 
+    state = models.CharField(max_length=20, choices=estado, verbose_name="Estado")
+    city = models.CharField(max_length=20, verbose_name="Município") 
     street = models.CharField(max_length=100, verbose_name="Rua / Avenida")
     phone = models.IntegerField(verbose_name="Telefone")
 

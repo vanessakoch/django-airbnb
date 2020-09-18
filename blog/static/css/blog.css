@@ -1,4 +1,3 @@
-@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css);
 @import 'https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap';
 
 :root {
@@ -12,42 +11,62 @@
     font-family: 'Roboto', sans-serif;
   }
 
-.glyphicon-thumbs-down, .glyphicon-thumbs-up {
-    margin: 30px 0;
-    font-size: 36px;
+.fa {
+    font-size: 26;
+}
+
+.fa-thumbs-o-up, .fa-thumbs-o-down {
     color: var(--gray);
 }
 
-.glyphicon-home {
-    font-size: 2px;
-    color: rgb(3, 3, 3);
-    display: flex;
-    justify-content: center;
-    position: unset;
+.fa-times {
+    color: #dc1a28;
+    float: right;
+    margin: 8px 10px;
 }
 
-.glyphicon-home:hover {
+.fa-times-circle {
+    color: #dc1a28;
+    margin-left: 10px;
+}
+
+.fa-check-circle-o {
+    color: rgb(4, 245, 77);
+}
+
+.fa-pencil-square-o {
+    color:#2350e4;
+    float: right;
+    margin: 10px 0px;
+}
+
+.fa-share-alt {
+    font-size: 20px;
+    color: #1B1B1B;
+}
+
+.fa-times:hover, .fa-times-circle:hover,
+.fa-check-circle-o:hover, .fa-pencil-square-o:hover,
+.fa-share-alt:hover {
+    color: #FF385C;
     text-decoration: none;
-    color:var(--gray);
 }
 
-.glyphicon {
-    font-size: 16px;
-}
 
 .liked {
     color: rgb(4, 245, 77);
 }
 
 .disliked {
-    color: #F00;
+    color: #dc1a28;
 }
 
 .date {
     color: #828282;
     font-size: 14px;
     text-align: center;
-    margin-top: 50px;
+    margin-bottom: 30px;
+    margin-top: 60px;
 }
 
 .top-menu, .top-menu:hover, .top-menu:visited {
@@ -59,11 +78,11 @@
 
 .top-comentario {
     font-size: 16px;
-    color: #000;
+    color: #828282;
 }
 
 .top-comentario:hover {
-    color: var(--gray);
+    color: #FF385C;
 }
 
 .top-addpost {
@@ -89,11 +108,10 @@
 }
 
 .top-h1 {
-    color: rgb(255, 56, 92);
-    font-size: 22px;
+    color: #1B1B1B;
+    font-size: 16px;
     font-weight: bold;
     width: 100%;
-
 }
 
 .top-h1:hover {
@@ -112,6 +130,7 @@
 .container-post h1 {
     color: rgb(255, 56, 92);
     font-weight: bold;
+    margin-top: 20px;
 }
 
 .container-post p {
@@ -129,7 +148,7 @@
     margin: 0 80px;
 }
 
-.right{
+.right {
 	float: right;
 }
 
@@ -187,15 +206,12 @@
 
 @media screen and (max-width: 640px) {
 
-    .glyphicon {
-        font-size: 10px;
-    }
-    .date {
-        font-size: 10px;
+    .fa, h1 {
+        font-size: 20px;
     }
 
     .top-post p {
-        margin: 0;
+        margin-left: 20%;
     }
 
     .top-addpost {

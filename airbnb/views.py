@@ -1,8 +1,8 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.utils import timezone
+from django.contrib.auth.decorators import login_required
 from .models import Home, Address, Reserve, Comment, Rating, Search
 from .forms import HomeForm, AddressForm, ReserveForm, CommentForm, RatingForm, SearchForm
-from django.contrib.auth.decorators import login_required
 
 def init_page(request):
     return render(request, 'airbnb/init_page.html')

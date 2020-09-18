@@ -1,4 +1,5 @@
 {% extends 'airbnb/index.html' %}
+{% load crispy_forms_tags %}
 
 {% block content %}
 
@@ -7,7 +8,7 @@
             <form class="form-add" method="POST">
                 {% csrf_token %}
                 <p class="edit-p">Nova experiência</p>
-                {{ form.as_p }}
+                {{ form|crispy }}
                 <button type="submit" class="btn-salvar">Salvar</button>
             </form>
         </div>

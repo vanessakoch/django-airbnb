@@ -5,7 +5,7 @@
         <div class="top-menu">
             <p class="edit-p">Blog de Experiências</p>
             {% if user.is_authenticated %}
-                <a class="top-addpost" href="{% url 'blog:post_new' %}"><span class="glyphicon glyphicon-plus"> Novo post</span></a>
+                <a class="top-addpost" href="{% url 'blog:post_new' %}"><span class="fa fa-share-alt" aria-hidden="true"> Novo Post</span></a>
             {% endif %}
             {% for post in posts %}
                 <div class="date">
