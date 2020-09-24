@@ -186,10 +186,16 @@
 }
 
 .container-error {
-    width: 80vw;
-    height: 70vh;
     display: absolute;
     justify-content: center;
     align-items: center;
     text-align: center;
+}
+
+.container-error p {
+    margin: 50px 0;
+}
+
+.container-error img {
+    width: 50%;
 }

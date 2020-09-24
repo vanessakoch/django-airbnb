@@ -5,6 +5,10 @@ from django.contrib.auth.decorators import login_required
 from .models import Home, Address, Reserve, Comment, Rating, Search
 from .forms import HomeForm, AddressForm, ReserveForm, CommentForm, RatingForm, SearchForm
 
+import logging
+
+logger = logging.getLogger(__name__)
+
 def init_page(request):
     return render(request, 'airbnb/init_page.html')
 
@@ -62,6 +66,10 @@ def home_new(request):
             home = form.save(commit=False)
             home.owner = request.user
             home.save()
+            
+            if home.image == '../static/img/img_notfound.png':
+                logger.warning('Imagem da acomodação não foi anexada.')
+
             return redirect('home_address', pk=home.pk)
         else:
             messages.error(request, 'Erro! Verifique se os dados estão corretos.')
@@ -121,6 +129,7 @@ def home_reservation(request, pk):
             ).count()
 
             if is_reserved > 0:
+                logger.warning('Não foi possível reservar. Essa acomodação já está reservada.')
                 messages.error(request, 'Erro, você ja reservou esta acomodação.')
                 return redirect('home_detail', pk=home.pk)
             else:
@@ -179,8 +188,12 @@ def search_list(request):
 
             homes_count = Home.objects.filter(address__city = search.local).count()
 
+            logger.info('Busca realizada na cidade de : ' + search.local)
+
             if homes_count > 0:
                 home_searched = True
+            else:
+                logger.warning('Não foi possível encontrar acomodações nesse local.')
 
             return render(
                 request, 

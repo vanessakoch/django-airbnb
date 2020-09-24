@@ -46,7 +46,7 @@ class Address(models.Model):
 
 class Home(models.Model):
     owner = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
-    image = models.ImageField(upload_to='media/', default="media/1.jpg", verbose_name="Fotografia")
+    image = models.ImageField(upload_to='media/', default="../static/img/img_notfound.png", verbose_name="Fotografia")
     name = models.CharField(max_length=200, verbose_name="Nome do estabelecimento")
     description = models.TextField(verbose_name="Descrição")
     price = models.DecimalField(max_digits=30, decimal_places=2, verbose_name="Preço da diária")
