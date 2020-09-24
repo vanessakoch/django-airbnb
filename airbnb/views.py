@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.utils import timezone
+from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from .models import Home, Address, Reserve, Comment, Rating, Search
 from .forms import HomeForm, AddressForm, ReserveForm, CommentForm, RatingForm, SearchForm
@@ -62,6 +63,8 @@ def home_new(request):
             home.owner = request.user
             home.save()
             return redirect('home_address', pk=home.pk)
+        else:
+            messages.error(request, 'Erro! Verifique se os dados estão corretos.')
     else:
         form = HomeForm()
     return render(request, 'airbnb/home_edit.html', {'form': form})
@@ -77,7 +80,10 @@ def home_address(request, pk):
             address.save()
             home.address = get_object_or_404(Address, pk=address.pk)
             home.save()
+            messages.success(request, 'Dados salvos com sucesso!')
             return redirect('home_detail', pk=home.pk)
+        else:
+            messages.error(request, 'Erro! Verifique se os dados estão corretos.')
     else:
         form = AddressForm()
     return render(request, 'airbnb/home_address.html', {'form': form})
@@ -93,6 +99,8 @@ def home_edit(request, pk):
             home.owner = request.user
             home.save()
             return redirect('home_address', pk=home.pk)
+        else:
+            messages.error(request, 'Erro! Verifique se os dados estão corretos.')
     else:
         form = HomeForm(instance=home)
     return render(request, 'airbnb/home_edit.html', {'form': form})
@@ -113,6 +121,7 @@ def home_reservation(request, pk):
             ).count()
 
             if is_reserved > 0:
+                messages.error(request, 'Erro, você ja reservou esta acomodação.')
                 return redirect('home_detail', pk=home.pk)
             else:
                 reserve.user = request.user
@@ -122,7 +131,10 @@ def home_reservation(request, pk):
             
                 reserve.total_value = (daily_cost * total_days) * reserve.number_peoples
                 reserve.save() 
+                messages.success(request, 'Reserva feita com sucesso!')
                 return redirect('home_detail', pk=home.pk)
+        else:
+            messages.error(request, 'Erro! Verifique se os dados estão corretos.')
     else:
         form = ReserveForm()
     return render(request, 'airbnb/home_reservation.html', {'form': form})
@@ -185,6 +197,7 @@ def search_list(request):
 def home_publish(request, pk):
     home = get_object_or_404(Home, pk=pk)
     home.publish()
+    messages.success(request, 'Publicação feita com sucesso!')
     return redirect('home_detail', pk=pk)
 
 def publish(self):
@@ -195,6 +208,7 @@ def publish(self):
 def home_remove(request, pk):
     home = get_object_or_404(Home, pk=pk)
     home.delete()
+    messages.warning(request, 'Acomodação removida com sucesso!')
     return redirect('home_list')
 
 def add_comment_to_home(request, pk):
@@ -205,7 +219,10 @@ def add_comment_to_home(request, pk):
             comment = form.save(commit=False)
             comment.home = home
             comment.save()
+            messages.success(request, 'Comentário adicionado com sucesso.')
             return redirect('home_detail', pk=home.pk)
+        else:
+            messages.error(request, 'Erro! Verifique se os dados estão corretos.')
     else:
         form = CommentForm()
     return render(request, 'airbnb/add_comment_to_home.html', {'form': form})
@@ -214,11 +231,13 @@ def add_comment_to_home(request, pk):
 def comment_approve(request, pk):
     comment = get_object_or_404(Comment, pk=pk)
     comment.approve()
+    messages.success(request, 'Comentário publicado com sucesso!')
     return redirect('home_detail', pk=comment.home.pk)
 
 @login_required
 def comment_remove(request, pk):
     comment = get_object_or_404(Comment, pk=pk)
     comment.delete()
+    messages.warning(request, 'Comentário removido com sucesso!')
     return redirect('home_detail', pk=comment.home.pk)
 

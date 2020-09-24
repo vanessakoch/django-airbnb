@@ -43,19 +43,21 @@
       </div>
     </header>
 
-  <div class="intro">
-    {% if user.is_authenticated %}
-      <p class="login-menu">Olá
-        {{ user.username }}
-        <small>(<a href="{% url 'logout' %}">Sair</a>)</small>
-      </p>
-    {% endif %}
-    <a class="intro-underline" href="{% url 'init_page' %}">Lugares para ficar</a>
-    <a class="intro-a" href="{% url 'home_list' %}">Todas as estadias</a>
-    <a class="intro-a" href="{% url 'blog:post_list' %}">Experiências</a>
-  </div>
+    {% include 'messages.html' %}
+
+    <div class="intro">
+      {% if user.is_authenticated %}
+        <p class="login-menu">Olá
+          {{ user.username }}
+          <small>(<a href="{% url 'logout' %}">Sair</a>)</small>
+        </p>
+      {% endif %}
+      <a class="intro-underline" href="{% url 'init_page' %}">Lugares para ficar</a>
+      <a class="intro-a" href="{% url 'home_list' %}">Todas as estadias</a>
+      <a class="intro-a" href="{% url 'blog:post_list' %}">Experiências</a>
+    </div>
 
   {% block content %}{% endblock %}
 
-</body>
+  </body>
 </html>

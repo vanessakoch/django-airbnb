@@ -186,13 +186,10 @@
 }
 
 .container-error {
-    width: 90vw;
+    width: 80vw;
     height: 70vh;
     display: absolute;
     justify-content: center;
     align-items: center;
-}
-
-.container-error--detail {
     text-align: center;
 }

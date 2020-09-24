@@ -455,9 +455,9 @@ h2 {
 
 .reserved_done {
   font-size: 14px;
-  color: rgb(35, 80, 228);
   margin-top: 40px;
   text-align: center;
+  font-weight: bold;
 }
 
 .container-aside a {

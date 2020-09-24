@@ -1,5 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from django.utils import timezone
+from django.contrib import messages
 from .models import Post, Comment, PostLike, PostDislike
 from .forms import PostForm, CommentForm
 from django.shortcuts import redirect
@@ -54,6 +55,7 @@ def post_new(request):
             post = form.save(commit=False)
             post.author = request.user
             post.save()
+            messages.success(request, 'Postagem criada com sucesso!')
             return redirect('blog:post_detail', pk=post.pk)
     else:
         form = PostForm()
@@ -68,6 +70,7 @@ def post_edit(request, pk):
             post = form.save(commit=False)
             post.author = request.user
             post.save()
+            messages.success(request, 'Postagem editada com sucesso!')
             return redirect('blog:post_detail', pk=post.pk)
     else:
         form = PostForm(instance=post)
@@ -82,6 +85,7 @@ def post_draft_list(request):
 def post_publish(request, pk):
     post = get_object_or_404(Post, pk=pk)
     post.publish()
+    messages.success(request, 'Postagem publicada com sucesso!')
     return redirect('blog:post_detail', pk=pk)
 
 def publish(self):
@@ -92,6 +96,7 @@ def publish(self):
 def post_remove(request, pk):
     post = get_object_or_404(Post, pk=pk)
     post.delete()
+    messages.warning(request, 'Postagem removida com sucesso!')
     return redirect('blog:post_list')
 
 @login_required
@@ -140,6 +145,7 @@ def add_comment_to_post(request, pk):
             comment = form.save(commit=False)
             comment.post = post
             comment.save()
+            messages.success(request, 'Comentário adicionado com sucesso!')
             return redirect('blog:post_detail', pk=post.pk)
     else:
         form = CommentForm()
@@ -149,10 +155,12 @@ def add_comment_to_post(request, pk):
 def comment_approve(request, pk):
     comment = get_object_or_404(Comment, pk=pk)
     comment.approve()
+    messages.success(request, 'Comentário publicado com sucesso!')
     return redirect('blog:post_detail', pk=comment.post.pk)
 
 @login_required
 def comment_remove(request, pk):
     comment = get_object_or_404(Comment, pk=pk)
     comment.delete()
+    messages.warning(request, 'Comentário removido com sucesso!')
     return redirect('blog:post_detail', pk=comment.post.pk)
