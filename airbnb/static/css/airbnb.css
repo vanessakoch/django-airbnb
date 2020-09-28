@@ -81,6 +81,7 @@ ul:last-child {
 .intro {
   margin-top: 20px;
   margin-left: 6%;
+  width: 90%;
   font-size: 12px;
 }
 
@@ -281,23 +282,6 @@ input:focus, textarea:focus {
   color: rgb(255, 56, 92);
 }
 
-.btn-publicar {
-  cursor: pointer;
-  font-size: 14px;
-  color: #000;
-  transition: 0.4s all ease-in;
-  background-color: white;
-  padding: 10px;
-  box-shadow: 1px 1px 1px 1px var(--gray);
-  text-decoration: none;
-}
-
-.btn-publicar:hover {
-  text-decoration: none;
-  transition: 0.4s all ease-in;
-  color: var(--gray)
-}
-
 .btn-logar {
   background-color: rgb(255, 56, 92) ;
   font-size: 16px;
@@ -436,12 +420,13 @@ h2 {
   text-align: center;
   font-size: 16px;
   color: white;
-  background-color: rgb(255, 56, 92);
+  background-color: #007bff;
   border-radius: 20px;
 }
 
 .normal-weight {
   font-weight: normal;
+  margin: 5px 0;
 }
 
 .container-detail img {
@@ -462,9 +447,9 @@ h2 {
 
 .container-aside a {
   background-color: #fff;
-  color: rgb(255, 56 , 92);
-  box-shadow: 1px 1px 1px 1px rgb(255, 109, 109);
+  color: #007bff;
   border-radius: 10px;
+  box-shadow: 2px 2px 1px 1px var(--gray);
   font-weight: bold;
   display: block;
   margin: 10px;
@@ -474,7 +459,7 @@ h2 {
 .container-aside a:hover {
   text-decoration: none;
   color: var(--gray);
-  box-shadow: 1px 0px 1px 1px var(--gray);
+  box-shadow: 2px 2px 1px 1px var(--gray);
 }
 
 .container-comments {
@@ -542,21 +527,30 @@ h2 {
 }
 
 .detail-btncomentar {
-  font-size: 14px;
-  color: rgb(255, 255, 255);
-  background-color: rgb(35, 80, 228);
-  transition: 0.4s all ease-in;
-  padding: 5px;
   cursor: pointer;
-  border-radius: 20px;
+  text-align: center;
+  text-decoration: none;
   display: flex;
+  align-items: center;
   justify-content: center;
-  margin-top: 20px;
-  max-width: 100%;
+  font-size: 14px;
+  background-color: rgb(255, 56, 92);
+  line-height: 18px;
+  color: white;
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 12px 24px;
+  width: 100%;
+  transition: box-shadow;
+  border: medium;
+}
+
+.btn-publicar {
+  width: 32%;
 }
 
 .detail-btncomentar:hover {
-  background-color: rgb(59, 100, 233);
+  background-color: rgb(255, 123, 147);
   color: white;
   text-decoration: none;
 }
@@ -844,16 +838,12 @@ h2 {
   }
 
   .container-description {
-    width: 100%;
-    margin: 30px 15px;
+    width: 90%;
+    margin: 30px 10px;
   }
 
   .date-home {
     margin-right: 0;
-  }
-
-  .container-description {
-    width: 85%;
   }
 
   .rating-button, .rating-button-disabled {

@@ -13,7 +13,7 @@
             <p class="date-home">{{ home.published_date }}</p>
         {% else %}
             {% if user.is_authenticated %}
-                <a class="btn-publicar" href="{% url 'home_publish' pk=home.pk %}">Publicar acomodação</a>
+                <a class="detail-btncomentar btn-publicar" href="{% url 'home_publish' pk=home.pk %}">Publicar acomodação</a>
             {% endif %}
         {% endif %}
 
@@ -29,8 +29,8 @@
         <div class="container-detail">
             <img src="../../../media/{{ home.image }}" alt="Imagem Acomodacao">
 
-            <div class="container-aside">
-                <label>Apenas R$ {{ home.price }} por dia!</label>
+            <div class="container-aside bolder">
+                <label>APENAS R$ {{ home.price }} POR DIA!</label>
                 {% if home.published_date %}  
                     {% if reservation %}
                         <a><span class="is_reserved">JÁ ESTA RESERVADO :)</span></a>
@@ -44,8 +44,8 @@
                 {% endif %}
                 <label class="normal-weight" for="">Nota da acomodação: {{ home.avg_rating }}</label>
                 <label class="normal-weight" for="">Quantidade de avaliações: {{ home.no_of_ratings}}</label>
-                <label>Localização:</label>
-                <label class="normal-weight" for="">{{ home.address }}</label>
+                <label>LOCALIZAÇÃO:</label>
+                <label class="normal-weight bolder" for="">{{ home.address }}</label>
             </div>
 
             {% if home.published_date %}

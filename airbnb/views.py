@@ -73,6 +73,7 @@ def home_new(request):
             return redirect('home_address', pk=home.pk)
         else:
             messages.error(request, 'Erro! Verifique se os dados estão corretos.')
+            logger.error('Erro! Tentativa em submeter dados inválidos')
     else:
         form = HomeForm()
     return render(request, 'airbnb/home_edit.html', {'form': form})
@@ -89,9 +90,13 @@ def home_address(request, pk):
             home.address = get_object_or_404(Address, pk=address.pk)
             home.save()
             messages.success(request, 'Dados salvos com sucesso!')
+            logger.info('Dados salvos corretamente')
+
             return redirect('home_detail', pk=home.pk)
         else:
             messages.error(request, 'Erro! Verifique se os dados estão corretos.')
+            logger.error('Erro! Tentativa em submeter dados inválidos')
+
     else:
         form = AddressForm()
     return render(request, 'airbnb/home_address.html', {'form': form})
@@ -129,9 +134,9 @@ def home_reservation(request, pk):
             ).count()
 
             if is_reserved > 0:
-                logger.warning('Não foi possível reservar. Essa acomodação já está reservada.')
-                messages.error(request, 'Erro, você ja reservou esta acomodação.')
                 return redirect('home_detail', pk=home.pk)
+                logger.warning('Não foi possível reservar. Acomodação já está reservada por este usuário.')
+                messages.error(request, 'Erro, você ja reservou esta acomodação.')
             else:
                 reserve.user = request.user
                 reserve.home = home
@@ -171,6 +176,7 @@ def rating(request, pk):
             rating = Rating.objects.create(user=request.user, home=home)
             rating.stars = request.POST.get('star')
             rating.save()
+            messages.success(request, 'Acomodação avaliada com sucesso.')
             return redirect('home_detail', pk=home.pk)
 
 @login_required
@@ -192,8 +198,11 @@ def search_list(request):
 
             if homes_count > 0:
                 home_searched = True
+                messages.success(request, 'Veja as acomodações que encontramos para você.')
+                logger.info('Acomodações encontradas no local de busca.')
             else:
-                logger.warning('Não foi possível encontrar acomodações nesse local.')
+                messages.warning(request, 'Não foi possível encontrar acomodações nesse local.')
+                logger.warning('Localização sem acomodações encontradas na base de dados.')
 
             return render(
                 request, 
@@ -252,5 +261,6 @@ def comment_remove(request, pk):
     comment = get_object_or_404(Comment, pk=pk)
     comment.delete()
     messages.warning(request, 'Comentário removido com sucesso!')
+    logger.warning('Um comentário foi removido do banco de dados.')
     return redirect('home_detail', pk=comment.home.pk)
 

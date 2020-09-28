@@ -12,7 +12,7 @@
             </div>
         {% else %}
             {% if user.is_authenticated %}
-                <a class="btn-publicar" href="{% url 'blog:post_publish' pk=post.pk %}">Publicar post</a>
+                <a class="detail-btncomentar btn-publicar" href="{% url 'blog:post_publish' pk=post.pk %}">Publicar postagem</a>
             {% endif %}
         {% endif %}
         {% if user.is_authenticated %}

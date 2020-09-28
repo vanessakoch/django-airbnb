@@ -6,6 +6,10 @@ from .forms import PostForm, CommentForm
 from django.shortcuts import redirect
 from django.contrib.auth.decorators import login_required
 
+import logging
+
+logger = logging.getLogger(__name__)
+
 def post_list(request):
     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
     return render(request, 'blog/post_list.html', {'posts': posts})
@@ -57,6 +61,8 @@ def post_new(request):
             post.save()
             messages.success(request, 'Postagem criada com sucesso!')
             return redirect('blog:post_detail', pk=post.pk)
+        else:
+            logger.error('Erro na validação do formulário')
     else:
         form = PostForm()
     return render(request, 'blog/post_edit.html', {'form': form})
@@ -97,6 +103,7 @@ def post_remove(request, pk):
     post = get_object_or_404(Post, pk=pk)
     post.delete()
     messages.warning(request, 'Postagem removida com sucesso!')
+    logger.warning('Postagem foi removida do banco de dados')
     return redirect('blog:post_list')
 
 @login_required
@@ -112,10 +119,15 @@ def post_like(request, pk):
     ).count()
     
     if likes_count == 0 and dislikes_count == 0:
+        messages.success(request, 'Postagem aprovada com sucesso!')
         post_like, created = PostLike.objects.get_or_create(
             post_id=pk,
             user=request.user
         )
+    else:
+        messages.warning(request, 'Atenção, você já avaliou essa postagem!')
+        logger.error('Tentativa em avaliar postagem negada. Já foi avaliado pelo usuário.')  
+    
     return redirect('blog:post_detail', pk=pk)
 
 @login_required
@@ -131,10 +143,16 @@ def post_dislike(request, pk):
     ).count()
     
     if likes_count == 0 and dislikes_count == 0:
+        messages.success(request, 'Postagem reprovada com sucesso!')
+
         post_dislike, created = PostDislike.objects.get_or_create(
             post_id=pk,
             user=request.user
         )
+    else:
+        messages.warning(request, 'Atenção, você já avaliou essa postagem!')
+        logger.error('Tentativa em avaliar postagem negada. Já foi avaliado pelo usuário.')  
+
     return redirect('blog:post_detail', pk=pk)
 
 def add_comment_to_post(request, pk):
@@ -163,4 +181,5 @@ def comment_remove(request, pk):
     comment = get_object_or_404(Comment, pk=pk)
     comment.delete()
     messages.warning(request, 'Comentário removido com sucesso!')
+    logger.warning('Comentário removido da base de dados.')
     return redirect('blog:post_detail', pk=comment.post.pk)
