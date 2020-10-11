@@ -2,8 +2,6 @@ import datetime
 
 from django.test import TestCase
 from django.utils import timezone
-from django.utils import timezone
-
 from users.models import CustomUser
 from blog.models import Post, PostLike, PostDislike, PostComment
 from airbnb.models import Home, Address, Reserve, Comment, Rating, Search

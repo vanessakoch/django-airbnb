@@ -1,0 +1,50 @@
+2020-10-11 18:33:08,941-PIL.Image-(DEBUG) Importing BlpImagePlugin
+2020-10-11 18:33:08,944-PIL.Image-(DEBUG) Importing BmpImagePlugin
+2020-10-11 18:33:08,945-PIL.Image-(DEBUG) Importing BufrStubImagePlugin
+2020-10-11 18:33:08,946-PIL.Image-(DEBUG) Importing CurImagePlugin
+2020-10-11 18:33:08,947-PIL.Image-(DEBUG) Importing DcxImagePlugin
+2020-10-11 18:33:08,948-PIL.Image-(DEBUG) Importing DdsImagePlugin
+2020-10-11 18:33:08,950-PIL.Image-(DEBUG) Importing EpsImagePlugin
+2020-10-11 18:33:08,952-PIL.Image-(DEBUG) Importing FitsStubImagePlugin
+2020-10-11 18:33:08,953-PIL.Image-(DEBUG) Importing FliImagePlugin
+2020-10-11 18:33:08,955-PIL.Image-(DEBUG) Importing FpxImagePlugin
+2020-10-11 18:33:08,956-PIL.Image-(DEBUG) Image: failed to import FpxImagePlugin: No module named 'olefile'
+2020-10-11 18:33:08,956-PIL.Image-(DEBUG) Importing FtexImagePlugin
+2020-10-11 18:33:08,958-PIL.Image-(DEBUG) Importing GbrImagePlugin
+2020-10-11 18:33:08,963-PIL.Image-(DEBUG) Importing GifImagePlugin
+2020-10-11 18:33:08,964-PIL.Image-(DEBUG) Importing GribStubImagePlugin
+2020-10-11 18:33:08,965-PIL.Image-(DEBUG) Importing Hdf5StubImagePlugin
+2020-10-11 18:33:08,966-PIL.Image-(DEBUG) Importing IcnsImagePlugin
+2020-10-11 18:33:08,969-PIL.Image-(DEBUG) Importing IcoImagePlugin
+2020-10-11 18:33:08,970-PIL.Image-(DEBUG) Importing ImImagePlugin
+2020-10-11 18:33:08,973-PIL.Image-(DEBUG) Importing ImtImagePlugin
+2020-10-11 18:33:08,975-PIL.Image-(DEBUG) Importing IptcImagePlugin
+2020-10-11 18:33:08,977-PIL.Image-(DEBUG) Importing JpegImagePlugin
+2020-10-11 18:33:08,977-PIL.Image-(DEBUG) Importing Jpeg2KImagePlugin
+2020-10-11 18:33:08,978-PIL.Image-(DEBUG) Importing McIdasImagePlugin
+2020-10-11 18:33:08,978-PIL.Image-(DEBUG) Importing MicImagePlugin
+2020-10-11 18:33:08,980-PIL.Image-(DEBUG) Image: failed to import MicImagePlugin: No module named 'olefile'
+2020-10-11 18:33:08,980-PIL.Image-(DEBUG) Importing MpegImagePlugin
+2020-10-11 18:33:08,981-PIL.Image-(DEBUG) Importing MpoImagePlugin
+2020-10-11 18:33:08,984-PIL.Image-(DEBUG) Importing MspImagePlugin
+2020-10-11 18:33:08,985-PIL.Image-(DEBUG) Importing PalmImagePlugin
+2020-10-11 18:33:08,986-PIL.Image-(DEBUG) Importing PcdImagePlugin
+2020-10-11 18:33:08,987-PIL.Image-(DEBUG) Importing PcxImagePlugin
+2020-10-11 18:33:08,988-PIL.Image-(DEBUG) Importing PdfImagePlugin
+2020-10-11 18:33:09,005-PIL.Image-(DEBUG) Importing PixarImagePlugin
+2020-10-11 18:33:09,006-PIL.Image-(DEBUG) Importing PngImagePlugin
+2020-10-11 18:33:09,006-PIL.Image-(DEBUG) Importing PpmImagePlugin
+2020-10-11 18:33:09,006-PIL.Image-(DEBUG) Importing PsdImagePlugin
+2020-10-11 18:33:09,007-PIL.Image-(DEBUG) Importing SgiImagePlugin
+2020-10-11 18:33:09,010-PIL.Image-(DEBUG) Importing SpiderImagePlugin
+2020-10-11 18:33:09,012-PIL.Image-(DEBUG) Importing SunImagePlugin
+2020-10-11 18:33:09,013-PIL.Image-(DEBUG) Importing TgaImagePlugin
+2020-10-11 18:33:09,014-PIL.Image-(DEBUG) Importing TiffImagePlugin
+2020-10-11 18:33:09,015-PIL.Image-(DEBUG) Importing WebPImagePlugin
+2020-10-11 18:33:09,017-PIL.Image-(DEBUG) Importing WmfImagePlugin
+2020-10-11 18:33:09,018-PIL.Image-(DEBUG) Importing XbmImagePlugin
+2020-10-11 18:33:09,022-PIL.Image-(DEBUG) Importing XpmImagePlugin
+2020-10-11 18:33:09,023-PIL.Image-(DEBUG) Importing XVThumbImagePlugin
+2020-10-11 18:33:16,706-airbnb.views-(INFO) Dados salvos corretamente
+2020-10-11 18:34:38,159-blog.views-(WARNING) Objeto post foi editado!
+2020-10-11 18:34:38,159-blog.views-(WARNING) Objeto post foi editado!
