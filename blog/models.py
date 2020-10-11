@@ -43,7 +43,7 @@ class PostDislike(models.Model):
     def __str__(self):
         return '{} - {}'.format(self.post.title, self.user)
 
-class Comment(models.Model):
+class PostComment(models.Model):
     post = models.ForeignKey('blog.Post', on_delete=models.CASCADE, related_name='comments')
     author = models.CharField(max_length=200, verbose_name="Autor")
     text = models.TextField(verbose_name="Texto")

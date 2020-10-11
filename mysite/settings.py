@@ -127,19 +127,21 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'mysite.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': DB_NAME,
-        'USER': DB_USER,
-        'PASSWORD': DB_PASSWORD,
-        'HOST': DB_HOST,
-        'PORT': '',
-    }
+	'default': {
+    	'ENGINE': 'django.db.backends.mysql',
+    	'NAME': DB_NAME,
+    	'USER': DB_USER,
+    	'PASSWORD': DB_PASSWORD,
+    	'HOST': DB_HOST,
+    	'PORT': '',
+        'TEST':{
+            'NAME': DB_TEST,
+        }
+	}
 }
 
 # Password validation

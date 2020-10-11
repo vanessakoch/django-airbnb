@@ -95,6 +95,10 @@ class Reserve(models.Model):
     number_peoples = models.IntegerField(verbose_name="Número de pessoas")
     total_value = models.DecimalField(max_digits=30, decimal_places=2)
 
+    def set_total_value(self):
+        self.total_value = (self.home.price * abs((self.final_date - self.initial_date).days)) * self.number_peoples
+        self.save()
+
     def __str__(self):
         return str(self.total_value)
 

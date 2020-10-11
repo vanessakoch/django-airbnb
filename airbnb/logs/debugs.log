@@ -1,0 +1,481 @@
+2020-10-10 13:23:00,277-asyncio-(DEBUG) Using selector: EpollSelector
+2020-10-10 13:23:18,294-asyncio-(DEBUG) Using selector: EpollSelector
+2020-10-10 13:23:26,497-asyncio-(DEBUG) Using selector: EpollSelector
+2020-10-10 13:23:41,626-asyncio-(DEBUG) Using selector: EpollSelector
+2020-10-10 13:25:06,041-django.utils.autoreload-(INFO) Watching for file changes with StatReloader
+2020-10-10 13:25:45,950-django.utils.autoreload-(INFO) Watching for file changes with StatReloader
+2020-10-10 13:26:59,841-django.utils.autoreload-(INFO) /home/vanessa/Documentos/www/django-airbnb/mysite/settings.py changed, reloading.
+2020-10-10 13:26:59,842-asyncio-(DEBUG) Using selector: EpollSelector
+2020-10-10 13:27:00,446-asyncio-(DEBUG) Using selector: EpollSelector
+2020-10-10 13:38:32,442-asyncio-(DEBUG) Using selector: EpollSelector
+2020-10-10 13:39:51,330-django.utils.autoreload-(INFO) Watching for file changes with StatReloader
+2020-10-10 13:45:12,648-django.utils.autoreload-(INFO) /home/vanessa/Documentos/www/django-airbnb/blog/views.py changed, reloading.
+2020-10-10 13:45:12,649-asyncio-(DEBUG) Using selector: EpollSelector
+2020-10-10 13:45:13,348-django.utils.autoreload-(INFO) Watching for file changes with StatReloader
+2020-10-10 13:46:05,498-django.request-(ERROR) Internal Server Error: /blog/post/new/
+Traceback (most recent call last):
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/contrib/auth/decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/vanessa/Documentos/www/django-airbnb/blog/views.py", line 63, in post_new
+    logger.success('Nova postagem adicionada no banco')
+AttributeError: 'Logger' object has no attribute 'success'
+2020-10-10 13:46:06,352-django.request-(WARNING) Not Found: /favicon.ico
+2020-10-10 13:46:36,792-django.utils.autoreload-(INFO) /home/vanessa/Documentos/www/django-airbnb/blog/views.py changed, reloading.
+2020-10-10 13:46:36,792-asyncio-(DEBUG) Using selector: EpollSelector
+2020-10-10 13:46:37,792-django.utils.autoreload-(INFO) Watching for file changes with StatReloader
+2020-10-10 13:46:50,833-blog.views-(WARNING) Objeto Post editado
+2020-10-10 13:46:50,833-blog.views-(WARNING) Objeto Post editado
+2020-10-10 13:47:10,298-django.utils.autoreload-(INFO) /home/vanessa/Documentos/www/django-airbnb/blog/views.py changed, reloading.
+2020-10-10 13:47:10,299-asyncio-(DEBUG) Using selector: EpollSelector
+2020-10-10 13:47:11,042-django.utils.autoreload-(INFO) Watching for file changes with StatReloader
+2020-10-10 13:48:57,341-django.utils.autoreload-(INFO) /home/vanessa/Documentos/www/django-airbnb/blog/views.py changed, reloading.
+2020-10-10 13:48:57,342-asyncio-(DEBUG) Using selector: EpollSelector
+2020-10-10 13:48:58,016-django.utils.autoreload-(INFO) Watching for file changes with StatReloader
+2020-10-10 13:49:22,900-blog.views-(ERROR) Ausência de dados em um ou mais campos do formulário
+2020-10-10 13:49:22,900-blog.views-(ERROR) Ausência de dados em um ou mais campos do formulário
+2020-10-10 13:50:00,218-django.utils.autoreload-(INFO) /home/vanessa/Documentos/www/django-airbnb/blog/views.py changed, reloading.
+2020-10-10 13:50:00,219-asyncio-(DEBUG) Using selector: EpollSelector
+2020-10-10 13:50:00,865-django.utils.autoreload-(INFO) Watching for file changes with StatReloader
+2020-10-10 13:50:16,847-blog.views-(ERROR) Ausência de dados em um ou mais campos do formulário. Comentário não adicionado
+2020-10-10 13:50:16,847-blog.views-(ERROR) Ausência de dados em um ou mais campos do formulário. Comentário não adicionado
+2020-10-10 13:50:58,402-django.utils.autoreload-(INFO) /home/vanessa/Documentos/www/django-airbnb/blog/views.py changed, reloading.
+2020-10-10 13:50:58,403-asyncio-(DEBUG) Using selector: EpollSelector
+2020-10-10 13:50:59,126-django.utils.autoreload-(INFO) Watching for file changes with StatReloader
+2020-10-10 13:54:41,143-django.utils.autoreload-(INFO) /home/vanessa/Documentos/www/django-airbnb/airbnb/views.py changed, reloading.
+2020-10-10 13:54:41,144-asyncio-(DEBUG) Using selector: EpollSelector
+2020-10-10 13:54:41,862-django.utils.autoreload-(INFO) Watching for file changes with StatReloader
+2020-10-10 13:55:03,091-airbnb.views-(ERROR) Ausência de dados em um ou mais campos do formulário. Pesquisa não realizada
+2020-10-10 13:55:03,187-django.request-(ERROR) Internal Server Error: /home/search/
+Traceback (most recent call last):
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/contrib/auth/decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/vanessa/Documentos/www/django-airbnb/airbnb/views.py", line 218, in search_list
+    messages.warning('Atenção, preencha todos os dados para pesquisar!')
+TypeError: warning() missing 1 required positional argument: 'message'
+2020-10-10 13:55:18,277-airbnb.views-(ERROR) Ausência de dados em um ou mais campos do formulário. Pesquisa não realizada
+2020-10-10 13:55:18,337-django.request-(ERROR) Internal Server Error: /home/search/
+Traceback (most recent call last):
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/contrib/auth/decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/vanessa/Documentos/www/django-airbnb/airbnb/views.py", line 218, in search_list
+    messages.warning('Atenção, preencha todos os dados para pesquisar!')
+TypeError: warning() missing 1 required positional argument: 'message'
+2020-10-10 13:56:03,261-django.utils.autoreload-(INFO) /home/vanessa/Documentos/www/django-airbnb/airbnb/views.py changed, reloading.
+2020-10-10 13:56:03,262-asyncio-(DEBUG) Using selector: EpollSelector
+2020-10-10 13:56:04,022-django.utils.autoreload-(INFO) Watching for file changes with StatReloader
+2020-10-10 13:56:07,182-airbnb.views-(ERROR) Ausência de dados em um ou mais campos do formulário. Pesquisa não realizada
+2020-10-10 13:56:28,956-django.utils.autoreload-(INFO) /home/vanessa/Documentos/www/django-airbnb/airbnb/views.py changed, reloading.
+2020-10-10 13:56:28,957-asyncio-(DEBUG) Using selector: EpollSelector
+2020-10-10 13:56:29,690-django.utils.autoreload-(INFO) Watching for file changes with StatReloader
+2020-10-10 13:56:34,930-airbnb.views-(ERROR) Ausência de dados em um ou mais campos do formulário. Pesquisa não realizada
+2020-10-10 18:38:31,146-asyncio-(DEBUG) Using selector: EpollSelector
+2020-10-10 18:38:31,396-asyncio-(DEBUG) Using selector: EpollSelector
+2020-10-11 14:20:12,346-django.utils.autoreload-(INFO) Watching for file changes with StatReloader
+2020-10-11 14:20:29,952-PIL.PngImagePlugin-(DEBUG) STREAM b'IHDR' 16 13
+2020-10-11 14:20:29,954-PIL.PngImagePlugin-(DEBUG) STREAM b'sBIT' 41 3
+2020-10-11 14:20:29,954-PIL.PngImagePlugin-(DEBUG) b'sBIT' 41 3 (unknown)
+2020-10-11 14:20:29,955-PIL.PngImagePlugin-(DEBUG) STREAM b'tEXt' 56 25
+2020-10-11 14:20:29,955-PIL.PngImagePlugin-(DEBUG) STREAM b'IDAT' 93 8192
+2020-10-11 14:20:29,957-PIL.Image-(DEBUG) Importing BlpImagePlugin
+2020-10-11 14:20:29,958-PIL.Image-(DEBUG) Importing BmpImagePlugin
+2020-10-11 14:20:29,958-PIL.Image-(DEBUG) Importing BufrStubImagePlugin
+2020-10-11 14:20:29,959-PIL.Image-(DEBUG) Importing CurImagePlugin
+2020-10-11 14:20:29,960-PIL.Image-(DEBUG) Importing DcxImagePlugin
+2020-10-11 14:20:29,962-PIL.Image-(DEBUG) Importing DdsImagePlugin
+2020-10-11 14:20:29,966-PIL.Image-(DEBUG) Importing EpsImagePlugin
+2020-10-11 14:20:29,968-PIL.Image-(DEBUG) Importing FitsStubImagePlugin
+2020-10-11 14:20:29,971-PIL.Image-(DEBUG) Importing FliImagePlugin
+2020-10-11 14:20:29,974-PIL.Image-(DEBUG) Importing FpxImagePlugin
+2020-10-11 14:20:29,975-PIL.Image-(DEBUG) Image: failed to import FpxImagePlugin: No module named 'olefile'
+2020-10-11 14:20:29,976-PIL.Image-(DEBUG) Importing FtexImagePlugin
+2020-10-11 14:20:29,977-PIL.Image-(DEBUG) Importing GbrImagePlugin
+2020-10-11 14:20:29,978-PIL.Image-(DEBUG) Importing GifImagePlugin
+2020-10-11 14:20:29,978-PIL.Image-(DEBUG) Importing GribStubImagePlugin
+2020-10-11 14:20:29,979-PIL.Image-(DEBUG) Importing Hdf5StubImagePlugin
+2020-10-11 14:20:29,980-PIL.Image-(DEBUG) Importing IcnsImagePlugin
+2020-10-11 14:20:29,987-PIL.Image-(DEBUG) Importing IcoImagePlugin
+2020-10-11 14:20:29,990-PIL.Image-(DEBUG) Importing ImImagePlugin
+2020-10-11 14:20:29,995-PIL.Image-(DEBUG) Importing ImtImagePlugin
+2020-10-11 14:20:29,999-PIL.Image-(DEBUG) Importing IptcImagePlugin
+2020-10-11 14:20:30,001-PIL.Image-(DEBUG) Importing JpegImagePlugin
+2020-10-11 14:20:30,002-PIL.Image-(DEBUG) Importing Jpeg2KImagePlugin
+2020-10-11 14:20:30,002-PIL.Image-(DEBUG) Importing McIdasImagePlugin
+2020-10-11 14:20:30,003-PIL.Image-(DEBUG) Importing MicImagePlugin
+2020-10-11 14:20:30,004-PIL.Image-(DEBUG) Image: failed to import MicImagePlugin: No module named 'olefile'
+2020-10-11 14:20:30,005-PIL.Image-(DEBUG) Importing MpegImagePlugin
+2020-10-11 14:20:30,005-PIL.Image-(DEBUG) Importing MpoImagePlugin
+2020-10-11 14:20:30,006-PIL.Image-(DEBUG) Importing MspImagePlugin
+2020-10-11 14:20:30,007-PIL.Image-(DEBUG) Importing PalmImagePlugin
+2020-10-11 14:20:30,034-PIL.Image-(DEBUG) Importing PcdImagePlugin
+2020-10-11 14:20:30,037-PIL.Image-(DEBUG) Importing PcxImagePlugin
+2020-10-11 14:20:30,038-PIL.Image-(DEBUG) Importing PdfImagePlugin
+2020-10-11 14:20:30,056-PIL.Image-(DEBUG) Importing PixarImagePlugin
+2020-10-11 14:20:30,057-PIL.Image-(DEBUG) Importing PngImagePlugin
+2020-10-11 14:20:30,058-PIL.Image-(DEBUG) Importing PpmImagePlugin
+2020-10-11 14:20:30,058-PIL.Image-(DEBUG) Importing PsdImagePlugin
+2020-10-11 14:20:30,059-PIL.Image-(DEBUG) Importing SgiImagePlugin
+2020-10-11 14:20:30,060-PIL.Image-(DEBUG) Importing SpiderImagePlugin
+2020-10-11 14:20:30,061-PIL.Image-(DEBUG) Importing SunImagePlugin
+2020-10-11 14:20:30,062-PIL.Image-(DEBUG) Importing TgaImagePlugin
+2020-10-11 14:20:30,063-PIL.Image-(DEBUG) Importing TiffImagePlugin
+2020-10-11 14:20:30,064-PIL.Image-(DEBUG) Importing WebPImagePlugin
+2020-10-11 14:20:30,072-PIL.Image-(DEBUG) Importing WmfImagePlugin
+2020-10-11 14:20:30,073-PIL.Image-(DEBUG) Importing XbmImagePlugin
+2020-10-11 14:20:30,077-PIL.Image-(DEBUG) Importing XpmImagePlugin
+2020-10-11 14:20:30,080-PIL.Image-(DEBUG) Importing XVThumbImagePlugin
+2020-10-11 14:20:39,927-airbnb.views-(INFO) Dados salvos corretamente
+2020-10-11 14:21:03,736-django.request-(ERROR) Internal Server Error: /home/1/reservation/
+Traceback (most recent call last):
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/vanessa/Documentos/www/django-airbnb/airbnb/views.py", line 142, in home_reservation
+    reserve.set_total_value()
+  File "/home/vanessa/Documentos/www/django-airbnb/airbnb/models.py", line 100, in set_total_value
+    self.total_value = (home.price * self.total_days) * self.number_peoples
+NameError: name 'home' is not defined
+2020-10-11 14:21:04,289-django.request-(WARNING) Not Found: /favicon.ico
+2020-10-11 14:23:02,630-django.utils.autoreload-(INFO) /home/vanessa/Documentos/www/django-airbnb/airbnb/models.py changed, reloading.
+2020-10-11 14:23:02,631-asyncio-(DEBUG) Using selector: EpollSelector
+2020-10-11 14:23:03,444-django.utils.autoreload-(INFO) Watching for file changes with StatReloader
+2020-10-11 14:23:08,695-django.request-(ERROR) Internal Server Error: /home/1/reservation/
+Traceback (most recent call last):
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/vanessa/Documentos/www/django-airbnb/airbnb/views.py", line 142, in home_reservation
+    reserve.set_total_value()
+  File "/home/vanessa/Documentos/www/django-airbnb/airbnb/models.py", line 100, in set_total_value
+    self.total_value = (self.home.price * self.total_days) * self.number_peoples
+AttributeError: 'Reserve' object has no attribute 'total_days'
+2020-10-11 14:23:46,202-django.utils.autoreload-(INFO) /home/vanessa/Documentos/www/django-airbnb/airbnb/models.py changed, reloading.
+2020-10-11 14:23:46,204-asyncio-(DEBUG) Using selector: EpollSelector
+2020-10-11 14:23:47,055-django.utils.autoreload-(INFO) Watching for file changes with StatReloader
+2020-10-11 14:24:18,725-PIL.PngImagePlugin-(DEBUG) STREAM b'IHDR' 16 13
+2020-10-11 14:24:18,726-PIL.PngImagePlugin-(DEBUG) STREAM b'sBIT' 41 3
+2020-10-11 14:24:18,726-PIL.PngImagePlugin-(DEBUG) b'sBIT' 41 3 (unknown)
+2020-10-11 14:24:18,727-PIL.PngImagePlugin-(DEBUG) STREAM b'tEXt' 56 25
+2020-10-11 14:24:18,727-PIL.PngImagePlugin-(DEBUG) STREAM b'IDAT' 93 8192
+2020-10-11 14:24:18,729-PIL.Image-(DEBUG) Importing BlpImagePlugin
+2020-10-11 14:24:18,730-PIL.Image-(DEBUG) Importing BmpImagePlugin
+2020-10-11 14:24:18,730-PIL.Image-(DEBUG) Importing BufrStubImagePlugin
+2020-10-11 14:24:18,731-PIL.Image-(DEBUG) Importing CurImagePlugin
+2020-10-11 14:24:18,732-PIL.Image-(DEBUG) Importing DcxImagePlugin
+2020-10-11 14:24:18,733-PIL.Image-(DEBUG) Importing DdsImagePlugin
+2020-10-11 14:24:18,734-PIL.Image-(DEBUG) Importing EpsImagePlugin
+2020-10-11 14:24:18,736-PIL.Image-(DEBUG) Importing FitsStubImagePlugin
+2020-10-11 14:24:18,737-PIL.Image-(DEBUG) Importing FliImagePlugin
+2020-10-11 14:24:18,738-PIL.Image-(DEBUG) Importing FpxImagePlugin
+2020-10-11 14:24:18,741-PIL.Image-(DEBUG) Image: failed to import FpxImagePlugin: No module named 'olefile'
+2020-10-11 14:24:18,741-PIL.Image-(DEBUG) Importing FtexImagePlugin
+2020-10-11 14:24:18,743-PIL.Image-(DEBUG) Importing GbrImagePlugin
+2020-10-11 14:24:18,744-PIL.Image-(DEBUG) Importing GifImagePlugin
+2020-10-11 14:24:18,744-PIL.Image-(DEBUG) Importing GribStubImagePlugin
+2020-10-11 14:24:18,745-PIL.Image-(DEBUG) Importing Hdf5StubImagePlugin
+2020-10-11 14:24:18,746-PIL.Image-(DEBUG) Importing IcnsImagePlugin
+2020-10-11 14:24:18,748-PIL.Image-(DEBUG) Importing IcoImagePlugin
+2020-10-11 14:24:18,749-PIL.Image-(DEBUG) Importing ImImagePlugin
+2020-10-11 14:24:18,751-PIL.Image-(DEBUG) Importing ImtImagePlugin
+2020-10-11 14:24:18,753-PIL.Image-(DEBUG) Importing IptcImagePlugin
+2020-10-11 14:24:18,762-PIL.Image-(DEBUG) Importing JpegImagePlugin
+2020-10-11 14:24:18,763-PIL.Image-(DEBUG) Importing Jpeg2KImagePlugin
+2020-10-11 14:24:18,763-PIL.Image-(DEBUG) Importing McIdasImagePlugin
+2020-10-11 14:24:18,764-PIL.Image-(DEBUG) Importing MicImagePlugin
+2020-10-11 14:24:18,765-PIL.Image-(DEBUG) Image: failed to import MicImagePlugin: No module named 'olefile'
+2020-10-11 14:24:18,765-PIL.Image-(DEBUG) Importing MpegImagePlugin
+2020-10-11 14:24:18,766-PIL.Image-(DEBUG) Importing MpoImagePlugin
+2020-10-11 14:24:18,767-PIL.Image-(DEBUG) Importing MspImagePlugin
+2020-10-11 14:24:18,768-PIL.Image-(DEBUG) Importing PalmImagePlugin
+2020-10-11 14:24:18,771-PIL.Image-(DEBUG) Importing PcdImagePlugin
+2020-10-11 14:24:18,772-PIL.Image-(DEBUG) Importing PcxImagePlugin
+2020-10-11 14:24:18,772-PIL.Image-(DEBUG) Importing PdfImagePlugin
+2020-10-11 14:24:18,802-PIL.Image-(DEBUG) Importing PixarImagePlugin
+2020-10-11 14:24:18,804-PIL.Image-(DEBUG) Importing PngImagePlugin
+2020-10-11 14:24:18,805-PIL.Image-(DEBUG) Importing PpmImagePlugin
+2020-10-11 14:24:18,805-PIL.Image-(DEBUG) Importing PsdImagePlugin
+2020-10-11 14:24:18,806-PIL.Image-(DEBUG) Importing SgiImagePlugin
+2020-10-11 14:24:18,808-PIL.Image-(DEBUG) Importing SpiderImagePlugin
+2020-10-11 14:24:18,809-PIL.Image-(DEBUG) Importing SunImagePlugin
+2020-10-11 14:24:18,810-PIL.Image-(DEBUG) Importing TgaImagePlugin
+2020-10-11 14:24:18,812-PIL.Image-(DEBUG) Importing TiffImagePlugin
+2020-10-11 14:24:18,813-PIL.Image-(DEBUG) Importing WebPImagePlugin
+2020-10-11 14:24:18,815-PIL.Image-(DEBUG) Importing WmfImagePlugin
+2020-10-11 14:24:18,816-PIL.Image-(DEBUG) Importing XbmImagePlugin
+2020-10-11 14:24:18,818-PIL.Image-(DEBUG) Importing XpmImagePlugin
+2020-10-11 14:24:18,821-PIL.Image-(DEBUG) Importing XVThumbImagePlugin
+2020-10-11 14:24:24,936-airbnb.views-(INFO) Dados salvos corretamente
+2020-10-11 14:31:52,029-asyncio-(DEBUG) Using selector: EpollSelector
+2020-10-11 14:31:52,243-asyncio-(DEBUG) Using selector: EpollSelector
+2020-10-11 15:12:21,135-asyncio-(DEBUG) Using selector: EpollSelector
+2020-10-11 15:12:31,705-asyncio-(DEBUG) Using selector: EpollSelector
+2020-10-11 15:15:34,392-asyncio-(DEBUG) Using selector: EpollSelector
+2020-10-11 15:36:53,769-django.utils.autoreload-(INFO) Watching for file changes with StatReloader
+2020-10-11 15:37:08,320-PIL.PngImagePlugin-(DEBUG) STREAM b'IHDR' 16 13
+2020-10-11 15:37:08,320-PIL.PngImagePlugin-(DEBUG) STREAM b'sBIT' 41 3
+2020-10-11 15:37:08,320-PIL.PngImagePlugin-(DEBUG) b'sBIT' 41 3 (unknown)
+2020-10-11 15:37:08,320-PIL.PngImagePlugin-(DEBUG) STREAM b'tEXt' 56 25
+2020-10-11 15:37:08,321-PIL.PngImagePlugin-(DEBUG) STREAM b'IDAT' 93 8192
+2020-10-11 15:37:08,323-PIL.Image-(DEBUG) Importing BlpImagePlugin
+2020-10-11 15:37:08,325-PIL.Image-(DEBUG) Importing BmpImagePlugin
+2020-10-11 15:37:08,325-PIL.Image-(DEBUG) Importing BufrStubImagePlugin
+2020-10-11 15:37:08,325-PIL.Image-(DEBUG) Importing CurImagePlugin
+2020-10-11 15:37:08,326-PIL.Image-(DEBUG) Importing DcxImagePlugin
+2020-10-11 15:37:08,327-PIL.Image-(DEBUG) Importing DdsImagePlugin
+2020-10-11 15:37:08,329-PIL.Image-(DEBUG) Importing EpsImagePlugin
+2020-10-11 15:37:08,330-PIL.Image-(DEBUG) Importing FitsStubImagePlugin
+2020-10-11 15:37:08,332-PIL.Image-(DEBUG) Importing FliImagePlugin
+2020-10-11 15:37:08,335-PIL.Image-(DEBUG) Importing FpxImagePlugin
+2020-10-11 15:37:08,337-PIL.Image-(DEBUG) Image: failed to import FpxImagePlugin: No module named 'olefile'
+2020-10-11 15:37:08,337-PIL.Image-(DEBUG) Importing FtexImagePlugin
+2020-10-11 15:37:08,338-PIL.Image-(DEBUG) Importing GbrImagePlugin
+2020-10-11 15:37:08,339-PIL.Image-(DEBUG) Importing GifImagePlugin
+2020-10-11 15:37:08,339-PIL.Image-(DEBUG) Importing GribStubImagePlugin
+2020-10-11 15:37:08,340-PIL.Image-(DEBUG) Importing Hdf5StubImagePlugin
+2020-10-11 15:37:08,342-PIL.Image-(DEBUG) Importing IcnsImagePlugin
+2020-10-11 15:37:08,346-PIL.Image-(DEBUG) Importing IcoImagePlugin
+2020-10-11 15:37:08,355-PIL.Image-(DEBUG) Importing ImImagePlugin
+2020-10-11 15:37:08,357-PIL.Image-(DEBUG) Importing ImtImagePlugin
+2020-10-11 15:37:08,359-PIL.Image-(DEBUG) Importing IptcImagePlugin
+2020-10-11 15:37:08,360-PIL.Image-(DEBUG) Importing JpegImagePlugin
+2020-10-11 15:37:08,361-PIL.Image-(DEBUG) Importing Jpeg2KImagePlugin
+2020-10-11 15:37:08,361-PIL.Image-(DEBUG) Importing McIdasImagePlugin
+2020-10-11 15:37:08,362-PIL.Image-(DEBUG) Importing MicImagePlugin
+2020-10-11 15:37:08,363-PIL.Image-(DEBUG) Image: failed to import MicImagePlugin: No module named 'olefile'
+2020-10-11 15:37:08,364-PIL.Image-(DEBUG) Importing MpegImagePlugin
+2020-10-11 15:37:08,365-PIL.Image-(DEBUG) Importing MpoImagePlugin
+2020-10-11 15:37:08,367-PIL.Image-(DEBUG) Importing MspImagePlugin
+2020-10-11 15:37:08,369-PIL.Image-(DEBUG) Importing PalmImagePlugin
+2020-10-11 15:37:08,372-PIL.Image-(DEBUG) Importing PcdImagePlugin
+2020-10-11 15:37:08,373-PIL.Image-(DEBUG) Importing PcxImagePlugin
+2020-10-11 15:37:08,373-PIL.Image-(DEBUG) Importing PdfImagePlugin
+2020-10-11 15:37:08,395-PIL.Image-(DEBUG) Importing PixarImagePlugin
+2020-10-11 15:37:08,396-PIL.Image-(DEBUG) Importing PngImagePlugin
+2020-10-11 15:37:08,397-PIL.Image-(DEBUG) Importing PpmImagePlugin
+2020-10-11 15:37:08,397-PIL.Image-(DEBUG) Importing PsdImagePlugin
+2020-10-11 15:37:08,398-PIL.Image-(DEBUG) Importing SgiImagePlugin
+2020-10-11 15:37:08,399-PIL.Image-(DEBUG) Importing SpiderImagePlugin
+2020-10-11 15:37:08,401-PIL.Image-(DEBUG) Importing SunImagePlugin
+2020-10-11 15:37:08,406-PIL.Image-(DEBUG) Importing TgaImagePlugin
+2020-10-11 15:37:08,414-PIL.Image-(DEBUG) Importing TiffImagePlugin
+2020-10-11 15:37:08,414-PIL.Image-(DEBUG) Importing WebPImagePlugin
+2020-10-11 15:37:08,416-PIL.Image-(DEBUG) Importing WmfImagePlugin
+2020-10-11 15:37:08,417-PIL.Image-(DEBUG) Importing XbmImagePlugin
+2020-10-11 15:37:08,428-PIL.Image-(DEBUG) Importing XpmImagePlugin
+2020-10-11 15:37:08,437-PIL.Image-(DEBUG) Importing XVThumbImagePlugin
+2020-10-11 15:37:14,647-airbnb.views-(INFO) Dados salvos corretamente
+2020-10-11 15:37:58,109-django.utils.autoreload-(INFO) /home/vanessa/Documentos/www/django-airbnb/airbnb/views.py changed, reloading.
+2020-10-11 15:37:58,109-asyncio-(DEBUG) Using selector: EpollSelector
+2020-10-11 15:37:58,986-django.utils.autoreload-(INFO) Watching for file changes with StatReloader
+2020-10-11 15:40:24,091-django.utils.autoreload-(INFO) /home/vanessa/Documentos/www/django-airbnb/airbnb/views.py changed, reloading.
+2020-10-11 15:40:24,093-asyncio-(DEBUG) Using selector: EpollSelector
+2020-10-11 15:40:24,786-django.utils.autoreload-(INFO) Watching for file changes with StatReloader
+2020-10-11 15:41:40,370-asyncio-(DEBUG) Using selector: EpollSelector
+2020-10-11 15:41:40,535-asyncio-(DEBUG) Using selector: EpollSelector
+2020-10-11 15:41:42,794-django.utils.autoreload-(INFO) Watching for file changes with StatReloader
+2020-10-11 15:43:08,225-django.utils.autoreload-(INFO) /home/vanessa/Documentos/www/django-airbnb/airbnb/views.py changed, reloading.
+2020-10-11 15:43:08,226-asyncio-(DEBUG) Using selector: EpollSelector
+2020-10-11 15:43:08,959-django.utils.autoreload-(INFO) Watching for file changes with StatReloader
+2020-10-11 15:43:30,158-PIL.Image-(DEBUG) Importing BlpImagePlugin
+2020-10-11 15:43:30,160-PIL.Image-(DEBUG) Importing BmpImagePlugin
+2020-10-11 15:43:30,161-PIL.Image-(DEBUG) Importing BufrStubImagePlugin
+2020-10-11 15:43:30,162-PIL.Image-(DEBUG) Importing CurImagePlugin
+2020-10-11 15:43:30,163-PIL.Image-(DEBUG) Importing DcxImagePlugin
+2020-10-11 15:43:30,164-PIL.Image-(DEBUG) Importing DdsImagePlugin
+2020-10-11 15:43:30,165-PIL.Image-(DEBUG) Importing EpsImagePlugin
+2020-10-11 15:43:30,168-PIL.Image-(DEBUG) Importing FitsStubImagePlugin
+2020-10-11 15:43:30,168-PIL.Image-(DEBUG) Importing FliImagePlugin
+2020-10-11 15:43:30,170-PIL.Image-(DEBUG) Importing FpxImagePlugin
+2020-10-11 15:43:30,171-PIL.Image-(DEBUG) Image: failed to import FpxImagePlugin: No module named 'olefile'
+2020-10-11 15:43:30,172-PIL.Image-(DEBUG) Importing FtexImagePlugin
+2020-10-11 15:43:30,173-PIL.Image-(DEBUG) Importing GbrImagePlugin
+2020-10-11 15:43:30,177-PIL.Image-(DEBUG) Importing GifImagePlugin
+2020-10-11 15:43:30,177-PIL.Image-(DEBUG) Importing GribStubImagePlugin
+2020-10-11 15:43:30,179-PIL.Image-(DEBUG) Importing Hdf5StubImagePlugin
+2020-10-11 15:43:30,180-PIL.Image-(DEBUG) Importing IcnsImagePlugin
+2020-10-11 15:43:30,187-PIL.Image-(DEBUG) Importing IcoImagePlugin
+2020-10-11 15:43:30,189-PIL.Image-(DEBUG) Importing ImImagePlugin
+2020-10-11 15:43:30,192-PIL.Image-(DEBUG) Importing ImtImagePlugin
+2020-10-11 15:43:30,194-PIL.Image-(DEBUG) Importing IptcImagePlugin
+2020-10-11 15:43:30,196-PIL.Image-(DEBUG) Importing JpegImagePlugin
+2020-10-11 15:43:30,196-PIL.Image-(DEBUG) Importing Jpeg2KImagePlugin
+2020-10-11 15:43:30,196-PIL.Image-(DEBUG) Importing McIdasImagePlugin
+2020-10-11 15:43:30,197-PIL.Image-(DEBUG) Importing MicImagePlugin
+2020-10-11 15:43:30,198-PIL.Image-(DEBUG) Image: failed to import MicImagePlugin: No module named 'olefile'
+2020-10-11 15:43:30,198-PIL.Image-(DEBUG) Importing MpegImagePlugin
+2020-10-11 15:43:30,199-PIL.Image-(DEBUG) Importing MpoImagePlugin
+2020-10-11 15:43:30,201-PIL.Image-(DEBUG) Importing MspImagePlugin
+2020-10-11 15:43:30,202-PIL.Image-(DEBUG) Importing PalmImagePlugin
+2020-10-11 15:43:30,205-PIL.Image-(DEBUG) Importing PcdImagePlugin
+2020-10-11 15:43:30,206-PIL.Image-(DEBUG) Importing PcxImagePlugin
+2020-10-11 15:43:30,206-PIL.Image-(DEBUG) Importing PdfImagePlugin
+2020-10-11 15:43:30,225-PIL.Image-(DEBUG) Importing PixarImagePlugin
+2020-10-11 15:43:30,227-PIL.Image-(DEBUG) Importing PngImagePlugin
+2020-10-11 15:43:30,228-PIL.Image-(DEBUG) Importing PpmImagePlugin
+2020-10-11 15:43:30,228-PIL.Image-(DEBUG) Importing PsdImagePlugin
+2020-10-11 15:43:30,229-PIL.Image-(DEBUG) Importing SgiImagePlugin
+2020-10-11 15:43:30,230-PIL.Image-(DEBUG) Importing SpiderImagePlugin
+2020-10-11 15:43:30,232-PIL.Image-(DEBUG) Importing SunImagePlugin
+2020-10-11 15:43:30,233-PIL.Image-(DEBUG) Importing TgaImagePlugin
+2020-10-11 15:43:30,235-PIL.Image-(DEBUG) Importing TiffImagePlugin
+2020-10-11 15:43:30,235-PIL.Image-(DEBUG) Importing WebPImagePlugin
+2020-10-11 15:43:30,238-PIL.Image-(DEBUG) Importing WmfImagePlugin
+2020-10-11 15:43:30,239-PIL.Image-(DEBUG) Importing XbmImagePlugin
+2020-10-11 15:43:30,242-PIL.Image-(DEBUG) Importing XpmImagePlugin
+2020-10-11 15:43:30,245-PIL.Image-(DEBUG) Importing XVThumbImagePlugin
+2020-10-11 15:43:38,506-airbnb.views-(INFO) Dados salvos corretamente
+2020-10-11 15:50:17,161-django.utils.autoreload-(INFO) /home/vanessa/Documentos/www/django-airbnb/airbnb/views.py changed, reloading.
+2020-10-11 15:50:17,162-asyncio-(DEBUG) Using selector: EpollSelector
+2020-10-11 15:50:17,802-django.utils.autoreload-(INFO) Watching for file changes with StatReloader
+2020-10-11 15:50:33,832-django.utils.autoreload-(INFO) /home/vanessa/Documentos/www/django-airbnb/airbnb/views.py changed, reloading.
+2020-10-11 15:50:33,832-asyncio-(DEBUG) Using selector: EpollSelector
+2020-10-11 15:50:34,568-django.utils.autoreload-(INFO) Watching for file changes with StatReloader
+2020-10-11 15:50:41,156-django.utils.autoreload-(INFO) /home/vanessa/Documentos/www/django-airbnb/airbnb/views.py changed, reloading.
+2020-10-11 15:50:41,157-asyncio-(DEBUG) Using selector: EpollSelector
+2020-10-11 15:50:41,769-django.utils.autoreload-(INFO) Watching for file changes with StatReloader
+2020-10-11 15:50:50,723-django.utils.autoreload-(INFO) /home/vanessa/Documentos/www/django-airbnb/airbnb/views.py changed, reloading.
+2020-10-11 15:50:50,724-asyncio-(DEBUG) Using selector: EpollSelector
+2020-10-11 15:50:51,680-django.utils.autoreload-(INFO) Watching for file changes with StatReloader
+2020-10-11 15:51:09,526-asyncio-(DEBUG) Using selector: EpollSelector
+2020-10-11 15:51:09,690-asyncio-(DEBUG) Using selector: EpollSelector
+2020-10-11 16:18:16,322-django.utils.autoreload-(INFO) Watching for file changes with StatReloader
+2020-10-11 16:18:19,077-asyncio-(DEBUG) Using selector: EpollSelector
+2020-10-11 16:18:19,292-asyncio-(DEBUG) Using selector: EpollSelector
+2020-10-11 17:37:47,647-django.utils.autoreload-(INFO) Watching for file changes with StatReloader
+2020-10-11 17:38:01,522-django.request-(ERROR) Internal Server Error: /blog/
+Traceback (most recent call last):
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/db/backends/utils.py", line 86, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/db/backends/mysql/base.py", line 74, in execute
+    return self.cursor.execute(query, args)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/MySQLdb/cursors.py", line 206, in execute
+    res = self._query(query)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/MySQLdb/cursors.py", line 319, in _query
+    db.query(q)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/MySQLdb/connections.py", line 259, in query
+    _mysql.connection.query(self, query)
+MySQLdb._exceptions.ProgrammingError: (1146, "Table 'airbnb.blog_postcomment' doesn't exist")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/vanessa/Documentos/www/django-airbnb/blog/views.py", line 15, in post_list
+    return render(request, 'blog/post_list.html', {'posts': posts})
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/template/base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/template/base.py", line 903, in render_annotated
+    return self.render(context)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/template/loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/template/base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/template/base.py", line 903, in render_annotated
+    return self.render(context)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/template/loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/template/base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/template/base.py", line 903, in render_annotated
+    return self.render(context)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/template/defaulttags.py", line 209, in render
+    nodelist.append(node.render_annotated(context))
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/template/base.py", line 903, in render_annotated
+    return self.render(context)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/template/base.py", line 986, in render
+    output = self.filter_expression.resolve(context)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/template/base.py", line 670, in resolve
+    obj = self.var.resolve(context)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/template/base.py", line 795, in resolve
+    value = self._resolve_lookup(context)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/template/base.py", line 857, in _resolve_lookup
+    current = current()
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/db/models/query.py", line 397, in count
+    return self.query.get_count(using=self.db)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/db/models/sql/query.py", line 518, in get_count
+    number = obj.get_aggregation(using, ['__count'])['__count']
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/db/models/sql/query.py", line 503, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/db/models/sql/compiler.py", line 1152, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/db/backends/utils.py", line 100, in execute
+    return super().execute(sql, params)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/db/backends/utils.py", line 68, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/db/backends/utils.py", line 77, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/db/backends/utils.py", line 86, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/db/utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/db/backends/utils.py", line 86, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/db/backends/mysql/base.py", line 74, in execute
+    return self.cursor.execute(query, args)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/MySQLdb/cursors.py", line 206, in execute
+    res = self._query(query)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/MySQLdb/cursors.py", line 319, in _query
+    db.query(q)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/MySQLdb/connections.py", line 259, in query
+    _mysql.connection.query(self, query)
+django.db.utils.ProgrammingError: (1146, "Table 'airbnb.blog_postcomment' doesn't exist")
+2020-10-11 17:38:23,195-asyncio-(DEBUG) Using selector: EpollSelector
+2020-10-11 17:38:23,359-asyncio-(DEBUG) Using selector: EpollSelector
+2020-10-11 17:38:29,618-asyncio-(DEBUG) Using selector: EpollSelector
+2020-10-11 17:38:39,037-asyncio-(DEBUG) Using selector: EpollSelector
+2020-10-11 17:38:50,372-django.utils.autoreload-(INFO) Watching for file changes with StatReloader
+2020-10-11 17:39:13,699-blog.views-(WARNING) Postagem foi removida do banco de dados
+2020-10-11 17:39:13,699-blog.views-(WARNING) Postagem foi removida do banco de dados
+2020-10-11 17:39:45,255-blog.views-(WARNING) Comentário removido da base de dados.
+2020-10-11 17:39:45,255-blog.views-(WARNING) Comentário removido da base de dados.
+2020-10-11 17:40:03,843-blog.views-(ERROR) Tentativa em avaliar postagem negada. Já foi avaliado pelo usuário.
+2020-10-11 17:40:03,843-blog.views-(ERROR) Tentativa em avaliar postagem negada. Já foi avaliado pelo usuário.
+2020-10-11 17:40:23,215-asyncio-(DEBUG) Using selector: EpollSelector
+2020-10-11 17:40:23,380-asyncio-(DEBUG) Using selector: EpollSelector
+2020-10-11 17:41:04,689-django.utils.autoreload-(INFO) Watching for file changes with StatReloader
+2020-10-11 17:41:05,955-asyncio-(DEBUG) Using selector: EpollSelector
+2020-10-11 17:41:06,170-asyncio-(DEBUG) Using selector: EpollSelector
+2020-10-11 17:41:10,208-django.utils.autoreload-(INFO) Watching for file changes with StatReloader
+2020-10-11 17:41:11,006-asyncio-(DEBUG) Using selector: EpollSelector
+2020-10-11 17:41:11,171-asyncio-(DEBUG) Using selector: EpollSelector
+2020-10-11 17:55:59,695-django.utils.autoreload-(INFO) Watching for file changes with StatReloader

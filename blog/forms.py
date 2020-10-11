@@ -1,7 +1,7 @@
 from django import forms
 from crispy_forms.helper import FormHelper
 from crispy_forms.layout import Submit
-from .models import Post, Comment
+from .models import Post, PostComment
 
 class PostForm(forms.ModelForm):
 
@@ -19,7 +19,7 @@ class PostForm(forms.ModelForm):
 class CommentForm(forms.ModelForm):
 
     class Meta:
-        model = Comment
+        model = PostComment
         fields = ('author', 'text',)
 
     def __init__(self, *args, **kwargs):

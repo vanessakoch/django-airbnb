@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from django.utils import timezone
 from django.contrib import messages
-from .models import Post, Comment, PostLike, PostDislike
+from .models import Post, PostComment, PostLike, PostDislike
 from .forms import PostForm, CommentForm
 from django.shortcuts import redirect
 from django.contrib.auth.decorators import login_required
@@ -76,8 +76,11 @@ def post_edit(request, pk):
             post = form.save(commit=False)
             post.author = request.user
             post.save()
+            logger.warning('Objeto post foi editado!')
             messages.success(request, 'Postagem editada com sucesso!')
             return redirect('blog:post_detail', pk=post.pk)
+        else:
+            logger.error('Ausência de dados em um ou mais campos do formulário. Post não adicionado')
     else:
         form = PostForm(instance=post)
     return render(request, 'blog/post_edit.html', {'form': form})
@@ -165,20 +168,22 @@ def add_comment_to_post(request, pk):
             comment.save()
             messages.success(request, 'Comentário adicionado com sucesso!')
             return redirect('blog:post_detail', pk=post.pk)
+        else:
+            logger.error('Ausência de dados em um ou mais campos do formulário. Comentário não adicionado')
     else:
         form = CommentForm()
     return render(request, 'blog/add_comment_to_post.html', {'form': form})
 
 @login_required
 def comment_approve(request, pk):
-    comment = get_object_or_404(Comment, pk=pk)
+    comment = get_object_or_404(PostComment, pk=pk)
     comment.approve()
     messages.success(request, 'Comentário publicado com sucesso!')
     return redirect('blog:post_detail', pk=comment.post.pk)
 
 @login_required
 def comment_remove(request, pk):
-    comment = get_object_or_404(Comment, pk=pk)
+    comment = get_object_or_404(PostComment, pk=pk)
     comment.delete()
     messages.warning(request, 'Comentário removido com sucesso!')
     logger.warning('Comentário removido da base de dados.')

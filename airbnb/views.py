@@ -66,7 +66,7 @@ def home_new(request):
             home = form.save(commit=False)
             home.owner = request.user
             home.save()
-            
+
             if home.image == '../static/img/img_notfound.png':
                 logger.warning('Imagem da acomodação não foi anexada.')
 
@@ -114,14 +114,13 @@ def home_edit(request, pk):
             return redirect('home_address', pk=home.pk)
         else:
             messages.error(request, 'Erro! Verifique se os dados estão corretos.')
+            logger.error('Ausência de dados em um ou mais campos do formulário. Acomodação não editada')
     else:
         form = HomeForm(instance=home)
     return render(request, 'airbnb/home_edit.html', {'form': form})
 
 def home_reservation(request, pk):
     home = get_object_or_404(Home, pk=pk)
-    total_value = 0
-    daily_cost = home.price
 
     if request.method == "POST":
         form = ReserveForm(request.POST)
@@ -140,15 +139,14 @@ def home_reservation(request, pk):
             else:
                 reserve.user = request.user
                 reserve.home = home
-                
-                total_days = abs((reserve.final_date - reserve.initial_date).days)
-            
-                reserve.total_value = (daily_cost * total_days) * reserve.number_peoples
+                reserve.set_total_value()
+
                 reserve.save() 
                 messages.success(request, 'Reserva feita com sucesso!')
                 return redirect('home_detail', pk=home.pk)
         else:
             messages.error(request, 'Erro! Verifique se os dados estão corretos.')
+            logger.error('Ausência de dados em um ou mais campos do formulário. Reserva não realizada')
     else:
         form = ReserveForm()
     return render(request, 'airbnb/home_reservation.html', {'form': form})
@@ -211,6 +209,9 @@ def search_list(request):
                 'search': search,
                 'home_searched': home_searched}
             )
+        else:
+            logger.error('Ausência de dados em um ou mais campos do formulário. Pesquisa não realizada')
+            messages.warning(request, 'Atenção, preencha todos os campos para realizar a pesquisa!')
     else:
         form = SearchForm()
     return render(request, 'airbnb/init_page.html', {'form': form})
