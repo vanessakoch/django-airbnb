@@ -2,3 +2,6 @@
 2020-10-11 22:01:37,776-asyncio-(DEBUG) Using selector: EpollSelector
 2020-10-11 22:16:18,857-asyncio-(DEBUG) Using selector: EpollSelector
 2020-10-11 22:16:24,277-asyncio-(DEBUG) Using selector: EpollSelector
+2020-10-11 23:00:40,284-django.utils.autoreload-(INFO) Watching for file changes with StatReloader
+2020-10-11 23:38:57,517-asyncio-(DEBUG) Using selector: EpollSelector
+2020-10-11 23:38:57,732-asyncio-(DEBUG) Using selector: EpollSelector
