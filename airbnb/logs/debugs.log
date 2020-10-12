@@ -48,3 +48,657 @@
 2020-10-11 18:33:16,706-airbnb.views-(INFO) Dados salvos corretamente
 2020-10-11 18:34:38,159-blog.views-(WARNING) Objeto post foi editado!
 2020-10-11 18:34:38,159-blog.views-(WARNING) Objeto post foi editado!
+2020-10-11 19:21:33,619-django.utils.autoreload-(INFO) /home/vanessa/Documentos/www/django-airbnb/airbnb/urls.py changed, reloading.
+2020-10-11 19:21:33,620-asyncio-(DEBUG) Using selector: EpollSelector
+2020-10-11 19:21:34,686-django.utils.autoreload-(INFO) Watching for file changes with StatReloader
+2020-10-11 19:25:55,898-django.utils.autoreload-(INFO) /home/vanessa/Documentos/www/django-airbnb/mysite/settings.py changed, reloading.
+2020-10-11 19:25:55,899-asyncio-(DEBUG) Using selector: EpollSelector
+2020-10-11 19:25:56,739-django.utils.autoreload-(INFO) Watching for file changes with StatReloader
+2020-10-11 19:26:22,447-django.utils.autoreload-(INFO) Watching for file changes with StatReloader
+2020-10-11 19:26:26,399-asyncio-(DEBUG) Using selector: EpollSelector
+2020-10-11 19:26:26,563-asyncio-(DEBUG) Using selector: EpollSelector
+2020-10-11 19:32:27,147-django.utils.autoreload-(INFO) /home/vanessa/Documentos/www/django-airbnb/airbnb/views.py changed, reloading.
+2020-10-11 19:32:27,148-asyncio-(DEBUG) Using selector: EpollSelector
+2020-10-11 19:32:28,017-django.utils.autoreload-(INFO) Watching for file changes with StatReloader
+2020-10-11 19:36:10,766-django.utils.autoreload-(INFO) /home/vanessa/Documentos/www/django-airbnb/airbnb/views.py changed, reloading.
+2020-10-11 19:36:10,767-asyncio-(DEBUG) Using selector: EpollSelector
+2020-10-11 19:36:11,502-django.utils.autoreload-(INFO) Watching for file changes with StatReloader
+2020-10-11 19:39:53,283-django.utils.autoreload-(INFO) Watching for file changes with StatReloader
+2020-10-11 19:40:05,023-django.utils.autoreload-(INFO) /home/vanessa/Documentos/www/django-airbnb/airbnb/urls.py changed, reloading.
+2020-10-11 19:40:05,024-asyncio-(DEBUG) Using selector: EpollSelector
+2020-10-11 19:40:05,241-django.utils.autoreload-(INFO) /home/vanessa/Documentos/www/django-airbnb/airbnb/urls.py changed, reloading.
+2020-10-11 19:40:05,242-asyncio-(DEBUG) Using selector: EpollSelector
+2020-10-11 19:40:05,676-django.utils.autoreload-(INFO) Watching for file changes with StatReloader
+2020-10-11 19:40:05,874-django.utils.autoreload-(INFO) Watching for file changes with StatReloader
+2020-10-11 19:40:06,281-asyncio-(DEBUG) Using selector: EpollSelector
+2020-10-11 19:40:10,637-asyncio-(DEBUG) Using selector: EpollSelector
+2020-10-11 19:40:10,852-asyncio-(DEBUG) Using selector: EpollSelector
+2020-10-11 19:40:14,301-django.utils.autoreload-(INFO) Watching for file changes with StatReloader
+2020-10-11 20:03:00,937-django.utils.autoreload-(INFO) /home/vanessa/Documentos/www/django-airbnb/airbnb/views.py changed, reloading.
+2020-10-11 20:03:00,938-asyncio-(DEBUG) Using selector: EpollSelector
+2020-10-11 20:03:01,819-django.utils.autoreload-(INFO) Watching for file changes with StatReloader
+2020-10-11 20:06:33,525-django.utils.autoreload-(INFO) /home/vanessa/Documentos/www/django-airbnb/airbnb/views.py changed, reloading.
+2020-10-11 20:06:33,527-asyncio-(DEBUG) Using selector: EpollSelector
+2020-10-11 20:06:34,320-django.utils.autoreload-(INFO) Watching for file changes with StatReloader
+2020-10-11 20:08:38,195-django.utils.autoreload-(INFO) /home/vanessa/Documentos/www/django-airbnb/airbnb/views.py changed, reloading.
+2020-10-11 20:08:38,198-asyncio-(DEBUG) Using selector: EpollSelector
+2020-10-11 20:08:38,983-django.utils.autoreload-(INFO) Watching for file changes with StatReloader
+2020-10-11 20:15:36,321-django.utils.autoreload-(INFO) /home/vanessa/Documentos/www/django-airbnb/airbnb/views.py changed, reloading.
+2020-10-11 20:15:36,322-asyncio-(DEBUG) Using selector: EpollSelector
+2020-10-11 20:15:37,245-django.utils.autoreload-(INFO) Watching for file changes with StatReloader
+2020-10-11 20:19:37,330-django.utils.autoreload-(INFO) /home/vanessa/Documentos/www/django-airbnb/airbnb/views.py changed, reloading.
+2020-10-11 20:19:37,331-asyncio-(DEBUG) Using selector: EpollSelector
+2020-10-11 20:19:37,952-django.utils.autoreload-(INFO) Watching for file changes with StatReloader
+2020-10-11 20:20:28,393-django.utils.autoreload-(INFO) /home/vanessa/Documentos/www/django-airbnb/airbnb/views.py changed, reloading.
+2020-10-11 20:20:28,394-asyncio-(DEBUG) Using selector: EpollSelector
+2020-10-11 20:20:29,179-django.utils.autoreload-(INFO) Watching for file changes with StatReloader
+2020-10-11 20:22:17,836-django.utils.autoreload-(INFO) /home/vanessa/Documentos/www/django-airbnb/mysite/settings.py changed, reloading.
+2020-10-11 20:22:17,839-asyncio-(DEBUG) Using selector: EpollSelector
+2020-10-11 20:22:18,574-django.utils.autoreload-(INFO) Watching for file changes with StatReloader
+2020-10-11 20:22:35,668-asyncio-(DEBUG) Using selector: EpollSelector
+2020-10-11 20:22:35,832-asyncio-(DEBUG) Using selector: EpollSelector
+2020-10-11 20:30:31,743-asyncio-(DEBUG) Using selector: EpollSelector
+2020-10-11 20:32:56,062-django.utils.autoreload-(INFO) Watching for file changes with StatReloader
+2020-10-11 20:35:46,965-django.utils.autoreload-(INFO) /home/vanessa/Documentos/www/django-airbnb/airbnb/views.py changed, reloading.
+2020-10-11 20:35:46,966-asyncio-(DEBUG) Using selector: EpollSelector
+2020-10-11 20:35:47,748-django.utils.autoreload-(INFO) Watching for file changes with StatReloader
+2020-10-11 20:38:13,037-asyncio-(DEBUG) Using selector: EpollSelector
+2020-10-11 20:42:28,367-django.utils.autoreload-(INFO) /home/vanessa/Documentos/www/django-airbnb/airbnb/views.py changed, reloading.
+2020-10-11 20:42:28,368-asyncio-(DEBUG) Using selector: EpollSelector
+2020-10-11 20:42:29,098-django.utils.autoreload-(INFO) Watching for file changes with StatReloader
+2020-10-11 20:42:33,510-django.request-(ERROR) Internal Server Error: /rest/home/
+Traceback (most recent call last):
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/home/vanessa/Documentos/www/django-airbnb/airbnb/views.py", line 280, in rest_home_list
+    return Response(serializer.data, safe=False)
+TypeError: __init__() got an unexpected keyword argument 'safe'
+2020-10-11 20:43:28,397-django.utils.autoreload-(INFO) /home/vanessa/Documentos/www/django-airbnb/airbnb/views.py changed, reloading.
+2020-10-11 20:43:28,398-asyncio-(DEBUG) Using selector: EpollSelector
+2020-10-11 20:43:29,029-django.utils.autoreload-(INFO) Watching for file changes with StatReloader
+2020-10-11 20:43:32,741-django.utils.autoreload-(INFO) /home/vanessa/Documentos/www/django-airbnb/airbnb/views.py changed, reloading.
+2020-10-11 20:43:32,742-asyncio-(DEBUG) Using selector: EpollSelector
+2020-10-11 20:43:33,485-django.utils.autoreload-(INFO) Watching for file changes with StatReloader
+2020-10-11 20:43:37,751-django.request-(ERROR) Internal Server Error: /rest/home/
+Traceback (most recent call last):
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/home/vanessa/Documentos/www/django-airbnb/airbnb/views.py", line 281, in rest_home_list
+    return Response(serializer.data, safe=False)
+TypeError: __init__() got an unexpected keyword argument 'safe'
+2020-10-11 20:45:12,535-django.request-(ERROR) Internal Server Error: /rest/home/
+Traceback (most recent call last):
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/home/vanessa/Documentos/www/django-airbnb/airbnb/views.py", line 281, in rest_home_list
+    return Response(serializer.data, safe=False)
+TypeError: __init__() got an unexpected keyword argument 'safe'
+2020-10-11 20:45:25,078-django.utils.autoreload-(INFO) /home/vanessa/Documentos/www/django-airbnb/airbnb/views.py changed, reloading.
+2020-10-11 20:45:25,079-asyncio-(DEBUG) Using selector: EpollSelector
+2020-10-11 20:45:25,807-django.utils.autoreload-(INFO) Watching for file changes with StatReloader
+2020-10-11 20:45:51,929-django.utils.autoreload-(INFO) /home/vanessa/Documentos/www/django-airbnb/airbnb/views.py changed, reloading.
+2020-10-11 20:45:51,930-asyncio-(DEBUG) Using selector: EpollSelector
+2020-10-11 20:45:52,687-django.utils.autoreload-(INFO) Watching for file changes with StatReloader
+2020-10-11 20:45:55,776-django.request-(WARNING) Unauthorized: /rest/home/
+2020-10-11 20:46:22,161-asyncio-(DEBUG) Using selector: EpollSelector
+2020-10-11 20:47:19,783-django.request-(WARNING) Unauthorized: /rest/home/
+2020-10-11 20:48:22,432-django.request-(ERROR) Internal Server Error: /rest/home/  'Authorization: Token b8917165facae9447e918b3e600b3b64cef7b33e/
+Traceback (most recent call last):
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/db/models/fields/__init__.py", line 1772, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: "  'Authorization: Token b8917165facae9447e918b3e600b3b64cef7b33e"
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/vanessa/Documentos/www/django-airbnb/airbnb/views.py", line 293, in rest_home_detail
+    home = Home.objects.get(pk=pk)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/db/models/query.py", line 404, in get
+    clone = self._chain() if self.query.combinator else self.filter(*args, **kwargs)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/db/models/query.py", line 904, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/db/models/query.py", line 923, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1351, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1378, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1312, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1166, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/db/models/lookups.py", line 22, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/db/models/lookups.py", line 72, in get_prep_lookup
+    return self.lhs.output_field.get_prep_value(self.rhs)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/db/models/fields/__init__.py", line 1774, in get_prep_value
+    raise e.__class__(
+ValueError: Field 'id' expected a number but got "  'Authorization: Token b8917165facae9447e918b3e600b3b64cef7b33e".
+2020-10-11 20:49:13,396-django.request-(ERROR) Internal Server Error: /rest/home/ 'Authorization: Token b8917165facae9447e918b3e600b3b64cef7b33e'/
+Traceback (most recent call last):
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/db/models/fields/__init__.py", line 1772, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: " 'Authorization: Token b8917165facae9447e918b3e600b3b64cef7b33e'"
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/vanessa/Documentos/www/django-airbnb/airbnb/views.py", line 293, in rest_home_detail
+    home = Home.objects.get(pk=pk)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/db/models/query.py", line 404, in get
+    clone = self._chain() if self.query.combinator else self.filter(*args, **kwargs)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/db/models/query.py", line 904, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/db/models/query.py", line 923, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1351, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1378, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1312, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1166, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/db/models/lookups.py", line 22, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/db/models/lookups.py", line 72, in get_prep_lookup
+    return self.lhs.output_field.get_prep_value(self.rhs)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/db/models/fields/__init__.py", line 1774, in get_prep_value
+    raise e.__class__(
+ValueError: Field 'id' expected a number but got " 'Authorization: Token b8917165facae9447e918b3e600b3b64cef7b33e'".
+2020-10-11 20:49:29,378-django.request-(WARNING) Not Found: /rest/home 'Authorization: Token b8917165facae9447e918b3e600b3b64cef7b33e'/
+2020-10-11 20:49:38,849-django.request-(ERROR) Internal Server Error: /rest/home/'Authorization: Token b8917165facae9447e918b3e600b3b64cef7b33e'/
+Traceback (most recent call last):
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/db/models/fields/__init__.py", line 1772, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: "'Authorization: Token b8917165facae9447e918b3e600b3b64cef7b33e'"
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/vanessa/Documentos/www/django-airbnb/airbnb/views.py", line 293, in rest_home_detail
+    home = Home.objects.get(pk=pk)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/db/models/query.py", line 404, in get
+    clone = self._chain() if self.query.combinator else self.filter(*args, **kwargs)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/db/models/query.py", line 904, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/db/models/query.py", line 923, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1351, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1378, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1312, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1166, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/db/models/lookups.py", line 22, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/db/models/lookups.py", line 72, in get_prep_lookup
+    return self.lhs.output_field.get_prep_value(self.rhs)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/db/models/fields/__init__.py", line 1774, in get_prep_value
+    raise e.__class__(
+ValueError: Field 'id' expected a number but got "'Authorization: Token b8917165facae9447e918b3e600b3b64cef7b33e'".
+2020-10-11 20:49:44,996-django.request-(ERROR) Internal Server Error: /rest/home/  'Authorization: Token b8917165facae9447e918b3e600b3b64cef7b33e'/
+Traceback (most recent call last):
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/db/models/fields/__init__.py", line 1772, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: "  'Authorization: Token b8917165facae9447e918b3e600b3b64cef7b33e'"
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/vanessa/Documentos/www/django-airbnb/airbnb/views.py", line 293, in rest_home_detail
+    home = Home.objects.get(pk=pk)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/db/models/query.py", line 404, in get
+    clone = self._chain() if self.query.combinator else self.filter(*args, **kwargs)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/db/models/query.py", line 904, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/db/models/query.py", line 923, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1351, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1378, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1312, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1166, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/db/models/lookups.py", line 22, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/db/models/lookups.py", line 72, in get_prep_lookup
+    return self.lhs.output_field.get_prep_value(self.rhs)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/db/models/fields/__init__.py", line 1774, in get_prep_value
+    raise e.__class__(
+ValueError: Field 'id' expected a number but got "  'Authorization: Token b8917165facae9447e918b3e600b3b64cef7b33e'".
+2020-10-11 20:49:50,997-django.request-(WARNING) Unauthorized: /rest/home/
+2020-10-11 20:51:32,410-django.utils.autoreload-(INFO) /home/vanessa/Documentos/www/django-airbnb/airbnb/urls.py changed, reloading.
+2020-10-11 20:51:32,411-asyncio-(DEBUG) Using selector: EpollSelector
+2020-10-11 20:51:33,095-django.utils.autoreload-(INFO) Watching for file changes with StatReloader
+2020-10-11 20:51:43,235-django.utils.autoreload-(INFO) /home/vanessa/Documentos/www/django-airbnb/airbnb/urls.py changed, reloading.
+2020-10-11 20:51:43,236-asyncio-(DEBUG) Using selector: EpollSelector
+2020-10-11 20:51:43,991-django.utils.autoreload-(INFO) Watching for file changes with StatReloader
+2020-10-11 20:51:48,290-django.request-(WARNING) Method Not Allowed: /api-token-auth/
+2020-10-11 20:53:45,355-django.request-(WARNING) Unauthorized: /rest/home/
+2020-10-11 20:53:51,818-django.request-(WARNING) Unauthorized: /rest/home/
+2020-10-11 20:53:57,007-django.request-(WARNING) Unauthorized: /rest/home/
+2020-10-11 20:54:02,090-django.request-(WARNING) Unauthorized: /rest/home/
+2020-10-11 20:54:30,144-django.request-(ERROR) Internal Server Error: /rest/home/ 'Authorization: Token 9054f7aa9305e012b3c2300408c3dfdf390fcddf'/
+Traceback (most recent call last):
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/db/models/fields/__init__.py", line 1772, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: " 'Authorization: Token 9054f7aa9305e012b3c2300408c3dfdf390fcddf'"
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/vanessa/Documentos/www/django-airbnb/airbnb/views.py", line 293, in rest_home_detail
+    home = Home.objects.get(pk=pk)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/db/models/query.py", line 404, in get
+    clone = self._chain() if self.query.combinator else self.filter(*args, **kwargs)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/db/models/query.py", line 904, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/db/models/query.py", line 923, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1351, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1378, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1312, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1166, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/db/models/lookups.py", line 22, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/db/models/lookups.py", line 72, in get_prep_lookup
+    return self.lhs.output_field.get_prep_value(self.rhs)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/db/models/fields/__init__.py", line 1774, in get_prep_value
+    raise e.__class__(
+ValueError: Field 'id' expected a number but got " 'Authorization: Token 9054f7aa9305e012b3c2300408c3dfdf390fcddf'".
+2020-10-11 20:54:42,141-django.request-(ERROR) Internal Server Error: /rest/home/'Authorization: Token 9054f7aa9305e012b3c2300408c3dfdf390fcddf'/
+Traceback (most recent call last):
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/db/models/fields/__init__.py", line 1772, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: "'Authorization: Token 9054f7aa9305e012b3c2300408c3dfdf390fcddf'"
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/vanessa/Documentos/www/django-airbnb/airbnb/views.py", line 293, in rest_home_detail
+    home = Home.objects.get(pk=pk)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/db/models/query.py", line 404, in get
+    clone = self._chain() if self.query.combinator else self.filter(*args, **kwargs)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/db/models/query.py", line 904, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/db/models/query.py", line 923, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1351, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1378, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1312, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1166, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/db/models/lookups.py", line 22, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/db/models/lookups.py", line 72, in get_prep_lookup
+    return self.lhs.output_field.get_prep_value(self.rhs)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/db/models/fields/__init__.py", line 1774, in get_prep_value
+    raise e.__class__(
+ValueError: Field 'id' expected a number but got "'Authorization: Token 9054f7aa9305e012b3c2300408c3dfdf390fcddf'".
+2020-10-11 20:56:36,278-django.request-(WARNING) Unauthorized: /rest/home/
+2020-10-11 20:56:37,815-django.request-(WARNING) Unauthorized: /rest/home/
+2020-10-11 20:56:52,056-django.request-(WARNING) Unauthorized: /rest/home/
+2020-10-11 20:56:59,164-django.request-(WARNING) Unauthorized: /rest/home/
+2020-10-11 20:57:09,238-django.request-(WARNING) Unauthorized: /rest/home/
+2020-10-11 20:58:28,605-django.request-(WARNING) Not Found: /rest/home -H 'Authorization: Token b8917165facae9447e918b3e600b3b64cef 7b33e'
+2020-10-11 20:59:05,634-django.request-(WARNING) Not Found: /rest/home'Authorization:Token20b8917165facae9447e918b3e600b3b64cefb33e'
+2020-10-11 20:59:11,863-django.request-(ERROR) Internal Server Error: /rest/home/'Authorization:Token20b8917165facae9447e918b3e600b3b64cefb33e'/
+Traceback (most recent call last):
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/db/models/fields/__init__.py", line 1772, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: "'Authorization:Token20b8917165facae9447e918b3e600b3b64cefb33e'"
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/vanessa/Documentos/www/django-airbnb/airbnb/views.py", line 293, in rest_home_detail
+    home = Home.objects.get(pk=pk)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/db/models/query.py", line 404, in get
+    clone = self._chain() if self.query.combinator else self.filter(*args, **kwargs)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/db/models/query.py", line 904, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/db/models/query.py", line 923, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1351, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1378, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1312, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1166, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/db/models/lookups.py", line 22, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/db/models/lookups.py", line 72, in get_prep_lookup
+    return self.lhs.output_field.get_prep_value(self.rhs)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/db/models/fields/__init__.py", line 1774, in get_prep_value
+    raise e.__class__(
+ValueError: Field 'id' expected a number but got "'Authorization:Token20b8917165facae9447e918b3e600b3b64cefb33e'".
+2020-10-11 20:59:23,447-django.request-(ERROR) Internal Server Error: /rest/home/20b8917165facae9447e918b3e600b3b64cefb33e'/
+Traceback (most recent call last):
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/db/models/fields/__init__.py", line 1772, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: "20b8917165facae9447e918b3e600b3b64cefb33e'"
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/vanessa/Documentos/www/django-airbnb/airbnb/views.py", line 293, in rest_home_detail
+    home = Home.objects.get(pk=pk)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/db/models/query.py", line 404, in get
+    clone = self._chain() if self.query.combinator else self.filter(*args, **kwargs)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/db/models/query.py", line 904, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/db/models/query.py", line 923, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1351, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1378, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1312, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1166, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/db/models/lookups.py", line 22, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/db/models/lookups.py", line 72, in get_prep_lookup
+    return self.lhs.output_field.get_prep_value(self.rhs)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/db/models/fields/__init__.py", line 1774, in get_prep_value
+    raise e.__class__(
+ValueError: Field 'id' expected a number but got "20b8917165facae9447e918b3e600b3b64cefb33e'".
+2020-10-11 21:02:50,064-django.utils.autoreload-(INFO) /home/vanessa/Documentos/www/django-airbnb/airbnb/views.py changed, reloading.
+2020-10-11 21:02:50,065-asyncio-(DEBUG) Using selector: EpollSelector
+2020-10-11 21:02:50,805-django.utils.autoreload-(INFO) Watching for file changes with StatReloader
+2020-10-11 21:07:05,991-django.utils.autoreload-(INFO) /home/vanessa/Documentos/www/django-airbnb/airbnb/views.py changed, reloading.
+2020-10-11 21:07:05,992-asyncio-(DEBUG) Using selector: EpollSelector
+2020-10-11 21:07:06,772-django.utils.autoreload-(INFO) Watching for file changes with StatReloader
+2020-10-11 21:07:09,581-django.request-(WARNING) Unauthorized: /rest/home/20b8917165facae9447e918b3e600b3b64cefb33e'/
+2020-10-11 21:07:11,727-django.request-(WARNING) Unauthorized: /rest/home/20b8917165facae9447e918b3e600b3b64cefb33e'/
+2020-10-11 21:07:12,731-django.request-(WARNING) Unauthorized: /rest/home/20b8917165facae9447e918b3e600b3b64cefb33e'/
+2020-10-11 21:07:40,408-django.utils.autoreload-(INFO) /home/vanessa/Documentos/www/django-airbnb/airbnb/views.py changed, reloading.
+2020-10-11 21:07:40,409-asyncio-(DEBUG) Using selector: EpollSelector
+2020-10-11 21:07:41,069-django.utils.autoreload-(INFO) Watching for file changes with StatReloader
+2020-10-11 21:07:53,077-django.utils.autoreload-(INFO) /home/vanessa/Documentos/www/django-airbnb/airbnb/views.py changed, reloading.
+2020-10-11 21:07:53,078-asyncio-(DEBUG) Using selector: EpollSelector
+2020-10-11 21:07:53,913-django.utils.autoreload-(INFO) Watching for file changes with StatReloader
+2020-10-11 21:07:55,957-django.request-(WARNING) Unauthorized: /rest/home/
+2020-10-11 21:08:42,185-django.utils.autoreload-(INFO) /home/vanessa/Documentos/www/django-airbnb/airbnb/views.py changed, reloading.
+2020-10-11 21:08:42,186-asyncio-(DEBUG) Using selector: EpollSelector
+2020-10-11 21:08:43,111-django.utils.autoreload-(INFO) Watching for file changes with StatReloader
+2020-10-11 21:09:02,605-django.utils.autoreload-(INFO) /home/vanessa/Documentos/www/django-airbnb/airbnb/views.py changed, reloading.
+2020-10-11 21:09:02,606-asyncio-(DEBUG) Using selector: EpollSelector
+2020-10-11 21:09:03,242-django.utils.autoreload-(INFO) Watching for file changes with StatReloader
+2020-10-11 21:09:07,579-django.request-(WARNING) Unauthorized: /rest/home/
+2020-10-11 21:09:26,509-django.request-(WARNING) Unauthorized: /rest/home/
+2020-10-11 21:10:36,168-django.utils.autoreload-(INFO) /home/vanessa/Documentos/www/django-airbnb/airbnb/views.py changed, reloading.
+2020-10-11 21:10:36,169-asyncio-(DEBUG) Using selector: EpollSelector
+2020-10-11 21:10:37,012-django.utils.autoreload-(INFO) Watching for file changes with StatReloader
+2020-10-11 21:11:36,793-django.utils.autoreload-(INFO) /home/vanessa/Documentos/www/django-airbnb/airbnb/views.py changed, reloading.
+2020-10-11 21:11:36,794-asyncio-(DEBUG) Using selector: EpollSelector
+2020-10-11 21:11:37,408-django.utils.autoreload-(INFO) Watching for file changes with StatReloader
+2020-10-11 21:12:40,778-django.utils.autoreload-(INFO) /home/vanessa/Documentos/www/django-airbnb/airbnb/views.py changed, reloading.
+2020-10-11 21:12:40,782-asyncio-(DEBUG) Using selector: EpollSelector
+2020-10-11 21:12:41,600-django.utils.autoreload-(INFO) Watching for file changes with StatReloader
+2020-10-11 21:12:48,322-django.utils.autoreload-(INFO) /home/vanessa/Documentos/www/django-airbnb/airbnb/views.py changed, reloading.
+2020-10-11 21:12:48,324-asyncio-(DEBUG) Using selector: EpollSelector
+2020-10-11 21:12:49,062-django.utils.autoreload-(INFO) Watching for file changes with StatReloader
+2020-10-11 21:14:56,114-django.utils.autoreload-(INFO) /home/vanessa/Documentos/www/django-airbnb/airbnb/serializers.py changed, reloading.
+2020-10-11 21:14:56,115-asyncio-(DEBUG) Using selector: EpollSelector
+2020-10-11 21:14:56,750-django.utils.autoreload-(INFO) Watching for file changes with StatReloader
+2020-10-11 21:15:19,594-django.utils.autoreload-(INFO) /home/vanessa/Documentos/www/django-airbnb/airbnb/views.py changed, reloading.
+2020-10-11 21:15:19,595-asyncio-(DEBUG) Using selector: EpollSelector
+2020-10-11 21:15:20,246-django.utils.autoreload-(INFO) Watching for file changes with StatReloader
+2020-10-11 21:17:42,936-django.utils.autoreload-(INFO) /home/vanessa/Documentos/www/django-airbnb/airbnb/views.py changed, reloading.
+2020-10-11 21:17:42,937-asyncio-(DEBUG) Using selector: EpollSelector
+2020-10-11 21:17:43,565-django.utils.autoreload-(INFO) Watching for file changes with StatReloader
+2020-10-11 21:18:25,569-django.utils.autoreload-(INFO) /home/vanessa/Documentos/www/django-airbnb/airbnb/urls.py changed, reloading.
+2020-10-11 21:18:25,570-asyncio-(DEBUG) Using selector: EpollSelector
+2020-10-11 21:18:26,331-django.utils.autoreload-(INFO) Watching for file changes with StatReloader
+2020-10-11 21:18:32,852-django.request-(ERROR) Internal Server Error: /rest/user/
+Traceback (most recent call last):
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/home/vanessa/Documentos/www/django-airbnb/airbnb/views.py", line 321, in rest_user_list
+    users = CustomUser.objects.filter()
+NameError: name 'CustomUser' is not defined
+2020-10-11 21:19:24,367-django.utils.autoreload-(INFO) /home/vanessa/Documentos/www/django-airbnb/airbnb/views.py changed, reloading.
+2020-10-11 21:19:24,368-asyncio-(DEBUG) Using selector: EpollSelector
+2020-10-11 21:19:25,056-django.utils.autoreload-(INFO) Watching for file changes with StatReloader
+2020-10-11 21:19:26,866-django.request-(ERROR) Internal Server Error: /rest/user/
+Traceback (most recent call last):
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/home/vanessa/Documentos/www/django-airbnb/airbnb/views.py", line 324, in rest_user_list
+    return Response(serializer.data)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/rest_framework/serializers.py", line 745, in data
+    ret = super().data
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/rest_framework/serializers.py", line 246, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/rest_framework/serializers.py", line 663, in to_representation
+    return [
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/rest_framework/serializers.py", line 664, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/rest_framework/serializers.py", line 500, in to_representation
+    for field in fields:
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/rest_framework/serializers.py", line 361, in _readable_fields
+    for field in self.fields.values():
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/rest_framework/serializers.py", line 349, in fields
+    for key, value in self.get_fields().items():
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/rest_framework/serializers.py", line 1053, in get_fields
+    field_class, field_kwargs = self.build_field(
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/rest_framework/serializers.py", line 1199, in build_field
+    return self.build_unknown_field(field_name, model_class)
+  File "/home/vanessa/Documentos/www/django-airbnb/myvenv/lib/python3.8/site-packages/rest_framework/serializers.py", line 1317, in build_unknown_field
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: Field name `username` is not valid for model `Home`.
+2020-10-11 21:19:48,135-django.utils.autoreload-(INFO) /home/vanessa/Documentos/www/django-airbnb/airbnb/serializers.py changed, reloading.
+2020-10-11 21:19:48,136-asyncio-(DEBUG) Using selector: EpollSelector
+2020-10-11 21:19:48,756-django.utils.autoreload-(INFO) Watching for file changes with StatReloader
+2020-10-11 21:20:01,370-django.request-(WARNING) Not Found: /rest/user/2/
+2020-10-11 21:22:59,694-django.utils.autoreload-(INFO) /home/vanessa/Documentos/www/django-airbnb/airbnb/serializers.py changed, reloading.
+2020-10-11 21:22:59,696-asyncio-(DEBUG) Using selector: EpollSelector
+2020-10-11 21:23:00,564-django.utils.autoreload-(INFO) Watching for file changes with StatReloader
+2020-10-11 21:23:17,109-django.utils.autoreload-(INFO) /home/vanessa/Documentos/www/django-airbnb/airbnb/serializers.py changed, reloading.
+2020-10-11 21:23:17,109-asyncio-(DEBUG) Using selector: EpollSelector
+2020-10-11 21:23:17,990-django.utils.autoreload-(INFO) Watching for file changes with StatReloader
+2020-10-11 21:26:32,654-django.utils.autoreload-(INFO) /home/vanessa/Documentos/www/django-airbnb/airbnb/serializers.py changed, reloading.
+2020-10-11 21:26:32,655-asyncio-(DEBUG) Using selector: EpollSelector
+2020-10-11 21:26:33,565-django.utils.autoreload-(INFO) Watching for file changes with StatReloader
+2020-10-11 21:28:28,767-django.utils.autoreload-(INFO) /home/vanessa/Documentos/www/django-airbnb/airbnb/views.py changed, reloading.
+2020-10-11 21:28:28,768-asyncio-(DEBUG) Using selector: EpollSelector
+2020-10-11 21:28:29,736-django.utils.autoreload-(INFO) Watching for file changes with StatReloader
+2020-10-11 21:29:07,325-django.utils.autoreload-(INFO) /home/vanessa/Documentos/www/django-airbnb/airbnb/urls.py changed, reloading.
+2020-10-11 21:29:07,326-asyncio-(DEBUG) Using selector: EpollSelector
+2020-10-11 21:29:08,145-django.utils.autoreload-(INFO) Watching for file changes with StatReloader
+2020-10-11 21:29:45,997-django.utils.autoreload-(INFO) /home/vanessa/Documentos/www/django-airbnb/airbnb/views.py changed, reloading.
+2020-10-11 21:29:45,998-asyncio-(DEBUG) Using selector: EpollSelector
+2020-10-11 21:29:46,749-django.utils.autoreload-(INFO) Watching for file changes with StatReloader
+2020-10-11 21:30:28,976-django.utils.autoreload-(INFO) /home/vanessa/Documentos/www/django-airbnb/airbnb/views.py changed, reloading.
+2020-10-11 21:30:28,977-asyncio-(DEBUG) Using selector: EpollSelector
+2020-10-11 21:30:29,788-django.utils.autoreload-(INFO) Watching for file changes with StatReloader
+2020-10-11 21:30:51,847-blog.views-(WARNING) Postagem foi removida do banco de dados
+2020-10-11 21:30:51,847-blog.views-(WARNING) Postagem foi removida do banco de dados

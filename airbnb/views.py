@@ -1,13 +1,27 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.utils import timezone
 from django.contrib import messages
+from django.http import HttpResponse, JsonResponse
 from django.contrib.auth.decorators import login_required
+from rest_framework import status
+from rest_framework.parsers import JSONParser
+from rest_framework.response import Response
+from rest_framework.decorators import api_view, permission_classes
+from rest_framework.permissions import BasePermission, IsAuthenticated, SAFE_METHODS
+from django.views.decorators.csrf import csrf_exempt
 from .models import Home, Address, Reserve, Comment, Rating, Search
 from .forms import HomeForm, AddressForm, ReserveForm, CommentForm, RatingForm, SearchForm
+from .serializers import HomeSerializer, UserSerializer, PostSerializer
+from users.models import CustomUser
+from blog.models import Post
 
 import logging
 
 logger = logging.getLogger(__name__)
+
+class ReadOnly(BasePermission):
+    def has_permission(self, request, view):
+        return request.method in SAFE_METHODS
 
 def init_page(request):
     return render(request, 'airbnb/init_page.html')
@@ -265,3 +279,110 @@ def comment_remove(request, pk):
     logger.warning('Um comentário foi removido do banco de dados.')
     return redirect('home_detail', pk=comment.home.pk)
 
+@api_view(['GET', 'POST'])
+@permission_classes([IsAuthenticated|ReadOnly])
+def rest_home_list(request):
+    if request.method == 'GET':
+        homes = Home.objects.filter().order_by('-created_date')
+        serializer = HomeSerializer(homes, many=True)
+        return Response(serializer.data)
+    elif request.method == 'POST':
+        serializer = HomeSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_200_OK)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+@api_view(['GET', 'PUT', 'DELETE'])
+@permission_classes([IsAuthenticated|ReadOnly])
+def rest_home_detail(request, pk):
+    try:
+        home = Home.objects.get(pk=pk)
+    except Home.DoesNotExist:
+        return Response(status=status.HTTP_404_NOT_FOUND)
+
+    if request.method == 'GET':
+        serializer = HomeSerializer(home)
+        return Response(serializer.data)
+    elif request.method == 'PUT':
+        serializer = HomeSerializer(home, data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+    elif request.method == 'DELETE':
+        home.delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)
+
+@api_view(['GET', 'POST'])
+@permission_classes([IsAuthenticated|ReadOnly])
+def rest_user_list(request):
+    if request.method == 'GET':
+        users = CustomUser.objects.filter()
+        serializer = UserSerializer(users, many=True)
+        return Response(serializer.data)
+    elif request.method == 'POST':
+        serializer = UserSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_200_OK)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+@api_view(['GET', 'PUT', 'DELETE'])
+@permission_classes([IsAuthenticated|ReadOnly])
+def rest_user_detail(request, pk):
+    try:
+        user = CustomUser.objects.get(pk=pk)
+    except CustomUser.DoesNotExist:
+        return Response(status=status.HTTP_404_NOT_FOUND)
+
+    if request.method == 'GET':
+        serializer = UserSerializer(user)
+        return Response(serializer.data)
+    elif request.method == 'PUT':
+        serializer = UserSerializer(user, data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+    elif request.method == 'DELETE':
+        user.delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)
+
+
+
+
+@api_view(['GET', 'POST'])
+@permission_classes([IsAuthenticated|ReadOnly])
+def rest_post_list(request):
+    if request.method == 'GET':
+        posts = Post.objects.filter().order_by('-created_date')
+        serializer = PostSerializer(posts, many=True)
+        return Response(serializer.data)
+    elif request.method == 'POST':
+        serializer = PostSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_200_OK)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+@api_view(['GET', 'PUT', 'DELETE'])
+@permission_classes([IsAuthenticated|ReadOnly])
+def rest_post_detail(request, pk):
+    try:
+        post = Post.objects.get(pk=pk)
+    except Post.DoesNotExist:
+        return Response(status=status.HTTP_404_NOT_FOUND)
+
+    if request.method == 'GET':
+        serializer = PostSerializer(post)
+        return Response(serializer.data)
+    elif request.method == 'PUT':
+        serializer = PostSerializer(post, data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+    elif request.method == 'DELETE':
+        post.delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)
