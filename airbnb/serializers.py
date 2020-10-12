@@ -3,7 +3,6 @@ from users.models import CustomUser
 from blog.models import Post
 from .models import Home
 
-
 class HomeSerializer(serializers.ModelSerializer):
     class Meta:
         model = Home

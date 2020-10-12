@@ -246,6 +246,7 @@ def home_remove(request, pk):
     home = get_object_or_404(Home, pk=pk)
     home.delete()
     messages.warning(request, 'Acomodação removida com sucesso!')
+    logger.warning('Uma acomodação foi removida do banco de dados.')
     return redirect('home_list')
 
 def add_comment_to_home(request, pk):
@@ -348,9 +349,6 @@ def rest_user_detail(request, pk):
     elif request.method == 'DELETE':
         user.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
-
-
-
 
 @api_view(['GET', 'POST'])
 @permission_classes([IsAuthenticated|ReadOnly])

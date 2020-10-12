@@ -60,8 +60,8 @@ class HomeTestCase(TestCase):
         reserve = Reserve.objects.create(
             home = Home.objects.get(name="Hotel Canoinhas"),
             user = CustomUser.objects.get(username="Admin"),
-            initial_date = timezone.now(),
-            final_date = timezone.now() + datetime.timedelta(days=4),
+            initial_date = datetime.date(2020,12,10),
+            final_date = datetime.date(2020,12,10) + datetime.timedelta(days=4),
             number_peoples = 3,
             total_value = 0
         )

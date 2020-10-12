@@ -92,7 +92,6 @@ INSTALLED_APPS = [
     'blog.apps.BlogConfig', 
     'crispy_forms',
     'rest_framework',
-
     'rest_framework.authtoken',
 ]
 
@@ -147,7 +146,7 @@ DATABASES = {
     	'PASSWORD': DB_PASSWORD,
     	'HOST': DB_HOST,
     	'PORT': '',
-        'TEST':{
+        'TEST': {
             'NAME': DB_TEST,
         }
 	}

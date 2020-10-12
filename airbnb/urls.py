@@ -27,7 +27,5 @@ urlpatterns = [
     path('rest/user/<pk>/', views.rest_user_detail, name='rest_user_detail'),
     path('rest/post/', views.rest_post_list, name='rest_post_list'),
     path('rest/post/<pk>/', views.rest_post_detail, name='rest_post_detail')
-
-
-    
+   
 ]
